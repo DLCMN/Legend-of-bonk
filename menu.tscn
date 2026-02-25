@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://dm74mugs1ojh4"]
+
+[ext_resource type="Script" uid="uid://bu36x4m86u00j" path="res://menu.gd" id="1_lti8b"]
+
+[node name="Menu" type="Node2D" unique_id=927452869]
+script = ExtResource("1_lti8b")
+
+[node name="Play" type="Button" parent="." unique_id=1242773181]
+offset_left = 445.0
+offset_top = 251.0
+offset_right = 770.0
+offset_bottom = 336.0
+size_flags_stretch_ratio = 1.5
+theme_override_colors/font_color = Color(0.66819066, 0.95070857, 0.8450076, 1)
+theme_override_colors/font_pressed_color = Color(0.96862745, 0.91764706, 0.99607843, 1)
+theme_override_colors/icon_pressed_color = Color(0.38039216, 0.8, 0.7372549, 1)
+theme_override_constants/outline_size = 0
+theme_override_font_sizes/font_size = 40
+text = "Play "
+
+[node name="Exit" type="Button" parent="." unique_id=1097260798]
+offset_left = 445.0
+offset_top = 351.0
+offset_right = 770.0
+offset_bottom = 436.0
+theme_override_colors/icon_pressed_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 40
+text = "Exit"
+
+[node name="NameofGame2" type="Label" parent="." unique_id=1591296317]
+offset_left = 371.0
+offset_top = 109.0
+offset_right = 889.0
+offset_bottom = 216.0
+theme_override_font_sizes/font_size = 53
+text = "The Legend of Bonk "
+
+[connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="Exit" to="." method="_on_exit_pressed"]
