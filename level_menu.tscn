@@ -4,36 +4,37 @@
 
 [node name="levelMenu" type="Node2D" unique_id=2061320339]
 script = ExtResource("1_pssaq")
+metadata/_edit_horizontal_guides_ = [130.0, -71.0]
 
 [node name="Label" type="Label" parent="." unique_id=182314746]
-offset_left = 481.0
-offset_top = 72.0
-offset_right = 732.0
-offset_bottom = 140.0
+offset_left = 512.0
+offset_top = 80.0
+offset_right = 763.0
+offset_bottom = 148.0
 theme_override_font_sizes/font_size = 43
 text = "Level Menu "
 
 [node name="Level1" type="Button" parent="." unique_id=62624231]
-offset_left = 438.0
-offset_top = 191.0
-offset_right = 785.0
-offset_bottom = 272.0
+offset_left = 464.0
+offset_top = 192.0
+offset_right = 811.0
+offset_bottom = 273.0
 theme_override_font_sizes/font_size = 35
 text = "Level 1"
 
 [node name="Level2" type="Button" parent="." unique_id=191977250]
-offset_left = 441.0
-offset_top = 326.0
-offset_right = 788.0
-offset_bottom = 407.0
+offset_left = 464.0
+offset_top = 336.0
+offset_right = 811.0
+offset_bottom = 417.0
 theme_override_font_sizes/font_size = 35
 text = "Level 2"
 
 [node name="Level3" type="Button" parent="." unique_id=918920364]
-offset_left = 447.0
-offset_top = 456.0
-offset_right = 794.0
-offset_bottom = 537.0
+offset_left = 464.0
+offset_top = 480.0
+offset_right = 811.0
+offset_bottom = 561.0
 theme_override_font_sizes/font_size = 35
 text = "Level 3"
 
