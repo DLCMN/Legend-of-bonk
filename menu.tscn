@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://dm74mugs1ojh4"]
 
 [ext_resource type="Script" uid="uid://bu36x4m86u00j" path="res://menu.gd" id="1_lti8b"]
+[ext_resource type="AudioStream" uid="uid://gi670poaw171" path="res://assets/Music/music-greensleeves-acoustic-379008.wav" id="2_ouk20"]
 
 [node name="Menu" type="Node2D" unique_id=927452869]
 script = ExtResource("1_lti8b")
@@ -34,6 +35,11 @@ offset_right = 889.0
 offset_bottom = 216.0
 theme_override_font_sizes/font_size = 53
 text = "The Legend of Bonk "
+
+[node name="IntroMenue" type="AudioStreamPlayer" parent="." unique_id=798822455]
+stream = ExtResource("2_ouk20")
+volume_db = -15.0
+autoplay = true
 
 [connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="Exit" to="." method="_on_exit_pressed"]

@@ -1,5 +1,8 @@
 [gd_scene format=3 uid="uid://f154rw6jw2cr"]
 
+[ext_resource type="AudioStream" uid="uid://g6j758sb38j" path="res://assets/Music/music-pirate-adventure-361663.wav" id="1_3hls8"]
+[ext_resource type="PackedScene" uid="uid://bq8vi3nwkcsbh" path="res://Move/movement.tscn" id="2_hbghi"]
+
 [node name="Level1" type="Node2D" unique_id=1321335471]
 
 [node name="Label" type="Label" parent="." unique_id=815773364]
@@ -9,3 +12,10 @@ offset_right = 660.0
 offset_bottom = 117.0
 theme_override_font_sizes/font_size = 43
 text = "Level 1 "
+
+[node name="LevelMusic" type="AudioStreamPlayer" parent="." unique_id=793752687]
+stream = ExtResource("1_3hls8")
+volume_db = -25.0
+autoplay = true
+
+[node name="CharacterBody2D" parent="." unique_id=1861891870 instance=ExtResource("2_hbghi")]
