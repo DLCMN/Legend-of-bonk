@@ -19,3 +19,7 @@ volume_db = -25.0
 autoplay = true
 
 [node name="CharacterBody2D" parent="." unique_id=1861891870 instance=ExtResource("2_hbghi")]
+position = Vector2(536, 254)
+
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D" unique_id=1012319380]
+position = Vector2(3, -11)
