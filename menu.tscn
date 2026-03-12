@@ -38,7 +38,7 @@ text = "The Legend of Bonk "
 
 [node name="IntroMenue" type="AudioStreamPlayer" parent="." unique_id=798822455]
 stream = ExtResource("2_ouk20")
-volume_db = -15.0
+volume_db = -20.0
 autoplay = true
 
 [connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
