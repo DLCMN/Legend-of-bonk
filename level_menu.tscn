@@ -41,7 +41,7 @@ text = "Level 3"
 
 [node name="SelectScreenMusic" type="AudioStreamPlayer" parent="." unique_id=833499461]
 stream = ExtResource("2_mcy63")
-volume_db = -20.0
+volume_db = -27.0
 autoplay = true
 
 [connection signal="pressed" from="Level1" to="." method="_on_level_1_pressed"]
