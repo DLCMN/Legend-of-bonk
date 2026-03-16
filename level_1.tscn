@@ -3,6 +3,7 @@
 [ext_resource type="AudioStream" uid="uid://g6j758sb38j" path="res://assets/Music/music-pirate-adventure-361663.wav" id="1_3hls8"]
 [ext_resource type="TileSet" uid="uid://cbdolxwpgq5l7" path="res://assets/Pixel Art Furniture Pack - FREE/tilesV1.tres" id="1_hn12h"]
 [ext_resource type="PackedScene" uid="uid://bq8vi3nwkcsbh" path="res://Move/movement.tscn" id="2_hbghi"]
+[ext_resource type="PackedScene" uid="uid://d1hiwef468aqs" path="res://enemy.tscn" id="4_ihfcg"]
 
 [node name="Level1" type="Node2D" unique_id=1321335471]
 position = Vector2(2, 11)
@@ -43,3 +44,5 @@ limit_top = -1000000
 limit_right = 1056500
 limit_bottom = 1056500
 limit_smoothed = true
+
+[node name="Enemy" parent="." unique_id=751728501 instance=ExtResource("4_ihfcg")]
