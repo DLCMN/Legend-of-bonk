@@ -1,0 +1,23 @@
+extends Area2D 
+@export var card_id : int = 0 
+@export var face_up_texture : Texture2D 
+@export var face_down_texture : Texture2D 
+@onready var sprite = $Sprite2D 
+var is_flipped = false 
+var is_matched = false 
+func _ready(): 
+	sprite.texture = face_down_texture 
+func flip(): 
+	if is_matched: 
+		return 
+		is_flipped = !is_flipped 
+		if is_flipped: 
+			sprite.texture = face_up_texture 
+			GameManager.card_flipped(self) 
+		else: 
+				sprite.texture = face_down_texture 
+func set_matched(): 
+	is_matched = true 
+func _on_body_entered(body: Node2D) -> void: 
+		if body.name == "Player": 
+			flip()
