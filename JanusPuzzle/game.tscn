@@ -1,0 +1,57 @@
+[gd_scene format=3 uid="uid://i7ijrcwfq8j1"]
+
+[ext_resource type="Script" uid="uid://c3k0cukgk6j2e" path="res://game_manager.gd" id="1_feb5d"]
+[ext_resource type="PackedScene" uid="uid://dara34pg55f2o" path="res://player.tscn" id="2_fc0e3"]
+[ext_resource type="PackedScene" uid="uid://41oeycqrng3w" path="res://card.tscn" id="3_7jktm"]
+[ext_resource type="Texture2D" uid="uid://c8g2moxqfielq" path="res://cardA.png" id="4_eow3j"]
+[ext_resource type="Texture2D" uid="uid://jqlqns3k8wfy" path="res://icon.svg" id="5_j5wjh"]
+[ext_resource type="Texture2D" uid="uid://3p2v54jsilm7" path="res://cardB.png" id="6_j5wjh"]
+[ext_resource type="Texture2D" uid="uid://b80xvpn4blcfn" path="res://cardC.png" id="7_vef74"]
+
+[node name="game" type="Node" unique_id=481930065]
+script = ExtResource("1_feb5d")
+
+[node name="Player" parent="." unique_id=1631411668 instance=ExtResource("2_fc0e3")]
+position = Vector2(77, 336)
+
+[node name="Cards" type="Node2D" parent="." unique_id=1529262753]
+
+[node name="card1" parent="Cards" unique_id=1539333485 instance=ExtResource("3_7jktm")]
+position = Vector2(919, 454)
+scale = Vector2(1, 1)
+face_up_texture = ExtResource("4_eow3j")
+face_down_texture = ExtResource("5_j5wjh")
+
+[node name="card2" parent="Cards" unique_id=947847966 instance=ExtResource("3_7jktm")]
+position = Vector2(590, 148)
+scale = Vector2(1, 1)
+face_up_texture = ExtResource("4_eow3j")
+face_down_texture = ExtResource("5_j5wjh")
+
+[node name="card3" parent="Cards" unique_id=588459230 instance=ExtResource("3_7jktm")]
+position = Vector2(288, 155)
+scale = Vector2(1, 1)
+card_id = 1
+face_up_texture = ExtResource("6_j5wjh")
+face_down_texture = ExtResource("5_j5wjh")
+
+[node name="card4" parent="Cards" unique_id=148255906 instance=ExtResource("3_7jktm")]
+position = Vector2(581, 463)
+scale = Vector2(1, 1)
+card_id = 1
+face_up_texture = ExtResource("6_j5wjh")
+face_down_texture = ExtResource("5_j5wjh")
+
+[node name="card5" parent="Cards" unique_id=1392755676 instance=ExtResource("3_7jktm")]
+position = Vector2(286, 460)
+scale = Vector2(1, 1)
+card_id = 2
+face_up_texture = ExtResource("7_vef74")
+face_down_texture = ExtResource("5_j5wjh")
+
+[node name="card6" parent="Cards" unique_id=506570237 instance=ExtResource("3_7jktm")]
+position = Vector2(905, 167)
+scale = Vector2(1, 1)
+card_id = 2
+face_up_texture = ExtResource("7_vef74")
+face_down_texture = ExtResource("5_j5wjh")
