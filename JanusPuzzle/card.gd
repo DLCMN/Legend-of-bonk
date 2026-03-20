@@ -14,7 +14,6 @@ func _ready():
 
 
 func flip(): 
-	# Prevent bad states
 	if is_matched or is_flipped or GameManager.checking:
 		return 
 	
