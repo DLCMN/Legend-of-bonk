@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://3dw2pbdxjrih"]
+
+[ext_resource type="AudioStream" uid="uid://dpenrxiasguhy" path="res://assets/Music/music-Winter_ I - Allegro Non Molto.wav" id="1_xa4sa"]
+[ext_resource type="AudioStream" uid="uid://dyhy54lrsfuag" path="res://assets/Music/music_Directed-by-Robert-B-Weide-Sound-Effect.wav" id="2_4hj5i"]
+
+[node name="music_for_different_rooms_level_1" type="Node2D" unique_id=1961510690]
+
+[node name="Miniboss" type="AudioStreamPlayer" parent="." unique_id=1026078930]
+stream = ExtResource("1_xa4sa")
+volume_db = -20.0
+autoplay = true
+
+[node name="Boss" type="AudioStreamPlayer" parent="." unique_id=2107336220]
+stream = ExtResource("2_4hj5i")
+volume_db = -20.0
+autoplay = true
