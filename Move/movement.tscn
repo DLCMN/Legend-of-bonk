@@ -134,15 +134,15 @@ states/walk/node = SubResource("AnimationNodeBlendSpace2D_581qr")
 states/walk/position = Vector2(451.6, 78.4)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ctiow"]
-size = Vector2(66.5, 90)
+size = Vector2(64, 64)
 
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=1861891870 node_paths=PackedStringArray("animation_tree")]
 script = ExtResource("1_ctiow")
 animation_tree = NodePath("AnimationTree")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=2029401155]
-position = Vector2(-4, 3)
-scale = Vector2(4, 4)
+position = Vector2(0.49999952, 0.50000334)
+scale = Vector2(2.03125, 2.0312498)
 texture = ExtResource("2_dyqxk")
 hframes = 8
 
@@ -155,5 +155,4 @@ anim_player = NodePath("../AnimationPlayer")
 parameters/walk/blend_position = Vector2(0, 0)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1318628449]
-position = Vector2(0, -8)
 shape = SubResource("RectangleShape2D_ctiow")
