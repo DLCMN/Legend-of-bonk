@@ -1,7 +1,9 @@
 [gd_scene format=3 uid="uid://bq8vi3nwkcsbh"]
 
 [ext_resource type="Script" uid="uid://bygb3s6x5cdg3" path="res://Move/player.gd" id="1_ctiow"]
-[ext_resource type="Texture2D" uid="uid://cn2wkiwi8llm7" path="res://Move/sleemplaceholder-Sheet.png" id="2_dyqxk"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ctiow"]
+load_path = "res://.godot/imported/Bonk Front - Still.png-4999bf5678f15129954e8eea3110d5d4.ctex"
 
 [sub_resource type="Animation" id="Animation_dyqxk"]
 length = 0.001
@@ -45,7 +47,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0.03333333),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [Vector2i(2, 0)]
+"values": [Vector2i(1, 0)]
 }
 
 [sub_resource type="Animation" id="Animation_p5v78"]
@@ -57,10 +59,10 @@ tracks/0/path = NodePath("Sprite2D:frame_coords")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0.1),
+"times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [Vector2i(6, 0)]
+"values": [Vector2i(3, 0)]
 }
 
 [sub_resource type="Animation" id="Animation_0ka7j"]
@@ -75,7 +77,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [Vector2i(4, 0)]
+"values": [Vector2i(2, 0)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_38sxq"]
@@ -141,10 +143,10 @@ script = ExtResource("1_ctiow")
 animation_tree = NodePath("AnimationTree")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=2029401155]
-position = Vector2(0.49999952, 0.50000334)
-scale = Vector2(2.03125, 2.0312498)
-texture = ExtResource("2_dyqxk")
-hframes = 8
+position = Vector2(1, 0.5)
+scale = Vector2(5.031, 5.031)
+texture = SubResource("CompressedTexture2D_ctiow")
+hframes = 4
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=657987963]
 libraries/ = SubResource("AnimationLibrary_38sxq")
@@ -156,3 +158,8 @@ parameters/walk/blend_position = Vector2(0, 0)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1318628449]
 shape = SubResource("RectangleShape2D_ctiow")
+
+[node name="DashTimer" type="Timer" parent="." unique_id=729466158]
+wait_time = 0.13
+
+[connection signal="timeout" from="DashTimer" to="." method="_on_dash_timer_timeout"]
