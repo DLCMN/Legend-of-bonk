@@ -1,27 +1,32 @@
-[gd_scene format=3 uid="uid://d1hiwef468aqs"]
+[gd_scene format=3 uid="uid://dcvewrbty1qfa"]
 
-[ext_resource type="Script" uid="uid://crrjc5q5x7qxb" path="res://enemy.gd" id="1_7k104"]
-[ext_resource type="Texture2D" uid="uid://dlb2df6tcb11k" path="res://assets/Pixel Art Furniture Pack - FREE/Evil_Apple.png" id="2_4gyqm"]
+[ext_resource type="Script" uid="uid://b3ig11hngh0bh" path="res://enemy.gd" id="1_7k104"]
+[ext_resource type="Texture2D" uid="uid://c3qv64dqy6rod" path="res://New Project.png" id="2_4gyqm"]
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_4gyqm"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_7k104"]
 animations = [{
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("2_4gyqm")
 }],
 "loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
 "name": &"walk",
 "speed": 5.0
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_4gyqm"]
-radius = 158.44557
+radius = 160.04999
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_qi2p4"]
 radius = 77.36925
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_7k104"]
-radius = 124.197426
+radius = 91.350975
 
 [node name="Enemy" type="CharacterBody2D" unique_id=751728501]
 script = ExtResource("1_7k104")
@@ -29,8 +34,8 @@ script = ExtResource("1_7k104")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1067183079]
 position = Vector2(549, 449)
 scale = Vector2(9.4375, 7.5)
-sprite_frames = SubResource("SpriteFrames_4gyqm")
-animation = &"walk"
+sprite_frames = SubResource("SpriteFrames_7k104")
+animation = &"idle"
 offset = Vector2(0, -8)
 
 [node name="detection_area" type="Area2D" parent="." unique_id=1782574687]
@@ -43,13 +48,13 @@ position = Vector2(543, 391)
 shape = SubResource("CircleShape2D_4gyqm")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=477213309]
-position = Vector2(538, 391)
+position = Vector2(547, 390)
 shape = SubResource("CircleShape2D_qi2p4")
 
 [node name="enemy_hitbox" type="Area2D" parent="." unique_id=2105240242]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="enemy_hitbox" unique_id=1159494795]
-position = Vector2(548, 391)
+position = Vector2(544, 394)
 shape = SubResource("CircleShape2D_7k104")
 
 [node name="take_damage_cooldown" type="Timer" parent="." unique_id=25005804]
