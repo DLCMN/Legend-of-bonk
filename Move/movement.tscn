@@ -42,6 +42,20 @@ tracks/2/keys = {
 "update": 0,
 "values": [3.141592653589793]
 }
+tracks/3/type = "method"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.45),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"attack_finished"
+}]
+}
 
 [sub_resource type="Animation" id="Animation_uufbx"]
 resource_name = "Attack1 - Right"
@@ -81,6 +95,20 @@ tracks/2/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [1.5707963267948966]
+}
+tracks/3/type = "method"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.45),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"attack_finished"
+}]
 }
 
 [sub_resource type="Animation" id="Animation_uixo7"]
@@ -122,6 +150,20 @@ tracks/2/keys = {
 "update": 0,
 "values": [4.71238898038469]
 }
+tracks/3/type = "method"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.45),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"attack_finished"
+}]
+}
 
 [sub_resource type="Animation" id="Animation_5e5nn"]
 resource_name = "Attack1_Up"
@@ -161,6 +203,20 @@ tracks/2/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [0.0]
+}
+tracks/3/type = "method"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.45),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"attack_finished"
+}]
 }
 
 [sub_resource type="Animation" id="Animation_kxcuq"]
@@ -202,6 +258,20 @@ tracks/2/keys = {
 "update": 0,
 "values": [3.141592653589793]
 }
+tracks/3/type = "method"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.45),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"attack_finished"
+}]
+}
 
 [sub_resource type="Animation" id="Animation_8stoh"]
 resource_name = "Attack2 - Right"
@@ -241,6 +311,20 @@ tracks/2/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [1.5707963267948966]
+}
+tracks/3/type = "method"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.45),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"attack_finished"
+}]
 }
 
 [sub_resource type="Animation" id="Animation_xhdvj"]
@@ -282,6 +366,20 @@ tracks/2/keys = {
 "update": 0,
 "values": [4.71238898038469]
 }
+tracks/3/type = "method"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.45),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"attack_finished"
+}]
+}
 
 [sub_resource type="Animation" id="Animation_ltlno"]
 resource_name = "Attack2_Up"
@@ -321,6 +419,20 @@ tracks/2/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [0.0]
+}
+tracks/3/type = "method"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.45),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"attack_finished"
+}]
 }
 
 [sub_resource type="Animation" id="Animation_581qr"]
@@ -362,6 +474,20 @@ tracks/2/keys = {
 "update": 0,
 "values": [3.141592653589793]
 }
+tracks/3/type = "method"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.45),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"attack_finished"
+}]
+}
 
 [sub_resource type="Animation" id="Animation_eqo1w"]
 resource_name = "Attack3 - Left"
@@ -401,6 +527,20 @@ tracks/2/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [4.71238898038469]
+}
+tracks/3/type = "method"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.45),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"attack_finished"
+}]
 }
 
 [sub_resource type="Animation" id="Animation_i5lk8"]
@@ -442,6 +582,20 @@ tracks/2/keys = {
 "update": 0,
 "values": [1.5707963267948966]
 }
+tracks/3/type = "method"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.45),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"attack_finished"
+}]
+}
 
 [sub_resource type="Animation" id="Animation_63cp0"]
 resource_name = "Attack3-Up"
@@ -481,6 +635,20 @@ tracks/2/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [0.0]
+}
+tracks/3/type = "method"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.45),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"attack_finished"
+}]
 }
 
 [sub_resource type="Animation" id="Animation_38sxq"]
@@ -667,29 +835,73 @@ _data = {
 &"WalkUp": SubResource("Animation_xabqq")
 }
 
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_dyqxk"]
+animation = &"Attack1 - Down"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_0pdi0"]
+animation = &"Attack1 - Right"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_38sxq"]
+animation = &"Attack1_Up"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_p5v78"]
+animation = &"Attack1-Left"
+
+[sub_resource type="AnimationNodeBlendSpace2D" id="AnimationNodeBlendSpace2D_0ka7j"]
+blend_point_0/node = SubResource("AnimationNodeAnimation_dyqxk")
+blend_point_0/pos = Vector2(0, 1)
+blend_point_1/node = SubResource("AnimationNodeAnimation_0pdi0")
+blend_point_1/pos = Vector2(1, 0)
+blend_point_2/node = SubResource("AnimationNodeAnimation_38sxq")
+blend_point_2/pos = Vector2(0, -1)
+blend_point_3/node = SubResource("AnimationNodeAnimation_p5v78")
+blend_point_3/pos = Vector2(-1, 0)
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_581qr"]
+animation = &"IdleDown"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_eqo1w"]
+animation = &"IdleRight"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_i5lk8"]
+animation = &"IdleDown"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_63cp0"]
+animation = &"IdleLeft"
+
+[sub_resource type="AnimationNodeBlendSpace2D" id="AnimationNodeBlendSpace2D_pdh2l"]
+blend_point_0/node = SubResource("AnimationNodeAnimation_581qr")
+blend_point_0/pos = Vector2(0, 1)
+blend_point_1/node = SubResource("AnimationNodeAnimation_eqo1w")
+blend_point_1/pos = Vector2(1, 0)
+blend_point_2/node = SubResource("AnimationNodeAnimation_i5lk8")
+blend_point_2/pos = Vector2(0, -1)
+blend_point_3/node = SubResource("AnimationNodeAnimation_63cp0")
+blend_point_3/pos = Vector2(-1, 0)
+
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_fu8xx"]
-animation = &"down"
+animation = &"WalkDown"
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_uufbx"]
-animation = &"right"
+animation = &"WalkRight"
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_uixo7"]
-animation = &"up"
+animation = &"WalkUp"
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_5e5nn"]
-animation = &"left"
+animation = &"WalkLeft"
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_kxcuq"]
-animation = &"right"
+animation = &"WalkRight"
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_8stoh"]
-animation = &"right"
+animation = &"WalkRight"
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_xhdvj"]
-animation = &"left"
+animation = &"WalkLeft"
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_ltlno"]
-animation = &"left"
+animation = &"WalkLeft"
 
 [sub_resource type="AnimationNodeBlendSpace2D" id="AnimationNodeBlendSpace2D_581qr"]
 blend_point_0/node = SubResource("AnimationNodeAnimation_fu8xx")
@@ -697,7 +909,7 @@ blend_point_0/pos = Vector2(0, 1)
 blend_point_1/node = SubResource("AnimationNodeAnimation_uufbx")
 blend_point_1/pos = Vector2(1, 0)
 blend_point_2/node = SubResource("AnimationNodeAnimation_uixo7")
-blend_point_2/pos = Vector2(0, -0.90000004)
+blend_point_2/pos = Vector2(0, -1)
 blend_point_3/node = SubResource("AnimationNodeAnimation_5e5nn")
 blend_point_3/pos = Vector2(-1, 0)
 blend_point_4/node = SubResource("AnimationNodeAnimation_kxcuq")
@@ -710,8 +922,12 @@ blend_point_7/node = SubResource("AnimationNodeAnimation_ltlno")
 blend_point_7/pos = Vector2(-0.5, -0.5)
 
 [sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_0p8bk"]
+states/Attack1/node = SubResource("AnimationNodeBlendSpace2D_0ka7j")
+states/Attack1/position = Vector2(590.8, 157.6)
+states/Idle/node = SubResource("AnimationNodeBlendSpace2D_pdh2l")
+states/Idle/position = Vector2(447.6, 69.817604)
 states/walk/node = SubResource("AnimationNodeBlendSpace2D_581qr")
-states/walk/position = Vector2(451.6, 78.4)
+states/walk/position = Vector2(674.8, 69.76)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ctiow"]
 size = Vector2(80, 80)
@@ -735,9 +951,10 @@ vframes = 13
 libraries/ = SubResource("AnimationLibrary_38sxq")
 
 [node name="AnimationTree" type="AnimationTree" parent="." unique_id=189072991]
-active = false
 tree_root = SubResource("AnimationNodeStateMachine_0p8bk")
 anim_player = NodePath("../AnimationPlayer")
+parameters/Attack1/blend_position = Vector2(0, 0)
+parameters/Idle/blend_position = Vector2(0, 0)
 parameters/walk/blend_position = Vector2(0, 0)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1318628449]
