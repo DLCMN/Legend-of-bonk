@@ -2,9 +2,12 @@
 
 [ext_resource type="AudioStream" uid="uid://g6j758sb38j" path="res://assets/Music/music-pirate-adventure-361663.wav" id="1_3hls8"]
 [ext_resource type="TileSet" uid="uid://cbdolxwpgq5l7" path="res://assets/Pixel Art Furniture Pack - FREE/tilesV1.tres" id="1_hn12h"]
+[ext_resource type="Script" uid="uid://dplvbrua76ksc" path="res://Yeseniia(code)/global.gd" id="1_rka8t"]
 [ext_resource type="PackedScene" uid="uid://bq8vi3nwkcsbh" path="res://Move/movement.tscn" id="2_hbghi"]
+[ext_resource type="PackedScene" uid="uid://dcvewrbty1qfa" path="res://Yeseniia(code)/enemy.tscn" id="5_5hph3"]
 
 [node name="Level1" type="Node2D" unique_id=1321335471]
+script = ExtResource("1_rka8t")
 
 [node name="TileMap" type="Node2D" parent="." unique_id=1458838144]
 
@@ -46,5 +49,4 @@ limit_right = 1056500
 limit_bottom = 1056500
 limit_smoothed = true
 
-[node name="Enemy" parent="." unique_id=751728501]
-position = Vector2(55, 24)
+[node name="Enemy" parent="." unique_id=751728501 instance=ExtResource("5_5hph3")]

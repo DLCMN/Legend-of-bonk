@@ -1,19 +1,26 @@
 [gd_scene format=3 uid="uid://dcvewrbty1qfa"]
 
-[ext_resource type="Script" uid="uid://b3ig11hngh0bh" path="res://enemy.gd" id="1_7k104"]
-[ext_resource type="Texture2D" uid="uid://c3qv64dqy6rod" path="res://New Project.png" id="2_4gyqm"]
+[ext_resource type="Script" uid="uid://b3ig11hngh0bh" path="res://Yeseniia(code)/enemy.gd" id="1_7k104"]
+[ext_resource type="Texture2D" uid="uid://cn2wkiwi8llm7" path="res://Move/sleemplaceholder-Sheet.png" id="2_vmgph"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5gpht"]
+atlas = ExtResource("2_vmgph")
+region = Rect2(0, 0, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_7k104"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_4gyqm")
+"texture": SubResource("AtlasTexture_5gpht")
 }],
 "loop": true,
 "name": &"idle",
 "speed": 5.0
 }, {
-"frames": [],
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5gpht")
+}],
 "loop": true,
 "name": &"walk",
 "speed": 5.0
@@ -33,7 +40,7 @@ script = ExtResource("1_7k104")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1067183079]
 position = Vector2(549, 449)
-scale = Vector2(9.4375, 7.5)
+scale = Vector2(3, 2.384)
 sprite_frames = SubResource("SpriteFrames_7k104")
 animation = &"idle"
 offset = Vector2(0, -8)

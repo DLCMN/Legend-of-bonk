@@ -7,7 +7,7 @@ extends CharacterBody2D
 
 var input : Vector2
 var playback : AnimationNodeStateMachinePlayback
-var is_attacking = false
+@export var is_attacking = false
 
 #animation running the last frame compared to new one
 func _ready() -> void:
