@@ -20,6 +20,7 @@ func _physics_process(_delta: float) -> void:
 	
 	if Input.is_action_just_pressed("Attack") and not is_attacking:
 		is_attacking = true
+		print("Attack")
 		velocity = Vector2.ZERO
 		playback.travel("Attack1") #go to attack
 		
@@ -68,3 +69,9 @@ func update_animation_parameters():
  #reset dash
 func _on_dash_timer_timeout() -> void:
 	speed = 150
+
+
+func _on_sword_hit_box_body_entered(body: Node2D) -> void:
+	if is_attacking and body.name.begins_with("Evil") :
+		print(body.name)
+		print("hit")

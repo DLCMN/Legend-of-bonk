@@ -5,6 +5,7 @@
 [ext_resource type="Script" uid="uid://dplvbrua76ksc" path="res://Yeseniia(code)/global.gd" id="1_rka8t"]
 [ext_resource type="PackedScene" uid="uid://bq8vi3nwkcsbh" path="res://Move/movement.tscn" id="2_hbghi"]
 [ext_resource type="PackedScene" uid="uid://dcvewrbty1qfa" path="res://Yeseniia(code)/enemy.tscn" id="5_5hph3"]
+[ext_resource type="PackedScene" uid="uid://65b2y3wyhjma" path="res://newEnemies/evil_sleem.tscn" id="6_5hph3"]
 
 [node name="Level1" type="Node2D" unique_id=1321335471]
 script = ExtResource("1_rka8t")
@@ -50,3 +51,6 @@ limit_bottom = 1056500
 limit_smoothed = true
 
 [node name="Enemy" parent="." unique_id=751728501 instance=ExtResource("5_5hph3")]
+
+[node name="EvilSleem" parent="." unique_id=629169447 instance=ExtResource("6_5hph3")]
+position = Vector2(759, 401)

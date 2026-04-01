@@ -864,7 +864,7 @@ animation = &"IdleDown"
 animation = &"IdleRight"
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_i5lk8"]
-animation = &"IdleDown"
+animation = &"IdleUp"
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_63cp0"]
 animation = &"IdleLeft"
@@ -930,7 +930,7 @@ states/walk/node = SubResource("AnimationNodeBlendSpace2D_581qr")
 states/walk/position = Vector2(674.8, 69.76)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ctiow"]
-size = Vector2(80, 80)
+size = Vector2(71, 80)
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_m73wb"]
 radius = 29.0
@@ -958,7 +958,7 @@ parameters/Idle/blend_position = Vector2(0, 0)
 parameters/walk/blend_position = Vector2(0, 0)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1318628449]
-position = Vector2(1, 0)
+position = Vector2(0.5, 0)
 shape = SubResource("RectangleShape2D_ctiow")
 
 [node name="DashTimer" type="Timer" parent="." unique_id=729466158]
@@ -974,3 +974,4 @@ rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_m73wb")
 
 [connection signal="timeout" from="DashTimer" to="." method="_on_dash_timer_timeout"]
+[connection signal="body_entered" from="Marker2D/SwordHitBox" to="." method="_on_sword_hit_box_body_entered"]
