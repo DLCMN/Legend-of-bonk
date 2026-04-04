@@ -3,10 +3,13 @@ extends CharacterBody2D
 
 @export var speed : float = 150
 @export var animation_tree : AnimationTree
+@onready var soundDamage: AudioStreamPlayer2D = $PlayerDamage
 
 
 var input : Vector2
 var playback : AnimationNodeStateMachinePlayback
+var strength : int = 15
+
 @export var is_attacking = false
 
 #animation running the last frame compared to new one
@@ -16,10 +19,12 @@ func _ready() -> void:
 
 #movement (input, actual moving)
 func _physics_process(_delta: float) -> void:
-	input = Input.get_vector("left", "right", "up", "down")
+	if not is_attacking:
+		input = Input.get_vector("left", "right", "up", "down")
 	
 	if Input.is_action_just_pressed("Attack") and not is_attacking:
 		is_attacking = true
+		print("Attack")
 		velocity = Vector2.ZERO
 		playback.travel("Attack1") #go to attack
 		
@@ -46,6 +51,7 @@ func _physics_process(_delta: float) -> void:
 func attack_finished():
 	is_attacking = false
 	
+	
 func select_animation() -> void:
 	if is_attacking:
 		return
@@ -68,3 +74,8 @@ func update_animation_parameters():
  #reset dash
 func _on_dash_timer_timeout() -> void:
 	speed = 150
+
+
+func _on_sword_hit_box_body_entered(body: Node2D) -> void:
+	if is_attacking and body.name.begins_with("Evil") :
+		body.take_damage(strength, position)
