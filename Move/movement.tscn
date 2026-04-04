@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bygb3s6x5cdg3" path="res://Move/player.gd" id="1_ctiow"]
 [ext_resource type="Texture2D" uid="uid://mvst422jvd4" path="res://Move/AttackPH.png" id="2_dyqxk"]
+[ext_resource type="AudioStream" uid="uid://cukbg18i6cr08" path="res://Move/BonkBonk.wav" id="3_0pdi0"]
 
 [sub_resource type="Animation" id="Animation_fu8xx"]
 resource_name = "Attack1 - Down"
@@ -981,6 +982,12 @@ shape = SubResource("CapsuleShape2D_m73wb")
 wait_time = 5.0
 
 [node name="PlayerDamage" type="AudioStreamPlayer2D" parent="." unique_id=138202088]
+stream = ExtResource("3_0pdi0")
+volume_db = 0.75
+
+[node name="DamageCooldown" type="Timer" parent="." unique_id=384940252]
+wait_time = 0.5
+one_shot = true
 
 [connection signal="timeout" from="DashTimer" to="." method="_on_dash_timer_timeout"]
 [connection signal="body_entered" from="Marker2D/SwordHitBox" to="." method="_on_sword_hit_box_body_entered"]

@@ -4,16 +4,22 @@ extends CharacterBody2D
 @export var speed : float = 150
 @export var animation_tree : AnimationTree
 @onready var soundDamage: AudioStreamPlayer2D = $PlayerDamage
+@onready var damage_cooldown: Timer = $DamageCooldown
 
 
 var input : Vector2
 var playback : AnimationNodeStateMachinePlayback
 var strength : int = 15
+var maxHealth : int
+var health : int 
 
 @export var is_attacking = false
 
 #animation running the last frame compared to new one
 func _ready() -> void:
+	#load health
+	health = PlayerStats.health
+	maxHealth = PlayerStats.Maxhealth
 	playback = animation_tree["parameters/playback"]
 
 
@@ -79,3 +85,17 @@ func _on_dash_timer_timeout() -> void:
 func _on_sword_hit_box_body_entered(body: Node2D) -> void:
 	if is_attacking and body.name.begins_with("Evil") :
 		body.take_damage(strength, position)
+		
+		
+func takeDamage(amount: int) -> void:
+	if damage_cooldown.time_left > 0:
+		return
+	health -= amount
+	soundDamage.play()
+	PlayerStats.health = health
+	print(health)
+	#Damagecooldown
+	damage_cooldown.start()
+	
+#func die() -> void:
+	
