@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://cf81qqjhwe04m"]
+
+[ext_resource type="Texture2D" uid="uid://b8t8cayb4vc73" path="res://newEnemies/lEnemyHealthBar.png" id="1_kdjhy"]
+[ext_resource type="Script" uid="uid://bk3bm4dak17h0" path="res://health_bar.gd" id="1_srckl"]
+[ext_resource type="Texture2D" uid="uid://de63fa3yg432n" path="res://newEnemies/fullEnemyHealthBar.png" id="2_srckl"]
+
+[node name="HealthBar" type="Node2D" unique_id=277792686]
+script = ExtResource("1_srckl")
+
+[node name="HealthUnder" type="Sprite2D" parent="." unique_id=672105448]
+texture = ExtResource("1_kdjhy")
+centered = false
+
+[node name="Health" type="Sprite2D" parent="." unique_id=613839176]
+texture = ExtResource("2_srckl")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 16, 4)

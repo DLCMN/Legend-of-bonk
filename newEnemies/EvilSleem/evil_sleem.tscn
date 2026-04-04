@@ -5,6 +5,7 @@
 [ext_resource type="AudioStream" uid="uid://v85ica6gcvqt" path="res://newEnemies/EvilSleem/SlimeDead.mp3" id="3_s2cuy"]
 [ext_resource type="AudioStream" uid="uid://bf0dfqf7cg5jg" path="res://newEnemies/EvilSleem/BonkSlime.mp3" id="4_4pejn"]
 [ext_resource type="AudioStream" uid="uid://c0lvhyhqquvkx" path="res://newEnemies/EvilSleem/slimejump.mp3" id="5_0fcgj"]
+[ext_resource type="PackedScene" uid="uid://cf81qqjhwe04m" path="res://health_bar.tscn" id="6_4pejn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4hv5h"]
 size = Vector2(14.75, 12)
@@ -312,7 +313,6 @@ position = Vector2(0.625, -0.25)
 shape = SubResource("RectangleShape2D_4hv5h")
 
 [node name="evilSleemSprite" type="AnimatedSprite2D" parent="." unique_id=1565758002]
-position = Vector2(0, -0.25)
 sprite_frames = SubResource("SpriteFrames_ogirt")
 animation = &"death"
 autoplay = "idle"
@@ -333,5 +333,13 @@ stream = ExtResource("4_4pejn")
 [node name="SleemMove" type="AudioStreamPlayer2D" parent="." unique_id=2140650708]
 stream = ExtResource("5_0fcgj")
 
+[node name="HealthBar" parent="." unique_id=277792686 instance=ExtResource("6_4pejn")]
+position = Vector2(-5.9, 6.5)
+scale = Vector2(0.8, 0.8)
+
+[node name="Evaporation" type="Timer" parent="." unique_id=54429425]
+wait_time = 3.0
+
 [connection signal="body_entered" from="Sight" to="." method="_on_sight_body_entered"]
 [connection signal="body_exited" from="Sight" to="." method="_on_sight_body_exited"]
+[connection signal="timeout" from="Evaporation" to="." method="_on_evaporation_timeout"]
