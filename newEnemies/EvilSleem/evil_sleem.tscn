@@ -303,14 +303,14 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_4hv5h"]
-radius = 63.767643
+radius = 77.00649
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4pejn"]
 radius = 6.5
 height = 16.0
 
 [node name="EvilSleem" type="CharacterBody2D" unique_id=629169447]
-scale = Vector2(4, 4)
+scale = Vector2(2, 2)
 collision_layer = 2
 collision_mask = 0
 script = ExtResource("1_uqpha")
@@ -320,6 +320,7 @@ position = Vector2(0.625, -0.25)
 shape = SubResource("RectangleShape2D_4hv5h")
 
 [node name="evilSleemSprite" type="AnimatedSprite2D" parent="." unique_id=1565758002]
+position = Vector2(-0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_ogirt")
 animation = &"attack"
 autoplay = "idle"
@@ -329,6 +330,7 @@ frame_progress = 0.35879812
 [node name="Sight" type="Area2D" parent="." unique_id=811138938]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sight" unique_id=1244766896]
+position = Vector2(1.5, 0)
 shape = SubResource("CircleShape2D_4hv5h")
 
 [node name="Sleemdie" type="AudioStreamPlayer2D" parent="." unique_id=934944880]

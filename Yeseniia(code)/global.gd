@@ -1,6 +1,8 @@
 extends Node
-var player_is_attacking = false 
-
-func playerAttack():
-	if Input.is_action_just_pressed("Attack") and not player_is_attacking:
-		player_is_attacking = true
+#func _setup_level(level_root:Node) -> void:
+	#var thePlayer = level_root.get_node("Player")
+	#thePlayer.died.connect(_on_player_died)
+	
+#func _on_player_died() -> void:
+	
+ 

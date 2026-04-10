@@ -1,6 +1,8 @@
 class_name player
 extends CharacterBody2D
 
+signal died
+
 @export var speed : float = 150
 @export var animation_tree : AnimationTree
 @onready var soundDamage: AudioStreamPlayer2D = $PlayerDamage
@@ -12,6 +14,9 @@ var playback : AnimationNodeStateMachinePlayback
 var strength : int = 15
 var maxHealth : int
 var health : int 
+var dead : bool = false
+var checkpointManager
+var deathAnimFin : bool = false
 
 @export var is_attacking = false
 
@@ -21,14 +26,15 @@ func _ready() -> void:
 	health = PlayerStats.health
 	maxHealth = PlayerStats.Maxhealth
 	playback = animation_tree["parameters/playback"]
+	checkpointManager = get_parent().get_node("CheckpointManager")
 
 
 #movement (input, actual moving)
 func _physics_process(_delta: float) -> void:
-	if not is_attacking:
+	if not is_attacking and not dead:
 		input = Input.get_vector("left", "right", "up", "down")
 	
-	if Input.is_action_just_pressed("Attack") and not is_attacking:
+	if Input.is_action_just_pressed("Attack") and not is_attacking and not dead:
 		is_attacking = true
 		print("Attack")
 		velocity = Vector2.ZERO
@@ -37,7 +43,7 @@ func _physics_process(_delta: float) -> void:
 	
 	else:
 		#only move when not attacking pls
-		if not is_attacking:
+		if not is_attacking and not dead:
 			velocity = input * speed
 		else:
 			velocity = Vector2.ZERO
@@ -47,7 +53,7 @@ func _physics_process(_delta: float) -> void:
 		update_animation_parameters()
 
 	# dash
-	if Input.is_action_just_pressed("Dash") and not is_attacking:
+	if Input.is_action_just_pressed("Dash") and not is_attacking and not dead:
 		$DashTimer.start()
 		speed *= 10
 		velocity = input * speed
@@ -59,7 +65,7 @@ func attack_finished():
 	
 	
 func select_animation() -> void:
-	if is_attacking:
+	if is_attacking or dead:
 		return
 	if velocity == Vector2.ZERO:
 		playback.travel("Idle")
@@ -75,7 +81,6 @@ func update_animation_parameters():
 	animation_tree["parameters/walk/blend_position"] = input
 	animation_tree["parameters/Idle/blend_position"] = input
 	animation_tree["parameters/Attack1/blend_position"] = input
-	
 
  #reset dash
 func _on_dash_timer_timeout() -> void:
@@ -88,14 +93,27 @@ func _on_sword_hit_box_body_entered(body: Node2D) -> void:
 		
 		
 func takeDamage(amount: int) -> void:
-	if damage_cooldown.time_left > 0:
+	if damage_cooldown.time_left > 0 and not dead:
 		return
 	health -= amount
 	soundDamage.play()
 	PlayerStats.health = health
 	print(health)
+	if health <= 0:
+		die()
 	#Damagecooldown
 	damage_cooldown.start()
 	
-#func die() -> void:
-	
+func die() -> void:
+	dead = true
+	deathAnimFin = false
+	playback.travel("death")
+	$CollisionShape2D.set_deferred("disabled", true)
+	if deathAnimFin:
+		position = checkpointManager.lastLocation
+		dead = false
+		died.emit()
+
+
+func DeathAnimFinished() -> void:
+	deathAnimFin = true
