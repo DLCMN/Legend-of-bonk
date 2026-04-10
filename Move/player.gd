@@ -16,7 +16,6 @@ var maxHealth : int
 var health : int 
 var dead : bool = false
 var checkpointManager
-var deathAnimFin : bool = false
 
 @export var is_attacking = false
 
@@ -106,14 +105,12 @@ func takeDamage(amount: int) -> void:
 	
 func die() -> void:
 	dead = true
-	deathAnimFin = false
 	playback.travel("death")
 	$CollisionShape2D.set_deferred("disabled", true)
-	if deathAnimFin:
-		position = checkpointManager.lastLocation
-		dead = false
-		died.emit()
 
 
 func DeathAnimFinished() -> void:
-	deathAnimFin = true
+	position = checkpointManager.lastLocation
+	dead = false
+	$CollisionShape2D.set_deferred("disabled", false)
+	died.emit()
