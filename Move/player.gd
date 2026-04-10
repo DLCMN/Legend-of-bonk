@@ -7,6 +7,7 @@ signal died
 @export var animation_tree : AnimationTree
 @onready var soundDamage: AudioStreamPlayer2D = $PlayerDamage
 @onready var damage_cooldown: Timer = $DamageCooldown
+@onready var respawn_shield: Timer = $RespawnShield
 
 
 var input : Vector2
@@ -112,5 +113,9 @@ func die() -> void:
 func DeathAnimFinished() -> void:
 	position = checkpointManager.lastLocation
 	dead = false
+	health = PlayerStats.Maxhealth
+	respawn_shield.start()
+
+
+func _on_respawn_shield_timeout() -> void:
 	$CollisionShape2D.set_deferred("disabled", false)
-	died.emit()
