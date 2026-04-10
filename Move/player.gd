@@ -8,6 +8,8 @@ signal died
 @onready var soundDamage: AudioStreamPlayer2D = $PlayerDamage
 @onready var damage_cooldown: Timer = $DamageCooldown
 @onready var respawn_shield: Timer = $RespawnShield
+@onready var hud: CanvasLayer = $"../HUD"
+
 
 
 var input : Vector2
@@ -17,6 +19,8 @@ var maxHealth : int
 var health : int 
 var dead : bool = false
 var checkpointManager
+
+
 
 @export var is_attacking = false
 
@@ -108,13 +112,18 @@ func die() -> void:
 	dead = true
 	playback.travel("death")
 	$CollisionShape2D.set_deferred("disabled", true)
+	respawn_shield.start()
 
 
 func DeathAnimFinished() -> void:
+	await get_tree().create_timer(1.5).timeout
+	died.emit()
+	hud.fade(1.0)
+	await get_tree().create_timer(2).timeout
 	position = checkpointManager.lastLocation
+	hud.fade(0.0)
 	dead = false
 	health = PlayerStats.Maxhealth
-	respawn_shield.start()
 
 
 func _on_respawn_shield_timeout() -> void:

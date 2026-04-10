@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://65b2y3wyhjma" path="res://newEnemies/EvilSleem/evil_sleem.tscn" id="6_5hph3"]
 [ext_resource type="Script" uid="uid://d2hgu144de5mx" path="res://checkpoint_manager.gd" id="7_j7kpp"]
 [ext_resource type="PackedScene" uid="uid://i563vucp4hn2" path="res://Checkpoint.tscn" id="8_bjebc"]
+[ext_resource type="PackedScene" uid="uid://bys1bvclcs8ns" path="res://hud.tscn" id="9_5rr72"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_j7kpp"]
 texture = ExtResource("2_5hph3")
@@ -202,3 +203,5 @@ script = ExtResource("7_j7kpp")
 
 [node name="Checkpoint1" parent="CheckpointManager" unique_id=1216059412 instance=ExtResource("8_bjebc")]
 position = Vector2(392, 229)
+
+[node name="HUD" parent="." unique_id=107477700 instance=ExtResource("9_5rr72")]
