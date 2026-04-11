@@ -3,10 +3,12 @@
 [ext_resource type="Script" uid="uid://d3eas658nf8y6" path="res://hud.gd" id="1_37p78"]
 
 [node name="HUD" type="CanvasLayer" unique_id=107477700]
+process_mode = 3
 script = ExtResource("1_37p78")
 
 [node name="FadeOverlay" type="ColorRect" parent="." unique_id=1432469586]
 modulate = Color(1, 1, 1, 0)
+z_index = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0

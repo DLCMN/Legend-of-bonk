@@ -22,7 +22,7 @@ PlayerStats="*uid://bm5ulbutkgb0f"
 
 [display]
 
-window/size/viewport_width=1175
+window/size/viewport_width=1125
 window/size/viewport_height=675
 window/stretch/mode="viewport"
 
