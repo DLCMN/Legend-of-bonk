@@ -1,8 +1,8 @@
 extends CharacterBody2D
 
 const SPEED: int = 100
-const knockbackForce: int = 150
 
+var knockbackForce: int = 150
 var alive: bool = true
 var target = null
 var targetInRange:bool = false
@@ -21,24 +21,30 @@ var health: int = 75
 
 
 func _physics_process(delta: float) -> void:
+	#resets to show when game starts again
 	if alive:
 		show()
-	if alive and target:
+	if alive and target:    #how it attacks
 		_attack(delta)
 	
 	
-
+#how it targets the player, through getting its position and moving towards it
 func _attack(delta: float) -> void:
 	var direction = (target.position - position).normalized()
 	position += direction * SPEED * delta
-	if targetInRange and alive:
+	if targetInRange and alive: #checks it is touching the player and is alive before attacking otherwise it doesnt follow through
 		animSprite.play("attack")
 	else:
 		animSprite.play("walk")
-
-func take_damage(damage: int, attacker_position) -> void:
+#how the enemy's health deducts, and specifies if the damage is coming from the player or companion
+func take_damage(damage: int, attacker_position, body) -> void:
+	if body.name == "Player":
+		knockbackForce = 100
+	else:
+		knockbackForce = 25
+	
 	health -= damage
-	healthBar.updateHealth(health)
+	healthBar.updateHealth(health)  # updates visible healthbar
 	if health <= 0:
 		die()
 	else:
@@ -53,7 +59,7 @@ func take_damage(damage: int, attacker_position) -> void:
 		tween.set_trans(Tween.TRANS_CUBIC)
 		tween.tween_property(self, "position", targetPosition, 0.3)
 	
-	
+	#enemy dying
 func die() -> void:
 	alive = false
 	animSprite.play("death")
@@ -65,7 +71,7 @@ func die() -> void:
 	$Sight/CollisionShape2D.set_deferred("disabled", true)
 	$Hitbox/CollisionShape2D.set_deferred("disabled", true)
 
-	
+	#targeting the player
 func _on_sight_body_entered(body: Node2D) -> void:
 	if body.name == "Player":
 		target = body
@@ -77,12 +83,12 @@ func _on_sight_body_exited(body: Node2D) -> void:
 		target = null
 		animSprite.play("idle")
 
-
+#after a certain amount of time after it dies, the sprite dissapears
 func _on_evaporation_timeout() -> void:
 	if not alive:
 		hide()
 
-
+#actually hitting the player only when it is within range
 func _on_hitbox_body_entered(body: Node2D) -> void:
 	if body.name == "Player":
 		targetInRange = true
@@ -94,7 +100,7 @@ func _on_hitbox_body_exited(body: Node2D) -> void:
 	if body.name == "Player":
 		targetInRange = false
 		attack_timer.stop()
-
+#attack cooldown
 func _on_attack_timer_timeout() -> void:
 	if target and targetInRange:
 		target.takeDamage(strength)

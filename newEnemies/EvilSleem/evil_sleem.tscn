@@ -8,7 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://cf81qqjhwe04m" path="res://health_bar.tscn" id="6_4pejn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4hv5h"]
-size = Vector2(14.75, 12)
+size = Vector2(14, 11)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_uqpha"]
 atlas = ExtResource("1_4hv5h")
@@ -303,7 +303,7 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_4hv5h"]
-radius = 77.00649
+radius = 90.00139
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4pejn"]
 radius = 6.5
@@ -316,11 +316,12 @@ collision_mask = 0
 script = ExtResource("1_uqpha")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=32672050]
-position = Vector2(0.625, -0.25)
+position = Vector2(0, 1)
 shape = SubResource("RectangleShape2D_4hv5h")
 
 [node name="evilSleemSprite" type="AnimatedSprite2D" parent="." unique_id=1565758002]
-position = Vector2(-0.5, 0.5)
+self_modulate = Color(0.65882355, 0.21960784, 0.9411765, 0.8235294)
+position = Vector2(-0.5, 0)
 sprite_frames = SubResource("SpriteFrames_ogirt")
 animation = &"attack"
 autoplay = "idle"
@@ -328,6 +329,7 @@ frame = 3
 frame_progress = 0.35879812
 
 [node name="Sight" type="Area2D" parent="." unique_id=811138938]
+collision_layer = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sight" unique_id=1244766896]
 position = Vector2(1.5, 0)
@@ -345,7 +347,7 @@ stream = ExtResource("4_4pejn")
 stream = ExtResource("5_0fcgj")
 
 [node name="HealthBar" parent="." unique_id=277792686 instance=ExtResource("6_4pejn")]
-position = Vector2(-5.9, 6.5)
+position = Vector2(-6.5, 6.5)
 scale = Vector2(0.8, 0.8)
 
 [node name="Evaporation" type="Timer" parent="." unique_id=54429425]
@@ -354,6 +356,7 @@ wait_time = 3.0
 [node name="Hitbox" type="Area2D" parent="." unique_id=1247146665]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox" unique_id=1872710725]
+visible = false
 position = Vector2(0.5, 1.25)
 rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_4pejn")

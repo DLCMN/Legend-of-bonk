@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://pyd2asmie78m" path="res://assets/Pixel Art Furniture Pack - FREE/Forest TopDown PixelArt Tileset.png" id="2_5hph3"]
 [ext_resource type="PackedScene" uid="uid://bq8vi3nwkcsbh" path="res://Move/movement.tscn" id="2_hbghi"]
 [ext_resource type="PackedScene" uid="uid://65b2y3wyhjma" path="res://newEnemies/EvilSleem/evil_sleem.tscn" id="6_5hph3"]
+[ext_resource type="PackedScene" uid="uid://bc2mh7ylwndcv" path="res://sleem_friend.tscn" id="6_gyffv"]
 [ext_resource type="Script" uid="uid://d2hgu144de5mx" path="res://checkpoint_manager.gd" id="7_j7kpp"]
 [ext_resource type="PackedScene" uid="uid://i563vucp4hn2" path="res://Checkpoint.tscn" id="8_bjebc"]
 [ext_resource type="PackedScene" uid="uid://bys1bvclcs8ns" path="res://hud.tscn" id="9_5rr72"]
@@ -205,3 +206,6 @@ script = ExtResource("7_j7kpp")
 position = Vector2(392, 229)
 
 [node name="HUD" parent="." unique_id=107477700 instance=ExtResource("9_5rr72")]
+
+[node name="SleemFriend" parent="." unique_id=1720382389 instance=ExtResource("6_gyffv")]
+position = Vector2(679, 590)
