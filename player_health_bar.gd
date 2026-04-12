@@ -10,10 +10,14 @@ func _ready() -> void:
 	
 func updateHealth(new_health: int) -> void:
 	value = new_health
+	
+	
 
 func _physics_process(_float) -> void:
 	if value <= 0:
 		playerHeart.play("Death")
+		
+		
 	else:
 		if value > (max_value/4*3):
 			playerHeart.play("FullHealth")

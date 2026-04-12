@@ -10,6 +10,7 @@ extends CharacterBody2D
 @onready var hud: CanvasLayer = $"../HUD"
 @onready var player_health_bar: TextureProgressBar = $CanvasLayer/playerHealthBar
 @onready var player_heart: AnimatedSprite2D = $CanvasLayer/playerHealthBar/PlayerHeart
+@onready var heart_break_sound: AudioStreamPlayer2D = $heartBreakSound
 
 
 
@@ -24,6 +25,7 @@ var strength : int = 15
 var maxHealth : int
 var health : int 
 var dead : bool = false
+var friendDead : bool = false
 var checkpointManager
 
 
@@ -99,7 +101,7 @@ func _on_dash_timer_timeout() -> void:
 
 func _on_sword_hit_box_body_entered(body: Node2D) -> void:
 	if is_attacking and body.name.begins_with("Evil") :
-		body.take_damage(strength, position)
+		body.take_damage(strength, position, self)
 		
 		
 func takeDamage(amount: int) -> void:
@@ -116,14 +118,18 @@ func takeDamage(amount: int) -> void:
 	
 func die() -> void:
 	dead = true
+	friendDead = true
 	playback.travel("death")
 	$CollisionShape2D.set_deferred("disabled", true)
 	respawn_shield.start()
 
 
 func DeathAnimFinished() -> void:
-	await get_tree().create_timer(1.5).timeout
+	await get_tree().create_timer(0.7).timeout
+	heart_break_sound.play()
+	await get_tree().create_timer(0.8).timeout
 	await hud.fade(1.0)
+	friendDead = false
 	position = checkpointManager.lastLocation
 	health = PlayerStats.Maxhealth
 	player_health_bar.updateHealth(health)

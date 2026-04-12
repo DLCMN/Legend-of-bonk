@@ -1,8 +1,8 @@
 extends CharacterBody2D
 
 const SPEED: int = 100
-const knockbackForce: int = 150
 
+var knockbackForce: int = 150
 var alive: bool = true
 var target = null
 var targetInRange:bool = false
@@ -36,7 +36,12 @@ func _attack(delta: float) -> void:
 	else:
 		animSprite.play("walk")
 
-func take_damage(damage: int, attacker_position) -> void:
+func take_damage(damage: int, attacker_position, body) -> void:
+	if body.name == "Player":
+		knockbackForce = 150
+	else:
+		knockbackForce = 25
+	
 	health -= damage
 	healthBar.updateHealth(health)
 	if health <= 0:
