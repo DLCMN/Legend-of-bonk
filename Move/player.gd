@@ -4,6 +4,8 @@ extends CharacterBody2D
 
 @export var speed : float = 150
 @export var animation_tree : AnimationTree
+@export var atkNumber: int = 3
+
 @onready var soundDamage: AudioStreamPlayer2D = $PlayerDamage
 @onready var damage_cooldown: Timer = $DamageCooldown
 @onready var respawn_shield: Timer = $RespawnShield
@@ -27,13 +29,14 @@ var health : int
 var dead : bool = false
 var friendDead : bool = false
 var checkpointManager
-
+var cooldownCombo: bool = false
 
 
 @export var is_attacking = false
 
 #animation running the last frame compared to new one
 func _ready() -> void:
+	animation_tree.active = true
 	#load health
 	health = PlayerStats.health
 	maxHealth = PlayerStats.Maxhealth
@@ -46,11 +49,21 @@ func _physics_process(_delta: float) -> void:
 	if not is_attacking and not dead:
 		input = Input.get_vector("left", "right", "up", "down")
 	
-	if Input.is_action_just_pressed("Attack") and not is_attacking and not dead:
+	if Input.is_action_just_pressed("Attack") and not is_attacking and not dead and not cooldownCombo:
 		is_attacking = true
 		print("Attack")
 		velocity = Vector2.ZERO
-		playback.travel("Attack1") #go to attack
+		if Input.is_action_just_pressed("Attack") and atkNumber == 3:
+			playback.travel("Attack1") #go to attack
+			removeAtkNumber()
+		elif Input.is_action_just_pressed("Attack") and atkNumber == 2:
+			playback.travel("Attack2") #go to attack
+			removeAtkNumber()
+		elif Input.is_action_just_pressed("Attack") and atkNumber == 1:
+			playback.travel("Attack3") #go to attack
+			removeAtkNumber()
+			comboCooldown()
+			
 		
 	
 	else:
@@ -75,6 +88,14 @@ func _physics_process(_delta: float) -> void:
 func attack_finished():
 	is_attacking = false
 	
+func removeAtkNumber():
+	print(atkNumber)
+	if atkNumber <= 1:
+		atkNumber = 3
+	else:
+		atkNumber = atkNumber - 1
+		
+	
 	
 func select_animation() -> void:
 	if is_attacking or dead:
@@ -93,6 +114,9 @@ func update_animation_parameters():
 	animation_tree["parameters/walk/blend_position"] = input
 	animation_tree["parameters/Idle/blend_position"] = input
 	animation_tree["parameters/Attack1/blend_position"] = input
+	animation_tree["parameters/Attack2/blend_position"] = input
+	animation_tree["parameters/Attack3/blend_position"] = input
+
 
  #reset dash
 func _on_dash_timer_timeout() -> void:
@@ -133,10 +157,19 @@ func DeathAnimFinished() -> void:
 	position = checkpointManager.lastLocation
 	health = PlayerStats.Maxhealth
 	player_health_bar.updateHealth(health)
+	playback.travel("Idle")
 	await hud.fade(0.3)
 	dead = false
+	is_attacking = false
+	cooldownCombo = false
 	hud.fade(0.0)
 	
+	
+func comboCooldown():
+	cooldownCombo = true
+	await get_tree().create_timer(0.4).timeout
+	cooldownCombo = false
+
 
 func _on_respawn_shield_timeout() -> void:
 	$CollisionShape2D.set_deferred("disabled", false)

@@ -38,7 +38,7 @@ func _attack(delta: float) -> void:
 
 func take_damage(damage: int, attacker_position, body) -> void:
 	if body.name == "Player":
-		knockbackForce = 150
+		knockbackForce = 100
 	else:
 		knockbackForce = 25
 	
