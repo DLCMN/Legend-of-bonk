@@ -4,6 +4,7 @@
 
 [node name="HUD" type="CanvasLayer" unique_id=107477700]
 process_mode = 3
+layer = 10
 script = ExtResource("1_37p78")
 
 [node name="FadeOverlay" type="ColorRect" parent="." unique_id=1432469586]

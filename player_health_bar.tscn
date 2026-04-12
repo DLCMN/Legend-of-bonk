@@ -3,6 +3,147 @@
 [ext_resource type="Texture2D" uid="uid://dgsvrbyy0wawa" path="res://Move/HealthBarEmpty.png" id="1_8jm6k"]
 [ext_resource type="Texture2D" uid="uid://bgowd027i5t8j" path="res://Move/HealthBarFull.png" id="2_hf6ab"]
 [ext_resource type="Script" uid="uid://doddkkroe2ym8" path="res://player_health_bar.gd" id="3_hf6ab"]
+[ext_resource type="Texture2D" uid="uid://bebwr8uwr8atx" path="res://Move/PlayerHeart.png" id="4_lde8s"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lde8s"]
+atlas = ExtResource("4_lde8s")
+region = Rect2(0, 0, 20, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r3kxx"]
+atlas = ExtResource("4_lde8s")
+region = Rect2(20, 0, 20, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hq70p"]
+atlas = ExtResource("4_lde8s")
+region = Rect2(40, 0, 20, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3vk72"]
+atlas = ExtResource("4_lde8s")
+region = Rect2(0, 20, 20, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qcuhp"]
+atlas = ExtResource("4_lde8s")
+region = Rect2(20, 20, 20, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hff6k"]
+atlas = ExtResource("4_lde8s")
+region = Rect2(40, 20, 20, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3rpff"]
+atlas = ExtResource("4_lde8s")
+region = Rect2(60, 20, 20, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p0ir5"]
+atlas = ExtResource("4_lde8s")
+region = Rect2(0, 0, 20, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_32grd"]
+atlas = ExtResource("4_lde8s")
+region = Rect2(20, 0, 20, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5qgk0"]
+atlas = ExtResource("4_lde8s")
+region = Rect2(0, 0, 20, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dwfq1"]
+atlas = ExtResource("4_lde8s")
+region = Rect2(20, 0, 20, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bd8e3"]
+atlas = ExtResource("4_lde8s")
+region = Rect2(40, 0, 20, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dl7uq"]
+atlas = ExtResource("4_lde8s")
+region = Rect2(20, 0, 20, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_stlpo"]
+atlas = ExtResource("4_lde8s")
+region = Rect2(60, 0, 20, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ifiwx"]
+atlas = ExtResource("4_lde8s")
+region = Rect2(40, 0, 20, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4jupk"]
+atlas = ExtResource("4_lde8s")
+region = Rect2(0, 0, 20, 20)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_r3kxx"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lde8s")
+}, {
+"duration": 2.2,
+"texture": SubResource("AtlasTexture_r3kxx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hq70p")
+}],
+"loop": true,
+"name": &"3QuarterHealth",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 3.5,
+"texture": SubResource("AtlasTexture_3vk72")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qcuhp")
+}, {
+"duration": 1.25,
+"texture": SubResource("AtlasTexture_hff6k")
+}, {
+"duration": 6.0,
+"texture": SubResource("AtlasTexture_3rpff")
+}],
+"loop": false,
+"name": &"Death",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p0ir5")
+}, {
+"duration": 2.0,
+"texture": SubResource("AtlasTexture_32grd")
+}],
+"loop": true,
+"name": &"FullHealth",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 0.75,
+"texture": SubResource("AtlasTexture_5qgk0")
+}, {
+"duration": 1.8,
+"texture": SubResource("AtlasTexture_dwfq1")
+}, {
+"duration": 0.75,
+"texture": SubResource("AtlasTexture_bd8e3")
+}],
+"loop": true,
+"name": &"HalfHealth",
+"speed": 4.0
+}, {
+"frames": [{
+"duration": 2.0,
+"texture": SubResource("AtlasTexture_dl7uq")
+}, {
+"duration": 1.25,
+"texture": SubResource("AtlasTexture_stlpo")
+}, {
+"duration": 0.75,
+"texture": SubResource("AtlasTexture_ifiwx")
+}, {
+"duration": 0.75,
+"texture": SubResource("AtlasTexture_4jupk")
+}],
+"loop": true,
+"name": &"LowHealth",
+"speed": 7.5
+}]
 
 [node name="playerHealthBar" type="TextureProgressBar" unique_id=641231933]
 anchors_preset = 1
@@ -17,3 +158,10 @@ scale = Vector2(2.75, 2.75)
 texture_under = ExtResource("1_8jm6k")
 texture_progress = ExtResource("2_hf6ab")
 script = ExtResource("3_hf6ab")
+
+[node name="PlayerHeart" type="AnimatedSprite2D" parent="." unique_id=49384580]
+position = Vector2(8, 9)
+sprite_frames = SubResource("SpriteFrames_r3kxx")
+animation = &"Death"
+frame = 3
+frame_progress = 1.0

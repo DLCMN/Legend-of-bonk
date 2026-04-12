@@ -9,6 +9,7 @@ extends CharacterBody2D
 @onready var respawn_shield: Timer = $RespawnShield
 @onready var hud: CanvasLayer = $"../HUD"
 @onready var player_health_bar: TextureProgressBar = $CanvasLayer/playerHealthBar
+@onready var player_heart: AnimatedSprite2D = $CanvasLayer/playerHealthBar/PlayerHeart
 
 
 
@@ -108,7 +109,6 @@ func takeDamage(amount: int) -> void:
 	soundDamage.play()
 	PlayerStats.health = health
 	player_health_bar.updateHealth(health)
-	print(health)
 	if health <= 0:
 		die()
 	#Damagecooldown
@@ -123,15 +123,14 @@ func die() -> void:
 
 func DeathAnimFinished() -> void:
 	await get_tree().create_timer(1.5).timeout
-	player_health_bar.hide()
-	hud.fade(1.0)
-	await get_tree().create_timer(2).timeout
+	await hud.fade(1.0)
 	position = checkpointManager.lastLocation
-	await hud.fade(0.0)
-	dead = false
 	health = PlayerStats.Maxhealth
-	player_health_bar.show()
 	player_health_bar.updateHealth(health)
+	await hud.fade(0.3)
+	dead = false
+	hud.fade(0.0)
+	
 
 func _on_respawn_shield_timeout() -> void:
 	$CollisionShape2D.set_deferred("disabled", false)

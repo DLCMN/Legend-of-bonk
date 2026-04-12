@@ -1030,6 +1030,7 @@ one_shot = true
 wait_time = 6.0
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=210792244]
+layer = 2
 follow_viewport_enabled = true
 
 [node name="playerHealthBar" parent="CanvasLayer" unique_id=641231933 instance=ExtResource("4_38sxq")]
