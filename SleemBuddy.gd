@@ -17,13 +17,20 @@ var summoned: bool = true
 var enemyTarget = null
 
 func _physics_process(_delta: float) -> void:
+	
+	#setting what direction to follow player
 	var to_player: Vector2 = (bonk.position - position)
 	var direction = to_player.length()
+	
+	#if unlocked, show
 	if summoned:
+		#cry if player dies
 		if bonk.friendDead == true:
 			mourn()
 		else:
+			#move if not in the middle of telporting
 			if not teleporting:
+				#tells it to follow player until it reachs that distance away
 				if direction > 50:
 					velocity = to_player.normalized() * moveSpeed
 					sleemAnimation.play("walk")
@@ -32,6 +39,7 @@ func _physics_process(_delta: float) -> void:
 					velocity = Vector2.ZERO
 					sleemAnimation.play("idle")
 					
+				#player pushes sleem
 				if direction < 20:
 					var knockbackDirection = (position - bonk.position).normalized()
 					var targetPosition = position + knockbackDirection * knockbackForce
@@ -41,6 +49,7 @@ func _physics_process(_delta: float) -> void:
 					tween.set_trans(Tween.TRANS_CUBIC)
 					tween.tween_property(self, "position", targetPosition, 0.5)
 					
+				#teleportation
 				if direction > 250:
 					teleporting = true
 					sleemAnimation.play("TeleportStart")
@@ -54,16 +63,16 @@ func _physics_process(_delta: float) -> void:
 					
 	else:
 		hide()
-
+#cry
 func mourn():
 	sleemAnimation.play("sleemCry")
 
-
+#tells system when sleem stops teleporting
 func _on_animated_sprite_2d_animation_finished() -> void:
 	if sleemAnimation.animation == "TeleportStart":
 		teleporting = false
 
-
+#targets enemy and shoots
 func _on_sight_body_entered(body: Node2D) -> void:
 	if body.name.begins_with("Evil"):
 		enemyTarget = body
@@ -87,12 +96,13 @@ func collisionChecker():
 	
 
 func shoot():
+	#ensures enemy is in range and is attacking player, then shoots
 	if enemyTarget and enemyTarget.target:
 		var bullet = ammo.instantiate()
 		bullet.position = position
 		bullet.direction = (rayCast.target_position).normalized()
 		get_tree().current_scene.add_child(bullet)
-
+#nerfs the sleem
 func _on_bullet_cooldown_timeout() -> void:
 	shoot()
 	

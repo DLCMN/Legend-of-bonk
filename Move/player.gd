@@ -48,7 +48,7 @@ func _ready() -> void:
 func _physics_process(_delta: float) -> void:
 	if not is_attacking and not dead:
 		input = Input.get_vector("left", "right", "up", "down")
-	
+	#the attack + the deciding which combo its on, so which animation to play
 	if Input.is_action_just_pressed("Attack") and not is_attacking and not dead and not cooldownCombo:
 		is_attacking = true
 		print("Attack")
@@ -67,7 +67,7 @@ func _physics_process(_delta: float) -> void:
 		
 	
 	else:
-		#only move when not attacking pls
+		#only move when not attacking
 		if not is_attacking and not dead:
 			velocity = input * speed
 		else:
@@ -83,11 +83,11 @@ func _physics_process(_delta: float) -> void:
 		speed *= 10
 		velocity = input * speed
 
-	#runs animation
 
+#ending attack
 func attack_finished():
 	is_attacking = false
-	
+#combo countdown
 func removeAtkNumber():
 	print(atkNumber)
 	if atkNumber <= 1:
@@ -96,7 +96,7 @@ func removeAtkNumber():
 		atkNumber = atkNumber - 1
 		
 	
-	
+		#runs animation
 func select_animation() -> void:
 	if is_attacking or dead:
 		return
@@ -122,12 +122,12 @@ func update_animation_parameters():
 func _on_dash_timer_timeout() -> void:
 	speed = 150
 
-
+#attacking the enemy when it swings with something in it
 func _on_sword_hit_box_body_entered(body: Node2D) -> void:
 	if is_attacking and body.name.begins_with("Evil") :
 		body.take_damage(strength, position, self)
 		
-		
+# how the player takes damage and eventually dies
 func takeDamage(amount: int) -> void:
 	if damage_cooldown.time_left > 0 and not dead:
 		return
@@ -140,6 +140,7 @@ func takeDamage(amount: int) -> void:
 	#Damagecooldown
 	damage_cooldown.start()
 	
+#death
 func die() -> void:
 	dead = true
 	friendDead = true
@@ -147,29 +148,29 @@ func die() -> void:
 	$CollisionShape2D.set_deferred("disabled", true)
 	respawn_shield.start()
 
-
+#actually resetting + respawning and running the screen fade
 func DeathAnimFinished() -> void:
 	await get_tree().create_timer(0.7).timeout
 	heart_break_sound.play()
 	await get_tree().create_timer(0.8).timeout
 	await hud.fade(1.0)
-	friendDead = false
+	friendDead = false #notifys sleem to stop crying
 	position = checkpointManager.lastLocation
 	health = PlayerStats.Maxhealth
 	player_health_bar.updateHealth(health)
 	playback.travel("Idle")
 	await hud.fade(0.3)
-	dead = false
+	dead = false #resetting various variables
 	is_attacking = false
 	cooldownCombo = false
 	hud.fade(0.0)
 	
-	
+	 #making it so the combo actually appears as a combo and not just a spam of three animations
 func comboCooldown():
 	cooldownCombo = true
 	await get_tree().create_timer(0.4).timeout
 	cooldownCombo = false
 
-
+#temporary respawn invulnerability so player doesnt get spawn killed
 func _on_respawn_shield_timeout() -> void:
 	$CollisionShape2D.set_deferred("disabled", false)
