@@ -10,7 +10,7 @@ var playback : AnimationNodeStateMachinePlayback
 func _ready():
 	playback = animation_tree["parameters/playback"]
 	z_index = 10  
-	GameManager.register_player(self)
+	#GameManager.register_player(self)
 
 func _physics_process(delta: float) -> void:
 	input = Input.get_vector("left" , "right" , "up" , "down")

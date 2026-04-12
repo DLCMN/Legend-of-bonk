@@ -30,6 +30,10 @@ region = Rect2(48, 32, 16, 16)
 atlas = ExtResource("1_4hv5h")
 region = Rect2(64, 32, 16, 16)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_qk4r7"]
+atlas = ExtResource("1_4hv5h")
+region = Rect2(0, 16, 16, 16)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_toyxm"]
 atlas = ExtResource("1_4hv5h")
 region = Rect2(0, 48, 16, 16)
@@ -65,10 +69,6 @@ region = Rect2(112, 48, 16, 16)
 [sub_resource type="AtlasTexture" id="AtlasTexture_g73y6"]
 atlas = ExtResource("1_4hv5h")
 region = Rect2(128, 48, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_qk4r7"]
-atlas = ExtResource("1_4hv5h")
-region = Rect2(0, 16, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_q5hhd"]
 atlas = ExtResource("1_4hv5h")
@@ -179,6 +179,9 @@ animations = [{
 }, {
 "duration": 0.75,
 "texture": SubResource("AtlasTexture_m2htl")
+}, {
+"duration": 3.0,
+"texture": SubResource("AtlasTexture_qk4r7")
 }],
 "loop": true,
 "name": &"attack",
@@ -300,10 +303,14 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_4hv5h"]
-radius = 63.767643
+radius = 77.00649
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4pejn"]
+radius = 6.5
+height = 16.0
 
 [node name="EvilSleem" type="CharacterBody2D" unique_id=629169447]
-scale = Vector2(4, 4)
+scale = Vector2(2, 2)
 collision_layer = 2
 collision_mask = 0
 script = ExtResource("1_uqpha")
@@ -313,18 +320,22 @@ position = Vector2(0.625, -0.25)
 shape = SubResource("RectangleShape2D_4hv5h")
 
 [node name="evilSleemSprite" type="AnimatedSprite2D" parent="." unique_id=1565758002]
+position = Vector2(-0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_ogirt")
-animation = &"death"
+animation = &"attack"
 autoplay = "idle"
+frame = 3
+frame_progress = 0.35879812
 
 [node name="Sight" type="Area2D" parent="." unique_id=811138938]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sight" unique_id=1244766896]
+position = Vector2(1.5, 0)
 shape = SubResource("CircleShape2D_4hv5h")
 
 [node name="Sleemdie" type="AudioStreamPlayer2D" parent="." unique_id=934944880]
 stream = ExtResource("3_s2cuy")
-volume_db = -0.28
+volume_db = -0.4
 pitch_scale = 0.65
 
 [node name="SleemHit" type="AudioStreamPlayer2D" parent="." unique_id=221427630]
@@ -340,6 +351,18 @@ scale = Vector2(0.8, 0.8)
 [node name="Evaporation" type="Timer" parent="." unique_id=54429425]
 wait_time = 3.0
 
+[node name="Hitbox" type="Area2D" parent="." unique_id=1247146665]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox" unique_id=1872710725]
+position = Vector2(0.5, 1.25)
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_4pejn")
+
+[node name="AttackTimer" type="Timer" parent="." unique_id=2133921524]
+
 [connection signal="body_entered" from="Sight" to="." method="_on_sight_body_entered"]
 [connection signal="body_exited" from="Sight" to="." method="_on_sight_body_exited"]
 [connection signal="timeout" from="Evaporation" to="." method="_on_evaporation_timeout"]
+[connection signal="body_entered" from="Hitbox" to="." method="_on_hitbox_body_entered"]
+[connection signal="body_exited" from="Hitbox" to="." method="_on_hitbox_body_exited"]
+[connection signal="timeout" from="AttackTimer" to="." method="_on_attack_timer_timeout"]

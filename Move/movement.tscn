@@ -2,6 +2,8 @@
 
 [ext_resource type="Script" uid="uid://bygb3s6x5cdg3" path="res://Move/player.gd" id="1_ctiow"]
 [ext_resource type="Texture2D" uid="uid://mvst422jvd4" path="res://Move/AttackPH.png" id="2_dyqxk"]
+[ext_resource type="AudioStream" uid="uid://cukbg18i6cr08" path="res://Move/BonkBonk.wav" id="3_0pdi0"]
+[ext_resource type="PackedScene" uid="uid://r0m4lbvc7ew8" path="res://player_health_bar.tscn" id="4_38sxq"]
 
 [sub_resource type="Animation" id="Animation_fu8xx"]
 resource_name = "Attack1 - Down"
@@ -813,6 +815,36 @@ tracks/0/keys = {
 "values": [Vector2i(2, 0)]
 }
 
+[sub_resource type="Animation" id="Animation_m73wb"]
+resource_name = "death"
+length = 0.86
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame_coords")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.06666666, 0.13333333, 0.19999999, 0.26666665, 0.33333334, 0.4, 0.46666667, 0.53333336, 0.6, 0.6666667, 0.73333335, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [Vector2i(0, 0), Vector2i(1, 0), Vector2i(2, 0), Vector2i(3, 0), Vector2i(0, 0), Vector2i(1, 0), Vector2i(2, 0), Vector2i(3, 0), Vector2i(0, 0), Vector2i(1, 0), Vector2i(2, 0), Vector2i(3, 0)]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.8333333),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"DeathAnimFinished"
+}]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_38sxq"]
 _data = {
 &"Attack1 - Down": SubResource("Animation_fu8xx"),
@@ -835,7 +867,8 @@ _data = {
 &"WalkDown": SubResource("Animation_eicaj"),
 &"WalkLeft": SubResource("Animation_8qlaw"),
 &"WalkRight": SubResource("Animation_p5v78"),
-&"WalkUp": SubResource("Animation_xabqq")
+&"WalkUp": SubResource("Animation_xabqq"),
+&"death": SubResource("Animation_m73wb")
 }
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_dyqxk"]
@@ -881,6 +914,9 @@ blend_point_2/node = SubResource("AnimationNodeAnimation_i5lk8")
 blend_point_2/pos = Vector2(0, -1)
 blend_point_3/node = SubResource("AnimationNodeAnimation_63cp0")
 blend_point_3/pos = Vector2(-1, 0)
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_0ka7j"]
+animation = &"death"
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_fu8xx"]
 animation = &"WalkDown"
@@ -929,15 +965,17 @@ states/Attack1/node = SubResource("AnimationNodeBlendSpace2D_0ka7j")
 states/Attack1/position = Vector2(590.8, 157.6)
 states/Idle/node = SubResource("AnimationNodeBlendSpace2D_pdh2l")
 states/Idle/position = Vector2(447.6, 69.817604)
+states/death/node = SubResource("AnimationNodeAnimation_0ka7j")
+states/death/position = Vector2(782.8, 171.20001)
 states/walk/node = SubResource("AnimationNodeBlendSpace2D_581qr")
 states/walk/position = Vector2(674.8, 69.76)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ctiow"]
-size = Vector2(71, 80)
+size = Vector2(32.5, 32.5)
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_m73wb"]
-radius = 55.0
-height = 186.0
+radius = 19.0
+height = 62.0
 
 [node name="Player" type="CharacterBody2D" unique_id=1861891870 node_paths=PackedStringArray("animation_tree")]
 script = ExtResource("1_ctiow")
@@ -945,7 +983,7 @@ animation_tree = NodePath("AnimationTree")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=2029401155]
 position = Vector2(1, 0.5)
-scale = Vector2(5.031, 5.031)
+scale = Vector2(2, 2)
 texture = ExtResource("2_dyqxk")
 hframes = 4
 vframes = 13
@@ -961,7 +999,7 @@ parameters/Idle/blend_position = Vector2(0, 0)
 parameters/walk/blend_position = Vector2(0, 0)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1318628449]
-position = Vector2(0.5, 0)
+position = Vector2(0.75, 0.75)
 shape = SubResource("RectangleShape2D_ctiow")
 
 [node name="DashTimer" type="Timer" parent="." unique_id=729466158]
@@ -973,7 +1011,7 @@ wait_time = 0.13
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Marker2D/SwordHitBox" unique_id=2145710712]
-position = Vector2(-5.4836273e-06, -63)
+position = Vector2(1, -21)
 rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_m73wb")
 
@@ -981,6 +1019,22 @@ shape = SubResource("CapsuleShape2D_m73wb")
 wait_time = 5.0
 
 [node name="PlayerDamage" type="AudioStreamPlayer2D" parent="." unique_id=138202088]
+stream = ExtResource("3_0pdi0")
+volume_db = 0.75
+
+[node name="DamageCooldown" type="Timer" parent="." unique_id=384940252]
+wait_time = 0.5
+one_shot = true
+
+[node name="RespawnShield" type="Timer" parent="." unique_id=783443919]
+wait_time = 6.0
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=210792244]
+layer = 2
+follow_viewport_enabled = true
+
+[node name="playerHealthBar" parent="CanvasLayer" unique_id=641231933 instance=ExtResource("4_38sxq")]
 
 [connection signal="timeout" from="DashTimer" to="." method="_on_dash_timer_timeout"]
 [connection signal="body_entered" from="Marker2D/SwordHitBox" to="." method="_on_sword_hit_box_body_entered"]
+[connection signal="timeout" from="RespawnShield" to="." method="_on_respawn_shield_timeout"]

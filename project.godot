@@ -17,7 +17,15 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-global="*uid://bbp8cgx7okyb2"
+Global="*uid://bbp8cgx7okyb2"
+PlayerStats="*uid://bm5ulbutkgb0f"
+GameManager="*uid://c3k0cukgk6j2e"
+
+[display]
+
+window/size/viewport_width=1125
+window/size/viewport_height=675
+window/stretch/mode="viewport"
 
 [input]
 
