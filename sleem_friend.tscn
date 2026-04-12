@@ -417,7 +417,7 @@ rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_ppe1o")
 
 [node name="BulletCooldown" type="Timer" parent="." unique_id=1430083547]
-wait_time = 3.0
+wait_time = 2.0
 
 [node name="Sight" type="Area2D" parent="." unique_id=1478528825]
 collision_layer = 3
