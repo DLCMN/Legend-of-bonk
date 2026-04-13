@@ -27,7 +27,3 @@ func update_animation_parameters():
 		
 	animation_tree["parameters/walk/blend_position"] = input
 	
-
-
-func _OnBodyEnteredDown(area_rid: RID, area: Area2D, area_shape_index: int, local_shape_index: int) -> void:
-	pass # Replace with function body.
