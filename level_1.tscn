@@ -209,3 +209,5 @@ position = Vector2(392, 229)
 
 [node name="SleemFriend" parent="." unique_id=1720382389 instance=ExtResource("6_gyffv")]
 position = Vector2(679, 590)
+
+[node name="Items" type="Node2D" parent="." unique_id=1255080206]

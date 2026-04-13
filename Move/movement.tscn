@@ -1083,7 +1083,7 @@ size = Vector2(32.5, 32.5)
 radius = 19.0
 height = 62.0
 
-[node name="Player" type="CharacterBody2D" unique_id=1861891870 node_paths=PackedStringArray("animation_tree")]
+[node name="Player" type="CharacterBody2D" unique_id=1861891870 node_paths=PackedStringArray("animation_tree") groups=["player"]]
 script = ExtResource("1_ctiow")
 animation_tree = NodePath("AnimationTree")
 

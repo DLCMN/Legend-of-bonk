@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://cprb064j3qtix"]
+
+[ext_resource type="Texture2D" uid="uid://c5yagm8sp5e3n" path="res://heart.png" id="1_01648"]
+[ext_resource type="Script" uid="uid://xt0ful0yyotd" path="res://health_pickup.gd" id="1_awyve"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_01648"]
+size = Vector2(42, 39)
+
+[node name="HealthPickup" type="Area2D" unique_id=1642792819]
+script = ExtResource("1_awyve")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=214777934]
+scale = Vector2(3, 3)
+texture = ExtResource("1_01648")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1266898271]
+position = Vector2(0, 1.5)
+shape = SubResource("RectangleShape2D_01648")
+
+[node name="CollectedSound" type="AudioStreamPlayer2D" parent="." unique_id=851331982]
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
