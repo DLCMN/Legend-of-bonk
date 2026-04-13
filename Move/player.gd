@@ -140,14 +140,10 @@ func takeDamage(amount: int) -> void:
 	#Damagecooldown
 	damage_cooldown.start()
 	
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
 
 func _OnBodyEnteredDown(area_rid: RID, area: Area2D, area_shape_index: int, local_shape_index: int) -> void:
 	pass # Replace with function body.
-=======
 #death
 func die() -> void:
 	dead = true
@@ -182,5 +178,3 @@ func comboCooldown():
 #temporary respawn invulnerability so player doesnt get spawn killed
 func _on_respawn_shield_timeout() -> void:
 	$CollisionShape2D.set_deferred("disabled", false)
->>>>>>> 3efe8fb96379fb3cf27a7e0b0bd693d7935bc8d3
->>>>>>> parent of b34b352 (Revert "Camera")
