@@ -1,0 +1,79 @@
+[gd_scene format=3 uid="uid://bwyoq7qjf8f1k"]
+
+[ext_resource type="Script" path="res://main_boss/webs.gd" id="1_hkuoj"]
+[ext_resource type="Texture2D" uid="uid://c5yagm8sp5e3n" path="res://heart.png" id="2_gtndv"]
+[ext_resource type="Texture2D" uid="uid://bpjo54clffuw4" path="res://newEnemies/EvilSleem/OG2SLEEM.png" id="3_vamin"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sdlbc"]
+atlas = ExtResource("2_gtndv")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0ut5f"]
+atlas = ExtResource("3_vamin")
+region = Rect2(80, 48, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jovxe"]
+atlas = ExtResource("3_vamin")
+region = Rect2(96, 48, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ftfhg"]
+atlas = ExtResource("3_vamin")
+region = Rect2(112, 48, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_746i1"]
+atlas = ExtResource("3_vamin")
+region = Rect2(128, 48, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0d3ky"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sdlbc")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0ut5f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jovxe")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ftfhg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_746i1")
+}],
+"loop": false,
+"name": &"explode",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_niyoh"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_3ej0u"]
+
+[node name="Webs" type="Area2D" unique_id=1267333683]
+script = ExtResource("1_hkuoj")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=219963801]
+position = Vector2(-4.7683716e-07, 4.7683716e-07)
+scale = Vector2(1.25, 1.25)
+sprite_frames = SubResource("SpriteFrames_0d3ky")
+animation = &"explode"
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="." unique_id=483541048]
+
+[node name="hitbox" type="Area2D" parent="." unique_id=879111208]
+
+[node name="BulletCollision" type="CollisionShape2D" parent="hitbox" unique_id=356725989]
+shape = SubResource("RectangleShape2D_niyoh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hitbox/BulletCollision" unique_id=2125987564]
+shape = SubResource("CircleShape2D_3ej0u")
+
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_screen_exited"]
+[connection signal="body_entered" from="hitbox" to="." method="_on_hitbox_body_entered"]

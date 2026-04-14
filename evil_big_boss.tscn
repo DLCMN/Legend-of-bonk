@@ -1,165 +1,165 @@
-[gd_scene format=3 uid="uid://iviysg0gv4d"]
+[gd_scene format=3 uid="uid://1kksu0jv0oal"]
 
-[ext_resource type="Script" path="res://main_boss/EvilBigBoss/EvilBigBoss.gd" id="1_ybd31"]
-[ext_resource type="Texture2D" path="res://main_boss/EvilBigBoss/OG2SLEEM.png" id="2_gl5jd"]
-[ext_resource type="AudioStream" path="res://main_boss/EvilBigBoss/SlimeDead.mp3" id="3_wus1q"]
-[ext_resource type="AudioStream" path="res://main_boss/EvilBigBoss/BonkSlime.mp3" id="4_n5hem"]
-[ext_resource type="AudioStream" path="res://main_boss/EvilBigBoss/slimejump.mp3" id="5_41glu"]
-[ext_resource type="PackedScene" path="res://health_bar.tscn" id="6_5t1pv"]
+[ext_resource type="Script" path="res://main_boss/EvilBigBoss/EvilBigBoss.gd" id="1_h5nm3"]
+[ext_resource type="Texture2D" path="res://main_boss/EvilBigBoss/OG2SLEEM.png" id="2_ms86j"]
+[ext_resource type="AudioStream" path="res://main_boss/EvilBigBoss/SlimeDead.mp3" id="3_lb7or"]
+[ext_resource type="AudioStream" path="res://main_boss/EvilBigBoss/BonkSlime.mp3" id="4_6xac1"]
+[ext_resource type="AudioStream" path="res://main_boss/EvilBigBoss/slimejump.mp3" id="5_a8sff"]
+[ext_resource type="PackedScene" uid="uid://cf81qqjhwe04m" path="res://health_bar.tscn" id="6_4a7uq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4hv5h"]
 size = Vector2(14, 11)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_uqpha"]
-atlas = ExtResource("2_gl5jd")
+atlas = ExtResource("2_ms86j")
 region = Rect2(0, 32, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fnbcf"]
-atlas = ExtResource("2_gl5jd")
+atlas = ExtResource("2_ms86j")
 region = Rect2(16, 32, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_b6l2q"]
-atlas = ExtResource("2_gl5jd")
+atlas = ExtResource("2_ms86j")
 region = Rect2(32, 32, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_nhges"]
-atlas = ExtResource("2_gl5jd")
+atlas = ExtResource("2_ms86j")
 region = Rect2(48, 32, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_m2htl"]
-atlas = ExtResource("2_gl5jd")
+atlas = ExtResource("2_ms86j")
 region = Rect2(64, 32, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qk4r7"]
-atlas = ExtResource("2_gl5jd")
+atlas = ExtResource("2_ms86j")
 region = Rect2(0, 16, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_toyxm"]
-atlas = ExtResource("2_gl5jd")
+atlas = ExtResource("2_ms86j")
 region = Rect2(0, 48, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1cts4"]
-atlas = ExtResource("2_gl5jd")
+atlas = ExtResource("2_ms86j")
 region = Rect2(16, 48, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_oy1ih"]
-atlas = ExtResource("2_gl5jd")
+atlas = ExtResource("2_ms86j")
 region = Rect2(32, 48, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_e4ne4"]
-atlas = ExtResource("2_gl5jd")
+atlas = ExtResource("2_ms86j")
 region = Rect2(48, 48, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4bgg1"]
-atlas = ExtResource("2_gl5jd")
+atlas = ExtResource("2_ms86j")
 region = Rect2(64, 48, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_rghtv"]
-atlas = ExtResource("2_gl5jd")
+atlas = ExtResource("2_ms86j")
 region = Rect2(80, 48, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6f8j8"]
-atlas = ExtResource("2_gl5jd")
+atlas = ExtResource("2_ms86j")
 region = Rect2(96, 48, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_s0rtd"]
-atlas = ExtResource("2_gl5jd")
+atlas = ExtResource("2_ms86j")
 region = Rect2(112, 48, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_g73y6"]
-atlas = ExtResource("2_gl5jd")
+atlas = ExtResource("2_ms86j")
 region = Rect2(128, 48, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_q5hhd"]
-atlas = ExtResource("2_gl5jd")
+atlas = ExtResource("2_ms86j")
 region = Rect2(16, 16, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lp6pc"]
-atlas = ExtResource("2_gl5jd")
+atlas = ExtResource("2_ms86j")
 region = Rect2(32, 16, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_i60pt"]
-atlas = ExtResource("2_gl5jd")
+atlas = ExtResource("2_ms86j")
 region = Rect2(48, 16, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vlvv6"]
-atlas = ExtResource("2_gl5jd")
+atlas = ExtResource("2_ms86j")
 region = Rect2(64, 16, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_k7v7y"]
-atlas = ExtResource("2_gl5jd")
+atlas = ExtResource("2_ms86j")
 region = Rect2(80, 16, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ufmwf"]
-atlas = ExtResource("2_gl5jd")
+atlas = ExtResource("2_ms86j")
 region = Rect2(0, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_d1ef4"]
-atlas = ExtResource("2_gl5jd")
+atlas = ExtResource("2_ms86j")
 region = Rect2(32, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_e1iv0"]
-atlas = ExtResource("2_gl5jd")
+atlas = ExtResource("2_ms86j")
 region = Rect2(48, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_wax4b"]
-atlas = ExtResource("2_gl5jd")
+atlas = ExtResource("2_ms86j")
 region = Rect2(64, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5e62x"]
-atlas = ExtResource("2_gl5jd")
+atlas = ExtResource("2_ms86j")
 region = Rect2(80, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_30gjp"]
-atlas = ExtResource("2_gl5jd")
+atlas = ExtResource("2_ms86j")
 region = Rect2(96, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_we8m5"]
-atlas = ExtResource("2_gl5jd")
+atlas = ExtResource("2_ms86j")
 region = Rect2(112, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8m1rq"]
-atlas = ExtResource("2_gl5jd")
+atlas = ExtResource("2_ms86j")
 region = Rect2(128, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_p0d6g"]
-atlas = ExtResource("2_gl5jd")
+atlas = ExtResource("2_ms86j")
 region = Rect2(144, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_extfv"]
-atlas = ExtResource("2_gl5jd")
+atlas = ExtResource("2_ms86j")
 region = Rect2(160, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ra5s5"]
-atlas = ExtResource("2_gl5jd")
+atlas = ExtResource("2_ms86j")
 region = Rect2(176, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_wg26i"]
-atlas = ExtResource("2_gl5jd")
+atlas = ExtResource("2_ms86j")
 region = Rect2(192, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_coogr"]
-atlas = ExtResource("2_gl5jd")
+atlas = ExtResource("2_ms86j")
 region = Rect2(208, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_mt5p4"]
-atlas = ExtResource("2_gl5jd")
+atlas = ExtResource("2_ms86j")
 region = Rect2(224, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_smf2f"]
-atlas = ExtResource("2_gl5jd")
+atlas = ExtResource("2_ms86j")
 region = Rect2(240, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8ox3d"]
-atlas = ExtResource("2_gl5jd")
+atlas = ExtResource("2_ms86j")
 region = Rect2(256, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_457e8"]
-atlas = ExtResource("2_gl5jd")
+atlas = ExtResource("2_ms86j")
 region = Rect2(272, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_aw5it"]
-atlas = ExtResource("2_gl5jd")
+atlas = ExtResource("2_ms86j")
 region = Rect2(0, 0, 16, 16)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ogirt"]
@@ -303,25 +303,23 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_4hv5h"]
-radius = 122.02561
+radius = 126.024796
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4pejn"]
 radius = 6.5
 height = 16.0
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_gl5jd"]
-size = Vector2(34.5, 20)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_scllc"]
+size = Vector2(56, 24.5)
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_ybd31"]
-radius = 112.09036
+[sub_resource type="CircleShape2D" id="CircleShape2D_3j8qv"]
+radius = 107.01051
 
 [node name="EvilBigBoss" type="CharacterBody2D" unique_id=629169447]
-position = Vector2(500, 250)
-rotation = 0.13600439
 scale = Vector2(2, 2)
 collision_layer = 2
 collision_mask = 0
-script = ExtResource("1_ybd31")
+script = ExtResource("1_h5nm3")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=32672050]
 position = Vector2(0, 1)
@@ -330,7 +328,6 @@ shape = SubResource("RectangleShape2D_4hv5h")
 [node name="evilSleemSprite" type="AnimatedSprite2D" parent="." unique_id=1565758002]
 self_modulate = Color(0.65882355, 0.21960784, 0.9411765, 0.8235294)
 position = Vector2(-0.5, 0)
-rotation = -0.0038585535
 sprite_frames = SubResource("SpriteFrames_ogirt")
 animation = &"attack"
 autoplay = "idle"
@@ -345,17 +342,17 @@ position = Vector2(1.5, 0)
 shape = SubResource("CircleShape2D_4hv5h")
 
 [node name="Sleemdie" type="AudioStreamPlayer2D" parent="." unique_id=934944880]
-stream = ExtResource("3_wus1q")
+stream = ExtResource("3_lb7or")
 volume_db = -0.4
 pitch_scale = 0.65
 
 [node name="SleemHit" type="AudioStreamPlayer2D" parent="." unique_id=221427630]
-stream = ExtResource("4_n5hem")
+stream = ExtResource("4_6xac1")
 
 [node name="SleemMove" type="AudioStreamPlayer2D" parent="." unique_id=2140650708]
-stream = ExtResource("5_41glu")
+stream = ExtResource("5_a8sff")
 
-[node name="HealthBar" parent="." unique_id=277792686 instance=ExtResource("6_5t1pv")]
+[node name="HealthBar" parent="." unique_id=277792686 instance=ExtResource("6_4a7uq")]
 position = Vector2(-6.5, 6.5)
 scale = Vector2(0.8, 0.8)
 
@@ -365,33 +362,32 @@ wait_time = 3.0
 [node name="Hitbox" type="Area2D" parent="." unique_id=1247146665]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox" unique_id=1872710725]
+visible = false
 position = Vector2(0.5, 1.25)
 rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_4pejn")
 
 [node name="AttackTimer" type="Timer" parent="." unique_id=2133921524]
 
-[node name="Stab" type="Area2D" parent="." unique_id=1286430296]
+[node name="stab" type="Area2D" parent="." unique_id=1552939597]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Stab" unique_id=823869131]
-position = Vector2(-0.5, 10.5)
-shape = SubResource("RectangleShape2D_gl5jd")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="stab" unique_id=183270620]
+position = Vector2(0, 14.75)
+shape = SubResource("RectangleShape2D_scllc")
 
-[node name="Projectile" type="Area2D" parent="." unique_id=2078384560]
+[node name="projectile" type="Area2D" parent="." unique_id=88622882]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Projectile" unique_id=978448343]
-shape = SubResource("CircleShape2D_ybd31")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="projectile" unique_id=806241214]
+shape = SubResource("CircleShape2D_3j8qv")
 
-[node name="Web ray casts" type="Node2D" parent="." unique_id=1196377183]
+[node name="RayCast2D" type="RayCast2D" parent="." unique_id=986583385]
+target_position = Vector2(-67.5, 72)
 
-[node name="RayCast2D3" type="RayCast2D" parent="Web ray casts" unique_id=1662604206]
-target_position = Vector2(62, 78.5)
+[node name="RayCast2D3" type="RayCast2D" parent="." unique_id=277780179]
+target_position = Vector2(73.5, 65.5)
 
-[node name="RayCast2D2" type="RayCast2D" parent="Web ray casts" unique_id=427276032]
-target_position = Vector2(-81, 70)
-
-[node name="RayCast2D" type="RayCast2D" parent="Web ray casts" unique_id=129841804]
-target_position = Vector2(0, 96)
+[node name="RayCast2D2" type="RayCast2D" parent="." unique_id=1436858161]
+target_position = Vector2(0, 100)
 
 [connection signal="body_entered" from="Sight" to="." method="_on_sight_body_entered"]
 [connection signal="body_exited" from="Sight" to="." method="_on_sight_body_exited"]
@@ -399,5 +395,5 @@ target_position = Vector2(0, 96)
 [connection signal="body_entered" from="Hitbox" to="." method="_on_hitbox_body_entered"]
 [connection signal="body_exited" from="Hitbox" to="." method="_on_hitbox_body_exited"]
 [connection signal="timeout" from="AttackTimer" to="." method="_on_attack_timer_timeout"]
-[connection signal="body_entered" from="Stab" to="." method="_on_stab_body_entered"]
-[connection signal="body_entered" from="Projectile" to="." method="_on_projectile_body_entered"]
+[connection signal="body_entered" from="stab" to="." method="_on_stab_body_entered"]
+[connection signal="body_entered" from="projectile" to="." method="_on_projectile_body_entered"]
