@@ -1,6 +1,9 @@
 class_name player
 extends CharacterBody2D
 
+# To be assigned to Player Health Assets
+@export var player_health_bar : TextureProgressBar =  null
+@export var player_heart : AnimatedSprite2D = null
 
 @export var speed : float = 150
 @export var animation_tree : AnimationTree
@@ -10,8 +13,8 @@ extends CharacterBody2D
 @onready var damage_cooldown: Timer = $DamageCooldown
 @onready var respawn_shield: Timer = $RespawnShield
 @onready var hud: CanvasLayer = $"../HUD"
-@onready var player_health_bar: TextureProgressBar = $CanvasLayer/playerHealthBar
-@onready var player_heart: AnimatedSprite2D = $CanvasLayer/playerHealthBar/PlayerHeart
+# @onready var player_health_bar: TextureProgressBar = $CanvasLayer/playerHealthBar
+# @onready var player_heart: AnimatedSprite2D = $CanvasLayer/playerHealthBar/PlayerHeart
 @onready var heart_break_sound: AudioStreamPlayer2D = $heartBreakSound
 
 
@@ -172,7 +175,7 @@ func DeathAnimFinished() -> void:
 	 #making it so the combo actually appears as a combo and not just a spam of three animations
 func comboCooldown():
 	cooldownCombo = true
-	await get_tree().create_timer(0.4).timeout
+	await get_tree().create_timer(0.2).timeout
 	cooldownCombo = false
 
 #temporary respawn invulnerability so player doesnt get spawn killed

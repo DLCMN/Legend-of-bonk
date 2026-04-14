@@ -400,7 +400,8 @@ height = 6.0
 radius = 204.0
 
 [node name="SleemFriend" type="CharacterBody2D" unique_id=1720382389]
-collision_layer = 2
+collision_layer = 4
+collision_mask = 0
 script = ExtResource("1_766gd")
 ammo = ExtResource("2_t3n2v")
 
@@ -420,8 +421,8 @@ shape = SubResource("CapsuleShape2D_ppe1o")
 wait_time = 2.0
 
 [node name="Sight" type="Area2D" parent="." unique_id=1478528825]
-collision_layer = 3
-collision_mask = 3
+collision_layer = 4
+collision_mask = 7
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sight" unique_id=2140315455]
 shape = SubResource("CircleShape2D_t3n2v")

@@ -311,7 +311,7 @@ height = 16.0
 
 [node name="EvilSleem" type="CharacterBody2D" unique_id=629169447]
 scale = Vector2(2, 2)
-collision_layer = 2
+collision_layer = 4
 collision_mask = 0
 script = ExtResource("1_uqpha")
 
@@ -329,7 +329,8 @@ frame = 3
 frame_progress = 0.35879812
 
 [node name="Sight" type="Area2D" parent="." unique_id=811138938]
-collision_layer = 3
+collision_layer = 4
+collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sight" unique_id=1244766896]
 position = Vector2(1.5, 0)
@@ -354,6 +355,8 @@ scale = Vector2(0.8, 0.8)
 wait_time = 3.0
 
 [node name="Hitbox" type="Area2D" parent="." unique_id=1247146665]
+collision_layer = 4
+collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox" unique_id=1872710725]
 visible = false

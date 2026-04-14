@@ -11,7 +11,7 @@ extends CharacterBody2D
 @onready var rayCast: RayCast2D = $RayCast2D
 
 
-var knockbackForce: int = 20
+var knockbackForce: int = 80
 var teleporting: bool = false
 var summoned: bool = true
 var enemyTarget = null
