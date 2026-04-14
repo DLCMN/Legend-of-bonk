@@ -3,11 +3,16 @@ extends CharacterBody2D
 const SPEED: int = 100
 
 var knockbackForce: int = 150
+
+const DROP_CHANCE:float = 1.0
+
 var alive: bool = true
 var target = null
 var targetInRange:bool = false
 var strength: int  = 10
 var health: int = 75
+
+var health_pickup_scene=preload("res://health_pickup.tscn")
 
 @onready var animSprite: AnimatedSprite2D = $evilSleemSprite
 @onready var soundDamage: AudioStreamPlayer2D = $SleemHit
@@ -71,6 +76,10 @@ func die() -> void:
 	$Sight/CollisionShape2D.set_deferred("disabled", true)
 	$Hitbox/CollisionShape2D.set_deferred("disabled", true)
 
+#Drop health pickup
+	if randf()<=DROP_CHANCE:
+		drop_item()
+
 	#targeting the player
 func _on_sight_body_entered(body: Node2D) -> void:
 	if body.name == "Player":
@@ -104,3 +113,14 @@ func _on_hitbox_body_exited(body: Node2D) -> void:
 func _on_attack_timer_timeout() -> void:
 	if target and targetInRange:
 		target.takeDamage(strength)
+
+
+func drop_item():
+	var drop = health_pickup_scene.instantiate()
+	drop.position=position 
+	var level_root = get_parent()
+	var items_node= level_root.get_node("Items")
+	
+	items_node.call_deferred("add_child", drop)
+	
+	

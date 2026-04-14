@@ -16,11 +16,6 @@ extends CharacterBody2D
 
 
 
-
-
-
-
-
 var input : Vector2
 var playback : AnimationNodeStateMachinePlayback
 var strength : int = 15
@@ -30,7 +25,6 @@ var dead : bool = false
 var friendDead : bool = false
 var checkpointManager
 var cooldownCombo: bool = false
-
 
 @export var is_attacking = false
 
@@ -127,6 +121,18 @@ func _on_sword_hit_box_body_entered(body: Node2D) -> void:
 	if is_attacking and body.name.begins_with("Evil") :
 		body.take_damage(strength, position, self)
 		
+
+func heal(amount: int )-> void:
+	health +=amount
+	if health >= maxHealth:
+		health= maxHealth
+	PlayerStats.health = health
+	player_health_bar.updateHealth(health)
+	
+
+
+
+
 # how the player takes damage and eventually dies
 func takeDamage(amount: int) -> void:
 	if damage_cooldown.time_left > 0 and not dead:
