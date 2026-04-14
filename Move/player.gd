@@ -13,8 +13,6 @@ extends CharacterBody2D
 @onready var damage_cooldown: Timer = $DamageCooldown
 @onready var respawn_shield: Timer = $RespawnShield
 @onready var hud: CanvasLayer = $"../HUD"
-# @onready var player_health_bar: TextureProgressBar = $CanvasLayer/playerHealthBar
-# @onready var player_heart: AnimatedSprite2D = $CanvasLayer/playerHealthBar/PlayerHeart
 @onready var heart_break_sound: AudioStreamPlayer2D = $heartBreakSound
 
 
