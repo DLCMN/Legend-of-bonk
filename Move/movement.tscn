@@ -1082,13 +1082,9 @@ size = Vector2(32.5, 32.5)
 radius = 19.0
 height = 62.0
 
-<<<<<<< HEAD
 [node name="Player" type="CharacterBody2D" unique_id=1861891870 node_paths=PackedStringArray("animation_tree")]
 collision_layer = 3
 collision_mask = 3
-=======
-[node name="Player" type="CharacterBody2D" unique_id=1861891870 node_paths=PackedStringArray("animation_tree") groups=["player"]]
->>>>>>> 79eea9b4b00b8f12995cca8ade6f0f74083f0ef2
 script = ExtResource("1_ctiow")
 animation_tree = NodePath("AnimationTree")
 
