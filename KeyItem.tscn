@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://bpgbhoq0o3d7o"]
+
+[ext_resource type="Script" uid="uid://bghbtqocbx4qk" path="res://Script/key_item.gd" id="1_gslri"]
+[ext_resource type="Texture2D" uid="uid://dfb7mpq8y6176" path="res://assets/Sword Sprite.png" id="2_ljcgb"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nvpgv"]
+size = Vector2(6, 20)
+
+[node name="KeyItem" type="Node2D" unique_id=2086649070]
+script = ExtResource("1_gslri")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=330131867]
+shape = SubResource("RectangleShape2D_nvpgv")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=341161167]
+texture = ExtResource("2_ljcgb")

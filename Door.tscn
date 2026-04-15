@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://cvhyodwqnk65d"]
+
+[ext_resource type="Script" uid="uid://b4b3le5btr3uc" path="res://Script/door.gd" id="1_1vvux"]
+
+[node name="Door" type="Node2D" unique_id=833142503]
+script = ExtResource("1_1vvux")
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=1924431924]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=900510179]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1515647956]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1410336593]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1420776170]
