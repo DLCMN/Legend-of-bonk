@@ -14,6 +14,7 @@ func _ready():
 
 
 func flip(): 
+	$AnimationPlayer.play("flipping")
 	if is_matched or is_flipped or GameManager.checking:
 		return 
 	
@@ -26,6 +27,7 @@ func flip():
 func flip_back():
 	is_flipped = false
 	sprite.texture = face_down_texture
+	$AnimationPlayer.play("flipping")
 
 
 func set_matched(): 

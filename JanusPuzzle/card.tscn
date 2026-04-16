@@ -1,19 +1,34 @@
 [gd_scene format=3 uid="uid://87gos4233mxy"]
 
-[ext_resource type="Script" path="res://card.gd" id="1_kikvd"]
+[ext_resource type="Script" uid="uid://d2wi2x8m6f1dt" path="res://JanusPuzzle/card.gd" id="1_k1o4f"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rjlel"]
 size = Vector2(120.5, 122)
 
+[sub_resource type="Animation" id="Animation_k1o4f"]
+resource_name = "flipping"
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_2tswd"]
+_data = {
+&"flipping": SubResource("Animation_k1o4f")
+}
+
 [node name="card" type="Area2D" unique_id=1539333485]
+light_mask = 6
+visibility_layer = 6
 position = Vector2(548, 182)
 scale = Vector2(0.5, 0.5)
-script = ExtResource("1_kikvd")
+collision_layer = 3
+collision_mask = 3
+script = ExtResource("1_k1o4f")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1413620437]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=764490535]
 position = Vector2(0.75, 0)
 shape = SubResource("RectangleShape2D_rjlel")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1360778964]
+libraries/ = SubResource("AnimationLibrary_2tswd")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

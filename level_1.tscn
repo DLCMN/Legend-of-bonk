@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://bys1bvclcs8ns" path="res://hud.tscn" id="7_1pe0h"]
 [ext_resource type="PackedScene" uid="uid://bc2mh7ylwndcv" path="res://sleem_friend.tscn" id="8_27bay"]
 [ext_resource type="PackedScene" uid="uid://cp8nuuvji53rb" path="res://Camera/room_trans_camera.tscn" id="9_5rr72"]
+[ext_resource type="PackedScene" uid="uid://cur3p5nk6k7yp" path="res://JanusPuzzle/game_manager.tscn" id="10_gyffv"]
 
 [node name="Level1" type="Node2D" unique_id=1321335471]
 
@@ -58,7 +59,28 @@ stream = ExtResource("1_3hls8")
 volume_db = -35.0
 autoplay = true
 
+[node name="cards" parent="." unique_id=481930065 instance=ExtResource("10_gyffv")]
+
+[node name="card" parent="cards" index="0" unique_id=1539333485]
+position = Vector2(148, 573)
+
+[node name="card2" parent="cards" index="1" unique_id=501392757]
+position = Vector2(-194, 577)
+
+[node name="card3" parent="cards" index="2" unique_id=1810234599]
+position = Vector2(-8, 714)
+
+[node name="card4" parent="cards" index="3" unique_id=1688188529]
+position = Vector2(-3, 570)
+
+[node name="card5" parent="cards" index="4" unique_id=1664601371]
+position = Vector2(-188, 711)
+
+[node name="card6" parent="cards" index="5" unique_id=436998077]
+position = Vector2(152, 717)
+
 [node name="Player" parent="." unique_id=1861891870 node_paths=PackedStringArray("player_health_bar", "player_heart") instance=ExtResource("2_hbghi")]
+position = Vector2(2, 650)
 player_health_bar = NodePath("../RoomTransCamera/playerHealthBar")
 player_heart = NodePath("../RoomTransCamera/playerHealthBar/PlayerHeart")
 
@@ -66,18 +88,20 @@ player_heart = NodePath("../RoomTransCamera/playerHealthBar/PlayerHeart")
 script = ExtResource("4_bjebc")
 
 [node name="Checkpoint1" parent="CheckpointManager" unique_id=1216059412 instance=ExtResource("5_5rr72")]
+position = Vector2(-6, 2)
 
 [node name="EvilSleem" parent="." unique_id=629169447 instance=ExtResource("6_gyffv")]
-position = Vector2(-116, -13)
+position = Vector2(133, 27)
 collision_mask = 12
 
 [node name="SleemFriend" parent="." unique_id=1720382389 instance=ExtResource("8_27bay")]
-position = Vector2(163, 3)
+position = Vector2(-147, 652)
 
 [node name="RoomTransCamera" parent="." unique_id=1987845898 node_paths=PackedStringArray("TargetNode") instance=ExtResource("9_5rr72")]
 TargetNode = NodePath("../Player")
 
 [node name="HUD" parent="." unique_id=107477700 instance=ExtResource("7_1pe0h")]
 
+[editable path="cards"]
 [editable path="RoomTransCamera"]
 [editable path="RoomTransCamera/playerHealthBar"]

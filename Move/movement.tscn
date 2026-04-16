@@ -1083,6 +1083,7 @@ radius = 19.0
 height = 62.0
 
 [node name="Player" type="CharacterBody2D" unique_id=1861891870 node_paths=PackedStringArray("animation_tree")]
+z_index = 1
 collision_layer = 3
 collision_mask = 3
 script = ExtResource("1_ctiow")
