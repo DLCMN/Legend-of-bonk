@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://1dud0w8powxn"]
+
+[ext_resource type="Script" uid="uid://mc7oo1wp3dju" path="res://RedKey/RedKeyDropper.gd" id="1_biccj"]
+
+[node name="RedKeyDropper" type="Node2D" unique_id=320869837]
+script = ExtResource("1_biccj")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1542096455]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer" parent="." unique_id=867864271]

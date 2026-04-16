@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://cflc37dtysvf6"]
+
+[ext_resource type="Script" uid="uid://dn733cx82gpau" path="res://RedKey/RedKeyItem.gd" id="1_625ob"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gv60a"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_625ob"]
+
+[node name="RedKeyItem" type="CharacterBody2D" unique_id=345686876]
+script = ExtResource("1_625ob")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1449173090]
+shape = SubResource("RectangleShape2D_gv60a")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1197090031]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1018476988]
+shape = SubResource("RectangleShape2D_625ob")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1397326408]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1044859913]
