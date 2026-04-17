@@ -14,6 +14,7 @@ var health: int = 75
 var jumping: bool = false
 var jumpCountdown = false
 var targetedPosition: Vector2 
+var invincible:bool = false
 
 #var health_pickup_scene=preload("res://health_pickup.tscn")
 
@@ -29,6 +30,8 @@ var targetedPosition: Vector2
 @onready var Shadow : Node2D = get_parent().get_node("Shadow")
 @onready var thePlayer : Node2D = get_parent().get_node("Player")
 
+func _ready() -> void:
+	$CollisionShape2D.set_deferred("disabled", true)
 
 
 func _physics_process(delta: float) -> void:
@@ -45,7 +48,7 @@ func _attack(delta: float) -> void:
 		return
 	if not jumping:
 		if not jumpCountdown and not jumping:
-			JumpDelay.start
+			JumpDelay.start()
 		var direction = (target.position - position).normalized()
 		position += direction * SPEED * delta
 		if targetInRange and alive: #checks it is touching the player and is alive before attacking otherwise it doesnt follow through
@@ -77,19 +80,30 @@ func take_damage(damage: int, attacker_position, body) -> void:
 	
 	
 func JumpTime():
-	jumping = true
-	Shadow.show()
-	await get_tree().create_timer(2).timeout
-	targetedPosition = thePlayer.position
-	
-	animSprite.play("jump")
-	
-	var jumpTween = create_tween()
-	jumpTween.tween_property(self, "global_position", targetedPosition, 0.5).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_OUT)
-	
-	await jumpTween.finished
-	animSprite.play("Slam")
-	
+	if alive:
+		$CollisionShape2D.set_deferred("disabled", true)
+		$Sight/CollisionShape2D.set_deferred("disabled", true)
+		$Hitbox/CollisionShape2D.set_deferred("disabled", true)
+		jumping = true
+		Shadow.shadow = true
+		Shadow.show()
+		invincible = true
+		await get_tree().create_timer(2).timeout
+		Shadow.shadow = false
+		Shadow.hide()
+		targetedPosition = thePlayer.position
+		
+		animSprite.play("jump")
+		
+		var jumpTween = create_tween()
+		jumpTween.tween_property(self, "global_position", targetedPosition, 0.5).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_OUT)
+		
+		await jumpTween.finished
+		$CollisionShape2D.set_deferred("disabled", false)
+		animSprite.play("Slam")
+		await get_tree().create_timer(0.5).timeout
+		$CollisionShape2D.set_deferred("disabled", true)
+		
 	#enemy dying
 func die() -> void:
 	alive = false
@@ -108,13 +122,13 @@ func die() -> void:
 
 	#targeting the player
 func _on_sight_body_entered(body: Node2D) -> void:
-	if body.name == "Player":
+	if body.name == "Player" and not jumping and alive:
 		target = body
 		print(target)
 
 
 func _on_sight_body_exited(body: Node2D) -> void:
-	if body.name == "Player" and alive:
+	if body.name == "Player" and alive :
 		target = null
 		animSprite.play("idle")
 
@@ -125,14 +139,14 @@ func _on_evaporation_timeout() -> void:
 
 #actually hitting the player only when it is within range
 func _on_hitbox_body_entered(body: Node2D) -> void:
-	if body.name == "Player":
+	if body.name == "Player" and not jumping:
 		targetInRange = true
 		body.takeDamage(strength)
 		attack_timer.start()
 		animSprite.play("attack")
 
 func _on_hitbox_body_exited(body: Node2D) -> void:
-	if body.name == "Player":
+	if body.name == "Player" :
 		targetInRange = false
 		attack_timer.stop()
 #attack cooldown
@@ -153,4 +167,15 @@ func _on_attack_timer_timeout() -> void:
 
 
 func _on_jump_delay_timeout() -> void:
-	pass # Replace with function body.
+	JumpTime()
+	
+
+
+
+func _on_evil_sleem_sprite_animation_finished() -> void:
+	invincible = false
+	$CollisionShape2D.set_deferred("disabled", false)
+	await get_tree().create_timer(2).timeout
+	$Sight/CollisionShape2D.set_deferred("disabled", false)
+	$Hitbox/CollisionShape2D.set_deferred("disabled", false)
+	
