@@ -420,19 +420,21 @@ animations = [{
 size = Vector2(14, 11)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_tkcr8"]
-radius = 90.00139
+radius = 230.01956
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_xlhmv"]
-radius = 6.5
-height = 16.0
+radius = 30.5
+height = 69.0
 
 [node name="EvilSleemBoss" type="CharacterBody2D" unique_id=713703177]
+collision_layer = 4
+collision_mask = 0
 script = ExtResource("1_nfld4")
 
 [node name="evilSleemSprite" type="AnimatedSprite2D" parent="." unique_id=1800895430]
 self_modulate = Color(0.65882355, 0.21960784, 0.9411765, 0.8235294)
 position = Vector2(-0.5, 1)
-scale = Vector2(4, 4)
+scale = Vector2(5, 5)
 sprite_frames = SubResource("SpriteFrames_cni7f")
 animation = &"Slam"
 autoplay = "idle"
@@ -446,7 +448,6 @@ collision_layer = 4
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sight" unique_id=34997148]
-position = Vector2(1.5, 0)
 shape = SubResource("CircleShape2D_tkcr8")
 
 [node name="Sleemdie" type="AudioStreamPlayer2D" parent="." unique_id=1360508674]
@@ -476,10 +477,27 @@ position = Vector2(0.5, 1.25)
 rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_xlhmv")
 
+[node name="BodySlam" type="Area2D" parent="." unique_id=694793136]
+collision_layer = 4
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BodySlam" unique_id=324502095]
+position = Vector2(2, 1)
+rotation = 1.5707964
+scale = Vector2(1.5, 1.5)
+shape = SubResource("CapsuleShape2D_xlhmv")
+
 [node name="AttackTimer" type="Timer" parent="." unique_id=324550084]
 
 [node name="JumpDelay" type="Timer" parent="." unique_id=1421025788]
 wait_time = 8.0
 
 [connection signal="animation_finished" from="evilSleemSprite" to="." method="_on_evil_sleem_sprite_animation_finished"]
+[connection signal="body_entered" from="Sight" to="." method="_on_sight_body_entered"]
+[connection signal="body_exited" from="Sight" to="." method="_on_sight_body_exited"]
+[connection signal="timeout" from="Evaporation" to="." method="_on_evaporation_timeout"]
+[connection signal="body_entered" from="Hitbox" to="." method="_on_hitbox_body_entered"]
+[connection signal="body_exited" from="Hitbox" to="." method="_on_hitbox_body_exited"]
+[connection signal="body_entered" from="BodySlam" to="." method="_on_body_slam_body_entered"]
+[connection signal="timeout" from="AttackTimer" to="." method="_on_attack_timer_timeout"]
 [connection signal="timeout" from="JumpDelay" to="." method="_on_jump_delay_timeout"]

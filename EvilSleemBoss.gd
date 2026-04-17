@@ -38,7 +38,7 @@ func _physics_process(delta: float) -> void:
 	#resets to show when game starts again
 	if alive:
 		show()
-	if alive and target:    #how it attacks
+	if alive and target and not jumping:    #how it attacks
 		_attack(delta)
 	
 	
@@ -139,11 +139,13 @@ func _on_evaporation_timeout() -> void:
 
 #actually hitting the player only when it is within range
 func _on_hitbox_body_entered(body: Node2D) -> void:
-	if body.name == "Player" and not jumping:
+	if body.name == "Player" and not jumping and alive:
 		targetInRange = true
-		body.takeDamage(strength)
-		attack_timer.start()
-		animSprite.play("attack")
+		await get_tree().create_timer(0.5).timeout
+		if targetInRange:
+			body.takeDamage(strength)
+			attack_timer.start()
+			animSprite.play("attack")
 
 func _on_hitbox_body_exited(body: Node2D) -> void:
 	if body.name == "Player" :
@@ -172,10 +174,17 @@ func _on_jump_delay_timeout() -> void:
 
 
 
+
 func _on_evil_sleem_sprite_animation_finished() -> void:
 	invincible = false
 	$CollisionShape2D.set_deferred("disabled", false)
 	await get_tree().create_timer(2).timeout
 	$Sight/CollisionShape2D.set_deferred("disabled", false)
 	$Hitbox/CollisionShape2D.set_deferred("disabled", false)
+	
+
+
+func _on_body_slam_body_entered(body: Node2D) -> void:
+	if jumping and alive:
+		body.takeDamage(30)
 	
