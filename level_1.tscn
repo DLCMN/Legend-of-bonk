@@ -10,6 +10,8 @@
 [ext_resource type="PackedScene" uid="uid://bc2mh7ylwndcv" path="res://sleem_friend.tscn" id="8_27bay"]
 [ext_resource type="PackedScene" uid="uid://cp8nuuvji53rb" path="res://Camera/room_trans_camera.tscn" id="9_5rr72"]
 [ext_resource type="PackedScene" uid="uid://cur3p5nk6k7yp" path="res://JanusPuzzle/game_manager.tscn" id="10_gyffv"]
+[ext_resource type="PackedScene" uid="uid://dr2ysu1goxcvt" path="res://newEnemies/SleemMiniBoss/SleemShadow.tscn" id="11_1pe0h"]
+[ext_resource type="PackedScene" uid="uid://b82lnpdlgmlhl" path="res://newEnemies/SleemMiniBoss/evil_sleem_boss.tscn" id="12_27bay"]
 
 [node name="Level1" type="Node2D" unique_id=1321335471]
 
@@ -79,8 +81,9 @@ position = Vector2(-188, 711)
 [node name="card6" parent="cards" index="5" unique_id=436998077]
 position = Vector2(152, 717)
 
+[node name="Shadow" parent="." unique_id=650283062 instance=ExtResource("11_1pe0h")]
+
 [node name="Player" parent="." unique_id=1861891870 node_paths=PackedStringArray("player_health_bar", "player_heart") instance=ExtResource("2_hbghi")]
-position = Vector2(2, 650)
 player_health_bar = NodePath("../RoomTransCamera/playerHealthBar")
 player_heart = NodePath("../RoomTransCamera/playerHealthBar/PlayerHeart")
 
@@ -91,16 +94,19 @@ script = ExtResource("4_bjebc")
 position = Vector2(-6, 2)
 
 [node name="EvilSleem" parent="." unique_id=629169447 instance=ExtResource("6_gyffv")]
-position = Vector2(133, 27)
+position = Vector2(184, 57)
 collision_mask = 12
 
 [node name="SleemFriend" parent="." unique_id=1720382389 instance=ExtResource("8_27bay")]
-position = Vector2(-147, 652)
+position = Vector2(-175, 11)
 
 [node name="RoomTransCamera" parent="." unique_id=1987845898 node_paths=PackedStringArray("TargetNode") instance=ExtResource("9_5rr72")]
 TargetNode = NodePath("../Player")
 
 [node name="HUD" parent="." unique_id=107477700 instance=ExtResource("7_1pe0h")]
+
+[node name="EvilSleemBoss" parent="." unique_id=713703177 instance=ExtResource("12_27bay")]
+position = Vector2(1604, 165)
 
 [editable path="cards"]
 [editable path="RoomTransCamera"]
