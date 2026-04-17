@@ -1,6 +1,7 @@
 [gd_resource type="TileSet" format=3 uid="uid://cbdolxwpgq5l7"]
 
 [ext_resource type="Texture2D" uid="uid://pyd2asmie78m" path="res://assets/Pixel Art Furniture Pack - FREE/Forest TopDown PixelArt Tileset.png" id="1_phsnx"]
+[ext_resource type="Texture2D" uid="uid://db77k4fl4a24q" path="res://grasstester.png" id="2_cljsi"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ihfcg"]
 texture = ExtResource("1_phsnx")
@@ -142,6 +143,18 @@ texture = ExtResource("1_phsnx")
 0:2/0 = 0
 1:2/0 = 0
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_cljsi"]
+texture = ExtResource("2_cljsi")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+
 [resource]
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_ihfcg")
+sources/3 = SubResource("TileSetAtlasSource_cljsi")
