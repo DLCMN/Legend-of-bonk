@@ -10,8 +10,8 @@
 [ext_resource type="PackedScene" uid="uid://bc2mh7ylwndcv" path="res://sleem_friend.tscn" id="8_27bay"]
 [ext_resource type="PackedScene" uid="uid://cp8nuuvji53rb" path="res://Camera/room_trans_camera.tscn" id="9_5rr72"]
 [ext_resource type="PackedScene" uid="uid://cur3p5nk6k7yp" path="res://JanusPuzzle/game_manager.tscn" id="10_gyffv"]
-[ext_resource type="PackedScene" uid="uid://dr2ysu1goxcvt" path="res://SleemShadow.tscn" id="11_1pe0h"]
-[ext_resource type="PackedScene" uid="uid://b82lnpdlgmlhl" path="res://evil_sleem_boss.tscn" id="12_27bay"]
+[ext_resource type="PackedScene" uid="uid://dr2ysu1goxcvt" path="res://newEnemies/SleemMiniBoss/SleemShadow.tscn" id="11_1pe0h"]
+[ext_resource type="PackedScene" uid="uid://b82lnpdlgmlhl" path="res://newEnemies/SleemMiniBoss/evil_sleem_boss.tscn" id="12_27bay"]
 
 [node name="Level1" type="Node2D" unique_id=1321335471]
 

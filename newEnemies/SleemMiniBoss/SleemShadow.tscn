@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dr2ysu1goxcvt"]
 
-[ext_resource type="Script" uid="uid://3kfvqq1qejqr" path="res://shadow.gd" id="1_ndl8c"]
+[ext_resource type="Script" uid="uid://3kfvqq1qejqr" path="res://newEnemies/SleemMiniBoss/shadow.gd" id="1_ndl8c"]
 [ext_resource type="Texture2D" uid="uid://dxnfg7y58rfvp" path="res://newEnemies/EvilSleem/cryingSleem.png" id="2_r0r5y"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_r0r5y"]
