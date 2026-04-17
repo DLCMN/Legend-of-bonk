@@ -9,8 +9,10 @@ size = Vector2(6, 20)
 [node name="KeyItem" type="Node2D" unique_id=2086649070]
 script = ExtResource("1_gslri")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=330131867]
-shape = SubResource("RectangleShape2D_nvpgv")
-
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=341161167]
 texture = ExtResource("2_ljcgb")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=841563599]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=330131867]
+shape = SubResource("RectangleShape2D_nvpgv")
