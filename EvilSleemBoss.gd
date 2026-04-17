@@ -13,18 +13,21 @@ var strength: int  = 10
 var health: int = 75
 var jumping: bool = false
 var jumpCountdown = false
+var targetedPosition: Vector2 
 
 #var health_pickup_scene=preload("res://health_pickup.tscn")
 
 @onready var animSprite: AnimatedSprite2D = $evilSleemSprite
+
 @onready var soundDamage: AudioStreamPlayer2D = $SleemHit
 @onready var soundMove: AudioStreamPlayer2D = $SleemMove
 @onready var soundDeath: AudioStreamPlayer2D = $Sleemdie
 @onready var healthBar: Node2D = $HealthBar
-@onready var evil_sleem_sprite: AnimatedSprite2D = $evilSleemSprite
 @onready var attack_timer: Timer = $AttackTimer
 @onready var JumpDelay: Timer = $JumpDelay
 
+@onready var Shadow : Node2D = get_parent().get_node("Shadow")
+@onready var thePlayer : Node2D = get_parent().get_node("Player")
 
 
 
@@ -71,6 +74,21 @@ func take_damage(damage: int, attacker_position, body) -> void:
 		tween.set_ease(Tween.EASE_OUT)
 		tween.set_trans(Tween.TRANS_CUBIC)
 		tween.tween_property(self, "position", targetPosition, 0.3)
+	
+	
+func JumpTime():
+	jumping = true
+	Shadow.show()
+	await get_tree().create_timer(2).timeout
+	targetedPosition = thePlayer.position
+	
+	animSprite.play("jump")
+	
+	var jumpTween = create_tween()
+	jumpTween.tween_property(self, "global_position", targetedPosition, 0.5).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_OUT)
+	
+	await jumpTween.finished
+	animSprite.play("Slam")
 	
 	#enemy dying
 func die() -> void:
@@ -132,3 +150,7 @@ func _on_attack_timer_timeout() -> void:
 	#items_node.call_deferred("add_child", drop)
 	
 	
+
+
+func _on_jump_delay_timeout() -> void:
+	pass # Replace with function body.

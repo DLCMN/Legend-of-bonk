@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://bc2mh7ylwndcv" path="res://sleem_friend.tscn" id="8_27bay"]
 [ext_resource type="PackedScene" uid="uid://cp8nuuvji53rb" path="res://Camera/room_trans_camera.tscn" id="9_5rr72"]
 [ext_resource type="PackedScene" uid="uid://cur3p5nk6k7yp" path="res://JanusPuzzle/game_manager.tscn" id="10_gyffv"]
+[ext_resource type="PackedScene" uid="uid://dr2ysu1goxcvt" path="res://SleemShadow.tscn" id="11_1pe0h"]
 
 [node name="Level1" type="Node2D" unique_id=1321335471]
 
@@ -100,6 +101,8 @@ position = Vector2(-175, 11)
 TargetNode = NodePath("../Player")
 
 [node name="HUD" parent="." unique_id=107477700 instance=ExtResource("7_1pe0h")]
+
+[node name="Shadow" parent="." unique_id=650283062 instance=ExtResource("11_1pe0h")]
 
 [editable path="cards"]
 [editable path="RoomTransCamera"]
