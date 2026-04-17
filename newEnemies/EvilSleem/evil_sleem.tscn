@@ -305,6 +305,10 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_4hv5h"]
 radius = 90.00139
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4pejn"]
+radius = 8.0
+height = 16.0
+
 [node name="EvilSleem" type="CharacterBody2D" unique_id=629169447]
 scale = Vector2(2, 2)
 collision_layer = 4
@@ -352,7 +356,18 @@ wait_time = 3.0
 
 [node name="AttackTimer" type="Timer" parent="." unique_id=2133921524]
 
+[node name="Hitbox" type="Area2D" parent="." unique_id=1900622598]
+collision_layer = 4
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox" unique_id=538565250]
+position = Vector2(0.5, 1.25)
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_4pejn")
+
 [connection signal="body_entered" from="Sight" to="." method="_on_sight_body_entered"]
 [connection signal="body_exited" from="Sight" to="." method="_on_sight_body_exited"]
 [connection signal="timeout" from="Evaporation" to="." method="_on_evaporation_timeout"]
 [connection signal="timeout" from="AttackTimer" to="." method="_on_attack_timer_timeout"]
+[connection signal="body_entered" from="Hitbox" to="." method="_on_hitbox_body_entered"]
+[connection signal="body_exited" from="Hitbox" to="." method="_on_hitbox_body_exited"]

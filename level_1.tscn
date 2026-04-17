@@ -94,7 +94,7 @@ script = ExtResource("4_bjebc")
 position = Vector2(-6, 2)
 
 [node name="EvilSleem" parent="." unique_id=629169447 instance=ExtResource("6_gyffv")]
-position = Vector2(519, 68)
+position = Vector2(184, 57)
 collision_mask = 12
 
 [node name="SleemFriend" parent="." unique_id=1720382389 instance=ExtResource("8_27bay")]
@@ -106,7 +106,7 @@ TargetNode = NodePath("../Player")
 [node name="HUD" parent="." unique_id=107477700 instance=ExtResource("7_1pe0h")]
 
 [node name="EvilSleemBoss" parent="." unique_id=713703177 instance=ExtResource("12_27bay")]
-position = Vector2(219, -90)
+position = Vector2(1604, 165)
 
 [editable path="cards"]
 [editable path="RoomTransCamera"]
