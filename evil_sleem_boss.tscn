@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://b82lnpdlgmlhl"]
 
 [ext_resource type="Texture2D" uid="uid://bpjo54clffuw4" path="res://newEnemies/EvilSleem/OG2SLEEM.png" id="1_7gm7t"]
+[ext_resource type="Script" uid="uid://b6gvhkeo18xyh" path="res://EvilSleemBoss.gd" id="1_nfld4"]
 [ext_resource type="AudioStream" uid="uid://v85ica6gcvqt" path="res://newEnemies/EvilSleem/SlimeDead.mp3" id="2_nfld4"]
 [ext_resource type="AudioStream" uid="uid://bf0dfqf7cg5jg" path="res://newEnemies/EvilSleem/BonkSlime.mp3" id="3_xlhmv"]
 [ext_resource type="AudioStream" uid="uid://c0lvhyhqquvkx" path="res://newEnemies/EvilSleem/slimejump.mp3" id="4_r6k2r"]
@@ -304,7 +305,12 @@ size = Vector2(14, 11)
 [sub_resource type="CircleShape2D" id="CircleShape2D_tkcr8"]
 radius = 90.00139
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_xlhmv"]
+radius = 6.5
+height = 16.0
+
 [node name="EvilSleemBoss" type="CharacterBody2D" unique_id=713703177]
+script = ExtResource("1_nfld4")
 
 [node name="evilSleemSprite" type="AnimatedSprite2D" parent="." unique_id=1800895430]
 self_modulate = Color(0.65882355, 0.21960784, 0.9411765, 0.8235294)
@@ -339,3 +345,19 @@ stream = ExtResource("4_r6k2r")
 [node name="HealthBar" parent="." unique_id=277792686 instance=ExtResource("5_exgv2")]
 position = Vector2(-6.5, 6.5)
 scale = Vector2(0.8, 0.8)
+
+[node name="Evaporation" type="Timer" parent="." unique_id=296934435]
+wait_time = 3.0
+
+[node name="Hitbox" type="Area2D" parent="." unique_id=1680673836]
+collision_layer = 4
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox" unique_id=1629890081]
+position = Vector2(0.5, 1.25)
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_xlhmv")
+
+[node name="AttackTimer" type="Timer" parent="." unique_id=324550084]
+
+[node name="JumpDelay" type="Timer" parent="." unique_id=1421025788]
