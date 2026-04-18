@@ -19,11 +19,6 @@ extends CharacterBody2D
 
 
 
-
-
-
-
-
 var input : Vector2
 var playback : AnimationNodeStateMachinePlayback
 var strength : int = 15
@@ -40,6 +35,9 @@ var cooldownCombo: bool = false
 #animation running the last frame compared to new one
 func _ready() -> void:
 	animation_tree.active = true
+	#making maze code work
+	GameManager.register_player(self)
+	
 	#load health
 	health = PlayerStats.health
 	maxHealth = PlayerStats.Maxhealth
@@ -68,6 +66,11 @@ func _physics_process(_delta: float) -> void:
 			comboCooldown()
 			
 		
+		for i in get_slide_collision_count():
+			var collision = get_slide_collision(i)
+			var collider = collision.get_collider()
+			if collider is Area2D and collider.has_method("flip"):
+				collider.flip()
 	
 	else:
 		#only move when not attacking

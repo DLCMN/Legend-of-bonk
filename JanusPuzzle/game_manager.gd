@@ -1,35 +1,53 @@
 extends Node
 
-var first_card = null
-var second_card = null
-var checking := false
+var checking = false
 
+var player : Node2D
+var start_position : Vector2
 
-func card_flipped(card):
+var path_progress = 0
+var correct_path = []#this is getting filled in later  
+					
+
+func _ready():
+	
+	correct_path = [1, 1, 1, 1, 1, 1, 
+					1, 1, 1, 1, 1, 
+					1, 1, 1, 1, 1, 
+					1, 1, 1]
+
+func register_player(p):
+	player = p
+	start_position = p.global_position
+
+func card_flipped(tile):
 	if checking:
 		return
-
-	if first_card == null:
-		first_card = card
-		
-	elif second_card == null and card != first_card:
-		second_card = card
-		check_match()
-
-func check_match():
+	
 	checking = true
-	
-	if first_card.card_id == second_card.card_id:
-		first_card.set_matched()
-		second_card.set_matched()
+
+	if tile.card_id == correct_path[path_progress]:
+		path_progress += 1
+
+		if path_progress >= correct_path.size():
+			checking = false
+			return
 	else:
-		await get_tree().create_timer(1.0).timeout
-		first_card.flip_back()
-		second_card.flip_back()
+		await get_tree().create_timer(0.5).timeout
+		reset_player_position()
+		return
 	
-	reset_selection()
 	checking = false
 
-func reset_selection():
-	first_card = null
-	second_card = null
+func reset_player_position():
+	if player:
+		player.global_position = start_position
+	
+	path_progress = 0
+
+	reset_tiles()
+
+func reset_tiles():
+	for tile in get_tree().get_nodes_in_group("tiles"):
+		tile.is_flipped = false
+		tile.sprite.texture = tile.back_tile_texture

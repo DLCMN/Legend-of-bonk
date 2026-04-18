@@ -5,11 +5,14 @@
 [ext_resource type="PackedScene" uid="uid://bq8vi3nwkcsbh" path="res://Move/movement.tscn" id="2_hbghi"]
 [ext_resource type="Script" uid="uid://d2hgu144de5mx" path="res://checkpoint_manager.gd" id="4_bjebc"]
 [ext_resource type="PackedScene" uid="uid://i563vucp4hn2" path="res://Checkpoint.tscn" id="5_5rr72"]
+[ext_resource type="Texture2D" uid="uid://jsn56cdncyeg" path="res://mazeFixed/greenSquare.png" id="5_sof0w"]
+[ext_resource type="Texture2D" uid="uid://01ok706fjof6" path="res://mazeFixed/megamind.png" id="6_ggavl"]
 [ext_resource type="PackedScene" uid="uid://65b2y3wyhjma" path="res://newEnemies/EvilSleem/evil_sleem.tscn" id="6_gyffv"]
 [ext_resource type="PackedScene" uid="uid://bys1bvclcs8ns" path="res://hud.tscn" id="7_1pe0h"]
 [ext_resource type="PackedScene" uid="uid://bc2mh7ylwndcv" path="res://sleem_friend.tscn" id="8_27bay"]
 [ext_resource type="PackedScene" uid="uid://cp8nuuvji53rb" path="res://Camera/room_trans_camera.tscn" id="9_5rr72"]
 [ext_resource type="PackedScene" uid="uid://cur3p5nk6k7yp" path="res://JanusPuzzle/game_manager.tscn" id="10_gyffv"]
+[ext_resource type="PackedScene" uid="uid://b6b41yl6tb0o1" path="res://mazeFixed/global.tscn" id="11_1pe0h"]
 
 [node name="Level1" type="Node2D" unique_id=1321335471]
 
@@ -59,6 +62,84 @@ stream = ExtResource("1_3hls8")
 volume_db = -35.0
 autoplay = true
 
+[node name="SleemFriend" parent="." unique_id=1720382389 instance=ExtResource("8_27bay")]
+position = Vector2(2288, 624)
+
+[node name="maze" parent="." unique_id=1820058832 instance=ExtResource("11_1pe0h")]
+
+[node name="grid" parent="maze" index="0" unique_id=82943105]
+position = Vector2(2480, 488)
+
+[node name="tile" parent="maze/grid/row 1" parent_id_path=PackedInt32Array(1820058832, 1485976639) index="0" unique_id=691846773]
+card_id = 1
+front_tile_texture = ExtResource("5_sof0w")
+back_tile_texture = ExtResource("6_ggavl")
+
+[node name="tile2" parent="maze/grid/row 1" parent_id_path=PackedInt32Array(1820058832, 1485976639) index="1" unique_id=1045228084]
+card_id = 1
+front_tile_texture = ExtResource("5_sof0w")
+back_tile_texture = ExtResource("6_ggavl")
+
+[node name="tile3" parent="maze/grid/row 1" parent_id_path=PackedInt32Array(1820058832, 1485976639) index="2" unique_id=184212914]
+card_id = 1
+front_tile_texture = ExtResource("5_sof0w")
+back_tile_texture = ExtResource("6_ggavl")
+
+[node name="tile4" parent="maze/grid/row 1" parent_id_path=PackedInt32Array(1820058832, 1485976639) index="3" unique_id=1883310592]
+card_id = 1
+front_tile_texture = ExtResource("5_sof0w")
+back_tile_texture = ExtResource("6_ggavl")
+
+[node name="tile5" parent="maze/grid/row 1" parent_id_path=PackedInt32Array(1820058832, 1485976639) index="4" unique_id=2117416178]
+card_id = 1
+front_tile_texture = ExtResource("5_sof0w")
+back_tile_texture = ExtResource("6_ggavl")
+
+[node name="tile5" parent="maze/grid/row 2" parent_id_path=PackedInt32Array(1820058832, 167130444) index="0" unique_id=760844969]
+card_id = 1
+front_tile_texture = ExtResource("5_sof0w")
+back_tile_texture = ExtResource("6_ggavl")
+
+[node name="tile3" parent="maze/grid/row 3" parent_id_path=PackedInt32Array(1820058832, 491769077) index="0" unique_id=337315226]
+card_id = 1
+front_tile_texture = ExtResource("5_sof0w")
+back_tile_texture = ExtResource("6_ggavl")
+
+[node name="tile4" parent="maze/grid/row 3" parent_id_path=PackedInt32Array(1820058832, 491769077) index="1" unique_id=407230383]
+card_id = 1
+front_tile_texture = ExtResource("5_sof0w")
+back_tile_texture = ExtResource("6_ggavl")
+
+[node name="tile5" parent="maze/grid/row 3" parent_id_path=PackedInt32Array(1820058832, 491769077) index="2" unique_id=1330009101]
+card_id = 1
+front_tile_texture = ExtResource("5_sof0w")
+back_tile_texture = ExtResource("6_ggavl")
+
+[node name="tile3" parent="maze/grid/row 4" parent_id_path=PackedInt32Array(1820058832, 624277702) index="0" unique_id=582365156]
+card_id = 1
+front_tile_texture = ExtResource("5_sof0w")
+back_tile_texture = ExtResource("6_ggavl")
+
+[node name="tile2" parent="maze/grid/row 5" parent_id_path=PackedInt32Array(1820058832, 76945341) index="0" unique_id=1564730119]
+card_id = 1
+front_tile_texture = ExtResource("5_sof0w")
+back_tile_texture = ExtResource("6_ggavl")
+
+[node name="tile3" parent="maze/grid/row 5" parent_id_path=PackedInt32Array(1820058832, 76945341) index="1" unique_id=2134698050]
+card_id = 1
+front_tile_texture = ExtResource("5_sof0w")
+back_tile_texture = ExtResource("6_ggavl")
+
+[node name="tile" parent="maze/grid/row 6" parent_id_path=PackedInt32Array(1820058832, 227444857) index="0" unique_id=1672572235]
+card_id = 1
+front_tile_texture = ExtResource("5_sof0w")
+back_tile_texture = ExtResource("6_ggavl")
+
+[node name="tile2" parent="maze/grid/row 6" parent_id_path=PackedInt32Array(1820058832, 227444857) index="1" unique_id=211187139]
+card_id = 1
+front_tile_texture = ExtResource("5_sof0w")
+back_tile_texture = ExtResource("6_ggavl")
+
 [node name="cards" parent="." unique_id=481930065 instance=ExtResource("10_gyffv")]
 
 [node name="card" parent="cards" index="0" unique_id=1539333485]
@@ -80,7 +161,7 @@ position = Vector2(-188, 711)
 position = Vector2(152, 717)
 
 [node name="Player" parent="." unique_id=1861891870 node_paths=PackedStringArray("player_health_bar", "player_heart") instance=ExtResource("2_hbghi")]
-position = Vector2(2, 650)
+position = Vector2(2448, 648)
 player_health_bar = NodePath("../RoomTransCamera/playerHealthBar")
 player_heart = NodePath("../RoomTransCamera/playerHealthBar/PlayerHeart")
 
@@ -91,17 +172,15 @@ script = ExtResource("4_bjebc")
 position = Vector2(-6, 2)
 
 [node name="EvilSleem" parent="." unique_id=629169447 instance=ExtResource("6_gyffv")]
-position = Vector2(133, 27)
+position = Vector2(96, -240)
 collision_mask = 12
-
-[node name="SleemFriend" parent="." unique_id=1720382389 instance=ExtResource("8_27bay")]
-position = Vector2(-147, 652)
 
 [node name="RoomTransCamera" parent="." unique_id=1987845898 node_paths=PackedStringArray("TargetNode") instance=ExtResource("9_5rr72")]
 TargetNode = NodePath("../Player")
 
 [node name="HUD" parent="." unique_id=107477700 instance=ExtResource("7_1pe0h")]
 
+[editable path="maze"]
 [editable path="cards"]
 [editable path="RoomTransCamera"]
 [editable path="RoomTransCamera/playerHealthBar"]
