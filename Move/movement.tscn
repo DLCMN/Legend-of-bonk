@@ -1080,7 +1080,7 @@ states/walk/position = Vector2(674.8, 69.76)
 size = Vector2(32.5, 32.5)
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_m73wb"]
-radius = 19.0
+radius = 21.0
 height = 62.0
 
 [node name="Player" type="CharacterBody2D" unique_id=1861891870 node_paths=PackedStringArray("animation_tree")]
@@ -1123,7 +1123,7 @@ collision_layer = 3
 collision_mask = 6
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Marker2D/SwordHitBox" unique_id=2145710712]
-position = Vector2(1, -21)
+position = Vector2(1, -24)
 rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_m73wb")
 
