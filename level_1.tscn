@@ -12,13 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://bc2mh7ylwndcv" path="res://sleem_friend.tscn" id="8_27bay"]
 [ext_resource type="PackedScene" uid="uid://cp8nuuvji53rb" path="res://Camera/room_trans_camera.tscn" id="9_5rr72"]
 [ext_resource type="PackedScene" uid="uid://cur3p5nk6k7yp" path="res://JanusPuzzle/game_manager.tscn" id="10_gyffv"]
-<<<<<<< HEAD
 [ext_resource type="PackedScene" uid="uid://b6b41yl6tb0o1" path="res://mazeFixed/global.tscn" id="11_1pe0h"]
-=======
-[ext_resource type="PackedScene" uid="uid://dr2ysu1goxcvt" path="res://newEnemies/SleemMiniBoss/SleemShadow.tscn" id="11_1pe0h"]
-[ext_resource type="PackedScene" uid="uid://b82lnpdlgmlhl" path="res://newEnemies/SleemMiniBoss/evil_sleem_boss.tscn" id="12_27bay"]
-[ext_resource type="PackedScene" uid="uid://bpgbhoq0o3d7o" path="res://KeyItem.tscn" id="13_sof0w"]
->>>>>>> 3861e5dff4b657218748bced76b2adbd3bf0290a
 
 [node name="Level1" type="Node2D" unique_id=1321335471]
 
@@ -166,13 +160,8 @@ position = Vector2(-188, 711)
 [node name="card6" parent="cards" index="5" unique_id=436998077]
 position = Vector2(152, 717)
 
-[node name="Shadow" parent="." unique_id=650283062 instance=ExtResource("11_1pe0h")]
-
 [node name="Player" parent="." unique_id=1861891870 node_paths=PackedStringArray("player_health_bar", "player_heart") instance=ExtResource("2_hbghi")]
-<<<<<<< HEAD
 position = Vector2(2448, 648)
-=======
->>>>>>> 3861e5dff4b657218748bced76b2adbd3bf0290a
 player_health_bar = NodePath("../RoomTransCamera/playerHealthBar")
 player_heart = NodePath("../RoomTransCamera/playerHealthBar/PlayerHeart")
 
@@ -183,74 +172,15 @@ script = ExtResource("4_bjebc")
 position = Vector2(-6, 2)
 
 [node name="EvilSleem" parent="." unique_id=629169447 instance=ExtResource("6_gyffv")]
-<<<<<<< HEAD
 position = Vector2(96, -240)
 collision_mask = 12
 
-=======
-position = Vector2(184, 57)
-collision_mask = 12
-
-[node name="SleemFriend" parent="." unique_id=1720382389 instance=ExtResource("8_27bay")]
-position = Vector2(-175, 11)
-
->>>>>>> 3861e5dff4b657218748bced76b2adbd3bf0290a
 [node name="RoomTransCamera" parent="." unique_id=1987845898 node_paths=PackedStringArray("TargetNode") instance=ExtResource("9_5rr72")]
 TargetNode = NodePath("../Player")
 
 [node name="HUD" parent="." unique_id=107477700 instance=ExtResource("7_1pe0h")]
 
-<<<<<<< HEAD
 [editable path="maze"]
-=======
-[node name="EvilSleemBoss" parent="." unique_id=713703177 instance=ExtResource("12_27bay")]
-position = Vector2(1604, 165)
-
-[node name="key_1" parent="." unique_id=2086649070 instance=ExtResource("13_sof0w")]
-position = Vector2(90, -25)
-key_id = "first_key"
-
-[node name="UI" type="CanvasLayer" parent="." unique_id=350363707]
-
-[node name="Root" type="Control" parent="UI" unique_id=2054199180]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="KeyIndicators" type="HBoxContainer" parent="UI/Root" unique_id=2029945091]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="ColorRect" type="ColorRect" parent="UI/Root/KeyIndicators" unique_id=1684619890]
-custom_minimum_size = Vector2(32, 32)
-layout_mode = 2
-color = Color(1, 0.8627451, 0, 1)
-
-[node name="ColorRect2" type="ColorRect" parent="UI/Root/KeyIndicators" unique_id=2069697744]
-custom_minimum_size = Vector2(32, 32)
-layout_mode = 2
-color = Color(1, 0.11372549, 0.043137256, 1)
-
-[node name="ColorRect4" type="ColorRect" parent="UI/Root/KeyIndicators" unique_id=1720007119]
-custom_minimum_size = Vector2(32, 32)
-layout_mode = 2
-color = Color(0.41960785, 0.9098039, 0, 1)
-
-[node name="ColorRect3" type="ColorRect" parent="UI/Root/KeyIndicators" unique_id=1822016185]
-custom_minimum_size = Vector2(32, 32)
-layout_mode = 2
-color = Color(5.7756904e-07, 0.63308203, 0.7372746, 1)
-
-[node name="ColorRect5" type="ColorRect" parent="UI/Root/KeyIndicators" unique_id=705274779]
-custom_minimum_size = Vector2(32, 32)
-layout_mode = 2
-color = Color(0.991731, 0.036702875, 0.6279875, 1)
-
->>>>>>> 3861e5dff4b657218748bced76b2adbd3bf0290a
 [editable path="cards"]
 [editable path="RoomTransCamera"]
 [editable path="RoomTransCamera/playerHealthBar"]

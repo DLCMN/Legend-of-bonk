@@ -24,13 +24,12 @@ var playback : AnimationNodeStateMachinePlayback
 var strength : int = 15
 var maxHealth : int
 var health : int 
-
+var dead : bool = false
 var friendDead : bool = false
 var checkpointManager
 var cooldownCombo: bool = false
-var dash = false
 
-@export var dead : bool = false
+
 @export var is_attacking = false
 
 #animation running the last frame compared to new one
@@ -86,11 +85,9 @@ func _physics_process(_delta: float) -> void:
 
 	# dash
 	if Input.is_action_just_pressed("Dash") and not is_attacking and not dead:
-		
 		$DashTimer.start()
 		speed *= 10
 		velocity = input * speed
-		dash = true
 
 
 #ending attack
@@ -130,7 +127,6 @@ func update_animation_parameters():
  #reset dash
 func _on_dash_timer_timeout() -> void:
 	speed = 150
-	dash = false
 
 #attacking the enemy when it swings with something in it
 func _on_sword_hit_box_body_entered(body: Node2D) -> void:
@@ -152,6 +148,8 @@ func takeDamage(amount: int) -> void:
 	
 
 
+func _OnBodyEnteredDown(area_rid: RID, area: Area2D, area_shape_index: int, local_shape_index: int) -> void:
+	pass # Replace with function body.
 #death
 func die() -> void:
 	dead = true
