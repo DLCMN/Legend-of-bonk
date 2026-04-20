@@ -63,7 +63,7 @@ volume_db = -35.0
 autoplay = true
 
 [node name="SleemFriend" parent="." unique_id=1720382389 instance=ExtResource("8_27bay")]
-position = Vector2(2288, 624)
+position = Vector2(72, 629)
 
 [node name="maze" parent="." unique_id=1820058832 instance=ExtResource("11_1pe0h")]
 
@@ -161,18 +161,19 @@ position = Vector2(-188, 711)
 position = Vector2(152, 717)
 
 [node name="Player" parent="." unique_id=1861891870 node_paths=PackedStringArray("player_health_bar", "player_heart") instance=ExtResource("2_hbghi")]
-position = Vector2(2448, 648)
+position = Vector2(-1, 637)
 player_health_bar = NodePath("../RoomTransCamera/playerHealthBar")
 player_heart = NodePath("../RoomTransCamera/playerHealthBar/PlayerHeart")
 
 [node name="CheckpointManager" type="Node2D" parent="." unique_id=1192262142]
+visible = false
 script = ExtResource("4_bjebc")
 
 [node name="Checkpoint1" parent="CheckpointManager" unique_id=1216059412 instance=ExtResource("5_5rr72")]
 position = Vector2(-6, 2)
 
 [node name="EvilSleem" parent="." unique_id=629169447 instance=ExtResource("6_gyffv")]
-position = Vector2(96, -240)
+position = Vector2(72, -4)
 collision_mask = 12
 
 [node name="RoomTransCamera" parent="." unique_id=1987845898 node_paths=PackedStringArray("TargetNode") instance=ExtResource("9_5rr72")]
