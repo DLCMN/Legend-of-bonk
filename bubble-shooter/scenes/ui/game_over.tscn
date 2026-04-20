@@ -21,6 +21,10 @@ script = ExtResource("1_gameover")
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 5.0
+offset_top = 3.0
+offset_right = 5.0
+offset_bottom = 3.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 0.5)
@@ -31,49 +35,26 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -280.0
-offset_top = -220.0
-offset_right = 280.0
-offset_bottom = 220.0
+offset_left = -254.0
+offset_top = -118.0
+offset_right = 268.0
+offset_bottom = 95.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_panel")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Panel" unique_id=367963876]
+modulate = Color(11.594878, 4.080776, 3.8195257, 1)
+self_modulate = Color(0.003921569, 0.09019608, 0.039215688, 1)
 layout_mode = 2
+size_flags_stretch_ratio = 1.6
 theme_override_constants/separation = 25
 
 [node name="TitleLabel" type="Label" parent="Panel/VBoxContainer" unique_id=788023707]
 layout_mode = 2
-theme_override_colors/font_outline_color = Color(0, 0, 0, 0.5)
+theme_override_colors/font_color = Color(0.003921569, 0.09019608, 0.039215688, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 4
 theme_override_font_sizes/font_size = 48
-text = "Game Over"
+text = "Game Over !!!"
 horizontal_alignment = 1
-
-[node name="ScoreLabel" type="Label" parent="Panel/VBoxContainer" unique_id=1577774431]
-layout_mode = 2
-theme_override_colors/font_color = Color(1, 1, 1, 0.9)
-theme_override_font_sizes/font_size = 28
-text = "Score: 0"
-horizontal_alignment = 1
-
-[node name="TimeBonusLabel" type="Label" parent="Panel/VBoxContainer" unique_id=133645814]
-layout_mode = 2
-theme_override_colors/font_color = Color(0.4, 1, 0.5, 1)
-theme_override_font_sizes/font_size = 24
-text = "Time Bonus: +0"
-horizontal_alignment = 1
-
-[node name="FinalScoreLabel" type="Label" parent="Panel/VBoxContainer" unique_id=1495433265]
-layout_mode = 2
-theme_override_colors/font_color = Color(1, 0.9, 0.3, 1)
-theme_override_font_sizes/font_size = 40
-text = "Final Score: 0"
-horizontal_alignment = 1
-
-[node name="PlayAgainButton" type="Button" parent="Panel/VBoxContainer" unique_id=1572440843]
-custom_minimum_size = Vector2(0, 60)
-layout_mode = 2
-theme_override_font_sizes/font_size = 24
-text = "Play Again"
