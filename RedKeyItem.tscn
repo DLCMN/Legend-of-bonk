@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cflc37dtysvf6"]
 
-[ext_resource type="Script" uid="uid://dn733cx82gpau" path="res://RedKey/RedKeyItem.gd" id="1_625ob"]
+[ext_resource type="Script" uid="uid://dn733cx82gpau" path="res://RedKeyItem.gd" id="1_625ob"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gv60a"]
 

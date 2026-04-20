@@ -1,6 +1,7 @@
 [gd_scene format=4 uid="uid://f154rw6jw2cr"]
 
 [ext_resource type="AudioStream" uid="uid://g6j758sb38j" path="res://assets/Music/music-pirate-adventure-361663.wav" id="1_3hls8"]
+[ext_resource type="Script" uid="uid://bg17ij2app3xs" path="res://Script/level_1.gd" id="1_65or1"]
 [ext_resource type="TileSet" uid="uid://cbdolxwpgq5l7" path="res://assets/Pixel Art Furniture Pack - FREE/tilesV1.tres" id="1_hn12h"]
 [ext_resource type="PackedScene" uid="uid://bq8vi3nwkcsbh" path="res://Move/movement.tscn" id="2_hbghi"]
 [ext_resource type="Script" uid="uid://d2hgu144de5mx" path="res://checkpoint_manager.gd" id="4_bjebc"]
@@ -13,8 +14,12 @@
 [ext_resource type="PackedScene" uid="uid://cp8nuuvji53rb" path="res://Camera/room_trans_camera.tscn" id="9_5rr72"]
 [ext_resource type="PackedScene" uid="uid://cur3p5nk6k7yp" path="res://JanusPuzzle/game_manager.tscn" id="10_gyffv"]
 [ext_resource type="PackedScene" uid="uid://b6b41yl6tb0o1" path="res://mazeFixed/global.tscn" id="11_1pe0h"]
+[ext_resource type="Script" uid="uid://bbjly3iygdq8" path="res://Script/ui_key_indicator.gd" id="14_ggavl"]
+[ext_resource type="Script" uid="uid://cr3lryy7tx6ky" path="res://Script/ui_key_indicators.gd" id="14_ubhxj"]
+[ext_resource type="PackedScene" uid="uid://bpgbhoq0o3d7o" path="res://KeyItem.tscn" id="17_lhbbi"]
 
 [node name="Level1" type="Node2D" unique_id=1321335471]
+script = ExtResource("1_65or1")
 
 [node name="TileMap" type="Node2D" parent="." unique_id=1458838144]
 position = Vector2(-336, -176)
@@ -180,9 +185,9 @@ TargetNode = NodePath("../Player")
 
 [node name="HUD" parent="." unique_id=107477700 instance=ExtResource("7_1pe0h")]
 
-[node name="UI (for the keyRing indicators)" type="CanvasLayer" parent="." unique_id=1651521260]
+[node name="UI_for_the_keyRing_indicators" type="CanvasLayer" parent="." unique_id=1651521260]
 
-[node name="Root" type="Control" parent="UI (for the keyRing indicators)" unique_id=2006651031]
+[node name="Root" type="Control" parent="UI_for_the_keyRing_indicators" unique_id=2006651031]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -190,35 +195,50 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="KeyIndicators" type="HBoxContainer" parent="UI (for the keyRing indicators)/Root" unique_id=613601807]
+[node name="KeyIndicators" type="HBoxContainer" parent="UI_for_the_keyRing_indicators/Root" unique_id=613601807]
 layout_mode = 0
-offset_right = 97.0
-offset_bottom = 69.0
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 192.0
+offset_bottom = 85.0
+script = ExtResource("14_ubhxj")
 
-[node name="ColorRect" type="ColorRect" parent="UI (for the keyRing indicators)/Root/KeyIndicators" unique_id=533158905]
+[node name="ColorRect" type="ColorRect" parent="UI_for_the_keyRing_indicators/Root/KeyIndicators" unique_id=533158905]
+visible = false
 custom_minimum_size = Vector2(32, 32)
 layout_mode = 2
 color = Color(1, 0.83137256, 0, 1)
+script = ExtResource("14_ggavl")
+key_id = "first_key"
 
-[node name="ColorRect2" type="ColorRect" parent="UI (for the keyRing indicators)/Root/KeyIndicators" unique_id=2063516784]
+[node name="ColorRect2" type="ColorRect" parent="UI_for_the_keyRing_indicators/Root/KeyIndicators" unique_id=2063516784]
+visible = false
 custom_minimum_size = Vector2(32, 32)
 layout_mode = 2
 color = Color(1, 0, 0, 1)
+script = ExtResource("14_ggavl")
 
-[node name="ColorRect3" type="ColorRect" parent="UI (for the keyRing indicators)/Root/KeyIndicators" unique_id=1641341132]
+[node name="ColorRect3" type="ColorRect" parent="UI_for_the_keyRing_indicators/Root/KeyIndicators" unique_id=1641341132]
+visible = false
 custom_minimum_size = Vector2(32, 32)
 layout_mode = 2
 color = Color(0.09019608, 0.83137256, 0.03137255, 1)
 
-[node name="ColorRect4" type="ColorRect" parent="UI (for the keyRing indicators)/Root/KeyIndicators" unique_id=1190357240]
+[node name="ColorRect4" type="ColorRect" parent="UI_for_the_keyRing_indicators/Root/KeyIndicators" unique_id=1190357240]
+visible = false
 custom_minimum_size = Vector2(32, 32)
 layout_mode = 2
 color = Color(0, 0.38431373, 0.9882353, 1)
 
-[node name="ColorRect5" type="ColorRect" parent="UI (for the keyRing indicators)/Root/KeyIndicators" unique_id=911484842]
+[node name="ColorRect5" type="ColorRect" parent="UI_for_the_keyRing_indicators/Root/KeyIndicators" unique_id=911484842]
+visible = false
 custom_minimum_size = Vector2(32, 32)
 layout_mode = 2
 color = Color(1, 0.0627451, 0.64705884, 1)
+
+[node name="KeyItem" parent="." unique_id=2086649070 instance=ExtResource("17_lhbbi")]
+position = Vector2(2502, 652)
+key_id = "first_key"
 
 [editable path="maze"]
 [editable path="cards"]

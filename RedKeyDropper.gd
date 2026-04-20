@@ -1,6 +1,6 @@
 extends Node2D
 
-const RED_KEY = preload("res://RedKey/RedKeyItem.tscn")
+const RED_KEY = preload("res://RedKeyDropper.tscn")
 
 var has_dropped: bool = false
 
