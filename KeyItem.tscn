@@ -16,3 +16,5 @@ texture = ExtResource("2_ljcgb")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=330131867]
 shape = SubResource("RectangleShape2D_nvpgv")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
