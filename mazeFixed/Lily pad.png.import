@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://01ok706fjof6"
-path="res://.godot/imported/megamind.png-bfa79a153e8ee667e8e1522564bf4315.ctex"
+uid="uid://beqjwreu5yl8v"
+path="res://.godot/imported/Lily pad.png-10cde4e8d280cce8b46e65dc5f181b8a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mazeFixed/megamind.png"
-dest_files=["res://.godot/imported/megamind.png-bfa79a153e8ee667e8e1522564bf4315.ctex"]
+source_file="res://mazeFixed/Lily pad.png"
+dest_files=["res://.godot/imported/Lily pad.png-10cde4e8d280cce8b46e65dc5f181b8a.ctex"]
 
 [params]
 

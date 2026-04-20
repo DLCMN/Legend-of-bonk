@@ -5,8 +5,8 @@
 [ext_resource type="PackedScene" uid="uid://bq8vi3nwkcsbh" path="res://Move/movement.tscn" id="2_hbghi"]
 [ext_resource type="Script" uid="uid://d2hgu144de5mx" path="res://checkpoint_manager.gd" id="4_bjebc"]
 [ext_resource type="PackedScene" uid="uid://i563vucp4hn2" path="res://Checkpoint.tscn" id="5_5rr72"]
-[ext_resource type="Texture2D" uid="uid://jsn56cdncyeg" path="res://mazeFixed/greenSquare.png" id="5_sof0w"]
-[ext_resource type="Texture2D" uid="uid://01ok706fjof6" path="res://mazeFixed/megamind.png" id="6_ggavl"]
+[ext_resource type="Texture2D" uid="uid://beqjwreu5yl8v" path="res://mazeFixed/Lily pad.png" id="5_sof0w"]
+[ext_resource type="Texture2D" uid="uid://eppu1ojp7hyj" path="res://mazeFixed/clear.png" id="6_ggavl"]
 [ext_resource type="PackedScene" uid="uid://65b2y3wyhjma" path="res://newEnemies/EvilSleem/evil_sleem.tscn" id="6_gyffv"]
 [ext_resource type="PackedScene" uid="uid://bys1bvclcs8ns" path="res://hud.tscn" id="7_1pe0h"]
 [ext_resource type="PackedScene" uid="uid://bc2mh7ylwndcv" path="res://sleem_friend.tscn" id="8_27bay"]
@@ -87,13 +87,13 @@ back_tile_texture = ExtResource("6_ggavl")
 
 [node name="tile4" parent="maze/grid/row 1" parent_id_path=PackedInt32Array(1820058832, 1485976639) index="3" unique_id=1883310592]
 card_id = 1
-front_tile_texture = ExtResource("5_sof0w")
-back_tile_texture = ExtResource("6_ggavl")
+front_tile_texture = ExtResource("6_ggavl")
+back_tile_texture = ExtResource("5_sof0w")
 
 [node name="tile5" parent="maze/grid/row 1" parent_id_path=PackedInt32Array(1820058832, 1485976639) index="4" unique_id=2117416178]
 card_id = 1
-front_tile_texture = ExtResource("5_sof0w")
-back_tile_texture = ExtResource("6_ggavl")
+front_tile_texture = ExtResource("6_ggavl")
+back_tile_texture = ExtResource("5_sof0w")
 
 [node name="tile5" parent="maze/grid/row 2" parent_id_path=PackedInt32Array(1820058832, 167130444) index="0" unique_id=760844969]
 card_id = 1
