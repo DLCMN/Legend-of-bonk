@@ -17,9 +17,9 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-Global="*uid://bbp8cgx7okyb2"
 PlayerStats="*uid://bm5ulbutkgb0f"
 GameManager="*uid://bu3u81jbisnlo"
+global="*uid://dplvbrua76ksc"
 
 [display]
 

@@ -28,7 +28,7 @@ func _physics_process(delta: float) -> void:
 
 func _on_body_entered(body) -> void:
 	if body.is_in_group("player"):
-		if Global.add_key(key_id):
+		if global.add_key(key_id):
 			print("Picked up RED KEY!")
 			item_picked_up()
 
