@@ -15,90 +15,8 @@
 [ext_resource type="PackedScene" uid="uid://cur3p5nk6k7yp" path="res://JanusPuzzle/game_manager.tscn" id="10_gyffv"]
 [ext_resource type="PackedScene" uid="uid://b6b41yl6tb0o1" path="res://mazeFixed/global.tscn" id="11_1pe0h"]
 [ext_resource type="PackedScene" uid="uid://uhg7vkdhcmec" path="res://gameover_screen.tscn" id="13_ggavl"]
-
-[sub_resource type="Resource" id="Resource_1pe0h"]
-metadata/__load_path__ = "res://mazeFixed/greenSquare.png"
-
-[sub_resource type="Resource" id="Resource_27bay"]
-metadata/__load_path__ = "res://mazeFixed/megamind.png"
-
-[sub_resource type="Resource" id="Resource_sof0w"]
-metadata/__load_path__ = "res://mazeFixed/greenSquare.png"
-
-[sub_resource type="Resource" id="Resource_ggavl"]
-metadata/__load_path__ = "res://mazeFixed/megamind.png"
-
-[sub_resource type="Resource" id="Resource_ubhxj"]
-metadata/__load_path__ = "res://mazeFixed/greenSquare.png"
-
-[sub_resource type="Resource" id="Resource_65or1"]
-metadata/__load_path__ = "res://mazeFixed/megamind.png"
-
-[sub_resource type="Resource" id="Resource_lhbbi"]
-metadata/__load_path__ = "res://mazeFixed/greenSquare.png"
-
-[sub_resource type="Resource" id="Resource_gjkv5"]
-metadata/__load_path__ = "res://mazeFixed/megamind.png"
-
-[sub_resource type="Resource" id="Resource_00ld1"]
-metadata/__load_path__ = "res://mazeFixed/greenSquare.png"
-
-[sub_resource type="Resource" id="Resource_3qmij"]
-metadata/__load_path__ = "res://mazeFixed/megamind.png"
-
-[sub_resource type="Resource" id="Resource_kb5eu"]
-metadata/__load_path__ = "res://mazeFixed/greenSquare.png"
-
-[sub_resource type="Resource" id="Resource_lfy8a"]
-metadata/__load_path__ = "res://mazeFixed/megamind.png"
-
-[sub_resource type="Resource" id="Resource_ethxx"]
-metadata/__load_path__ = "res://mazeFixed/greenSquare.png"
-
-[sub_resource type="Resource" id="Resource_3o2xh"]
-metadata/__load_path__ = "res://mazeFixed/megamind.png"
-
-[sub_resource type="Resource" id="Resource_duihb"]
-metadata/__load_path__ = "res://mazeFixed/greenSquare.png"
-
-[sub_resource type="Resource" id="Resource_b6mmh"]
-metadata/__load_path__ = "res://mazeFixed/megamind.png"
-
-[sub_resource type="Resource" id="Resource_ttn6t"]
-metadata/__load_path__ = "res://mazeFixed/greenSquare.png"
-
-[sub_resource type="Resource" id="Resource_ia5ws"]
-metadata/__load_path__ = "res://mazeFixed/megamind.png"
-
-[sub_resource type="Resource" id="Resource_be5co"]
-metadata/__load_path__ = "res://mazeFixed/greenSquare.png"
-
-[sub_resource type="Resource" id="Resource_hycyb"]
-metadata/__load_path__ = "res://mazeFixed/megamind.png"
-
-[sub_resource type="Resource" id="Resource_swvua"]
-metadata/__load_path__ = "res://mazeFixed/greenSquare.png"
-
-[sub_resource type="Resource" id="Resource_ka01f"]
-metadata/__load_path__ = "res://mazeFixed/megamind.png"
-
-[sub_resource type="Resource" id="Resource_notaq"]
-metadata/__load_path__ = "res://mazeFixed/greenSquare.png"
-
-[sub_resource type="Resource" id="Resource_ett8d"]
-metadata/__load_path__ = "res://mazeFixed/megamind.png"
-
-[sub_resource type="Resource" id="Resource_4p6gt"]
-metadata/__load_path__ = "res://mazeFixed/greenSquare.png"
-
-[sub_resource type="Resource" id="Resource_td8cy"]
-metadata/__load_path__ = "res://mazeFixed/megamind.png"
-
-[sub_resource type="Resource" id="Resource_84ct4"]
-metadata/__load_path__ = "res://mazeFixed/greenSquare.png"
-
-[sub_resource type="Resource" id="Resource_i5xja"]
-metadata/__load_path__ = "res://mazeFixed/megamind.png"
+[ext_resource type="PackedScene" uid="uid://d3jf5d0nwhijp" path="res://newEnemies/EvilZombie/evil_Zombie.tscn" id="16_lhbbi"]
+[ext_resource type="PackedScene" uid="uid://c24k5orvs8j" path="res://main_boss/evil_big_boss.tscn" id="17_gjkv5"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ubhxj"]
 texture = ExtResource("2_sof0w")
@@ -533,6 +451,34 @@ TargetNode = NodePath("../Player")
 
 [node name="Control" parent="Gameover_screen/CanvasLayer" parent_id_path=PackedInt32Array(186693592, 89566598) index="0" unique_id=128978032 node_paths=PackedStringArray("TargetNode")]
 TargetNode = NodePath("../../../Player")
+
+[node name="EvilZombie" parent="." unique_id=1385137568 instance=ExtResource("16_lhbbi")]
+position = Vector2(1819, 974)
+
+[node name="EvilZombie2" parent="." unique_id=897852672 instance=ExtResource("16_lhbbi")]
+position = Vector2(681, 659)
+
+[node name="EvilZombie3" parent="." unique_id=2116414755 instance=ExtResource("16_lhbbi")]
+position = Vector2(559, 645)
+
+[node name="EvilZombie4" parent="." unique_id=534823147 instance=ExtResource("16_lhbbi")]
+position = Vector2(523, 702)
+
+[node name="EvilZombie5" parent="." unique_id=1901962208 instance=ExtResource("16_lhbbi")]
+position = Vector2(781, 330)
+
+[node name="EvilZombie6" parent="." unique_id=61595267 instance=ExtResource("16_lhbbi")]
+position = Vector2(2048, 659)
+
+[node name="EvilZombie7" parent="." unique_id=404620613 instance=ExtResource("16_lhbbi")]
+position = Vector2(1182, 996)
+
+[node name="EvilZombie8" parent="." unique_id=280238111 instance=ExtResource("16_lhbbi")]
+position = Vector2(2027, 946)
+
+[node name="EvilBigBoss" parent="." unique_id=725883306 instance=ExtResource("17_gjkv5")]
+position = Vector2(291.99997, 1132.9999)
+scale = Vector2(0.4, 0.4)
 
 [editable path="maze"]
 [editable path="cards"]
