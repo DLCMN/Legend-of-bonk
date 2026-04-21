@@ -1,0 +1,8 @@
+res://level_1.tscn
+res://assets/Pixel Art Furniture Pack - FREE/tilesV1.tres
+res://JanusPuzzle/game_manager.tscn
+res://mazeFixed/global.tscn
+res://RedKeyItem.tscn
+res://mazeFixed/maze_game.tscn
+res://mazeFixed/global.gd
+res://mazeFixed/tile.gd
