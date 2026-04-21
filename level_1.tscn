@@ -2,10 +2,13 @@
 
 [ext_resource type="AudioStream" uid="uid://g6j758sb38j" path="res://assets/Music/music-pirate-adventure-361663.wav" id="1_3hls8"]
 [ext_resource type="TileSet" uid="uid://cbdolxwpgq5l7" path="res://assets/Pixel Art Furniture Pack - FREE/tilesV1.tres" id="1_hn12h"]
-[ext_resource type="Script" uid="uid://dspaf6ubxv1hf" path="res://Script/level_1.gd" id="1_sof0w"]
 [ext_resource type="PackedScene" uid="uid://bq8vi3nwkcsbh" path="res://Move/movement.tscn" id="2_hbghi"]
+[ext_resource type="PackedScene" uid="uid://b82lnpdlgmlhl" path="res://newEnemies/SleemMiniBoss/evil_sleem_boss.tscn" id="3_ubhxj"]
+[ext_resource type="PackedScene" uid="uid://dr2ysu1goxcvt" path="res://newEnemies/SleemMiniBoss/SleemShadow.tscn" id="4_65or1"]
 [ext_resource type="Script" uid="uid://d2hgu144de5mx" path="res://checkpoint_manager.gd" id="4_bjebc"]
 [ext_resource type="PackedScene" uid="uid://i563vucp4hn2" path="res://Checkpoint.tscn" id="5_5rr72"]
+[ext_resource type="Texture2D" uid="uid://beqjwreu5yl8v" path="res://mazeFixed/Lily pad.png" id="5_sof0w"]
+[ext_resource type="Texture2D" uid="uid://eppu1ojp7hyj" path="res://mazeFixed/clear.png" id="6_ggavl"]
 [ext_resource type="PackedScene" uid="uid://65b2y3wyhjma" path="res://newEnemies/EvilSleem/evil_sleem.tscn" id="6_gyffv"]
 [ext_resource type="PackedScene" uid="uid://bys1bvclcs8ns" path="res://hud.tscn" id="7_1pe0h"]
 [ext_resource type="PackedScene" uid="uid://bc2mh7ylwndcv" path="res://sleem_friend.tscn" id="8_27bay"]
@@ -13,92 +16,10 @@
 [ext_resource type="PackedScene" uid="uid://cur3p5nk6k7yp" path="res://JanusPuzzle/game_manager.tscn" id="10_gyffv"]
 [ext_resource type="PackedScene" uid="uid://b6b41yl6tb0o1" path="res://mazeFixed/global.tscn" id="11_1pe0h"]
 
-[sub_resource type="Resource" id="Resource_1pe0h"]
-metadata/__load_path__ = "res://mazeFixed/greenSquare.png"
-
-[sub_resource type="Resource" id="Resource_27bay"]
-metadata/__load_path__ = "res://mazeFixed/megamind.png"
-
-[sub_resource type="Resource" id="Resource_sof0w"]
-metadata/__load_path__ = "res://mazeFixed/greenSquare.png"
-
-[sub_resource type="Resource" id="Resource_ggavl"]
-metadata/__load_path__ = "res://mazeFixed/megamind.png"
-
-[sub_resource type="Resource" id="Resource_ubhxj"]
-metadata/__load_path__ = "res://mazeFixed/greenSquare.png"
-
-[sub_resource type="Resource" id="Resource_65or1"]
-metadata/__load_path__ = "res://mazeFixed/megamind.png"
-
-[sub_resource type="Resource" id="Resource_lhbbi"]
-metadata/__load_path__ = "res://mazeFixed/greenSquare.png"
-
-[sub_resource type="Resource" id="Resource_gjkv5"]
-metadata/__load_path__ = "res://mazeFixed/megamind.png"
-
-[sub_resource type="Resource" id="Resource_00ld1"]
-metadata/__load_path__ = "res://mazeFixed/greenSquare.png"
-
-[sub_resource type="Resource" id="Resource_3qmij"]
-metadata/__load_path__ = "res://mazeFixed/megamind.png"
-
-[sub_resource type="Resource" id="Resource_kb5eu"]
-metadata/__load_path__ = "res://mazeFixed/greenSquare.png"
-
-[sub_resource type="Resource" id="Resource_lfy8a"]
-metadata/__load_path__ = "res://mazeFixed/megamind.png"
-
-[sub_resource type="Resource" id="Resource_ethxx"]
-metadata/__load_path__ = "res://mazeFixed/greenSquare.png"
-
-[sub_resource type="Resource" id="Resource_3o2xh"]
-metadata/__load_path__ = "res://mazeFixed/megamind.png"
-
-[sub_resource type="Resource" id="Resource_duihb"]
-metadata/__load_path__ = "res://mazeFixed/greenSquare.png"
-
-[sub_resource type="Resource" id="Resource_b6mmh"]
-metadata/__load_path__ = "res://mazeFixed/megamind.png"
-
-[sub_resource type="Resource" id="Resource_ttn6t"]
-metadata/__load_path__ = "res://mazeFixed/greenSquare.png"
-
-[sub_resource type="Resource" id="Resource_ia5ws"]
-metadata/__load_path__ = "res://mazeFixed/megamind.png"
-
-[sub_resource type="Resource" id="Resource_be5co"]
-metadata/__load_path__ = "res://mazeFixed/greenSquare.png"
-
-[sub_resource type="Resource" id="Resource_hycyb"]
-metadata/__load_path__ = "res://mazeFixed/megamind.png"
-
-[sub_resource type="Resource" id="Resource_swvua"]
-metadata/__load_path__ = "res://mazeFixed/greenSquare.png"
-
-[sub_resource type="Resource" id="Resource_ka01f"]
-metadata/__load_path__ = "res://mazeFixed/megamind.png"
-
-[sub_resource type="Resource" id="Resource_notaq"]
-metadata/__load_path__ = "res://mazeFixed/greenSquare.png"
-
-[sub_resource type="Resource" id="Resource_ett8d"]
-metadata/__load_path__ = "res://mazeFixed/megamind.png"
-
-[sub_resource type="Resource" id="Resource_4p6gt"]
-metadata/__load_path__ = "res://mazeFixed/greenSquare.png"
-
-[sub_resource type="Resource" id="Resource_td8cy"]
-metadata/__load_path__ = "res://mazeFixed/megamind.png"
-
-[sub_resource type="Resource" id="Resource_84ct4"]
-metadata/__load_path__ = "res://mazeFixed/greenSquare.png"
-
-[sub_resource type="Resource" id="Resource_i5xja"]
-metadata/__load_path__ = "res://mazeFixed/megamind.png"
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_sof0w"]
+load_path = "res://.godot/imported/megamind.png-bfa79a153e8ee667e8e1522564bf4315.ctex"
 
 [node name="Level1" type="Node2D" unique_id=1321335471]
-script = ExtResource("1_sof0w")
 
 [node name="TileMap" type="Node2D" parent="." unique_id=1458838144]
 position = Vector2(-336, -176)
@@ -146,8 +67,17 @@ stream = ExtResource("1_3hls8")
 volume_db = -35.0
 autoplay = true
 
+[node name="EvilSleemBoss" parent="." unique_id=713703177 instance=ExtResource("3_ubhxj")]
+position = Vector2(1566, 137)
+
+[node name="Shadow" parent="." unique_id=650283062 instance=ExtResource("4_65or1")]
+
 [node name="SleemFriend" parent="." unique_id=1720382389 instance=ExtResource("8_27bay")]
-position = Vector2(2288, 624)
+position = Vector2(-130, 13)
+
+[node name="Player" parent="." unique_id=1861891870 node_paths=PackedStringArray("player_health_bar", "player_heart") instance=ExtResource("2_hbghi")]
+player_health_bar = NodePath("../RoomTransCamera/playerHealthBar")
+player_heart = NodePath("../RoomTransCamera/playerHealthBar/PlayerHeart")
 
 [node name="maze" parent="." unique_id=1820058832 instance=ExtResource("11_1pe0h")]
 
@@ -156,73 +86,74 @@ position = Vector2(2480, 488)
 
 [node name="tile" parent="maze/grid/row 1" parent_id_path=PackedInt32Array(1820058832, 1485976639) index="0" unique_id=691846773]
 card_id = 1
-front_tile_texture = SubResource("Resource_1pe0h")
-back_tile_texture = SubResource("Resource_27bay")
+front_tile_texture = ExtResource("5_sof0w")
+back_tile_texture = ExtResource("6_ggavl")
 
 [node name="tile2" parent="maze/grid/row 1" parent_id_path=PackedInt32Array(1820058832, 1485976639) index="1" unique_id=1045228084]
 card_id = 1
-front_tile_texture = SubResource("Resource_sof0w")
-back_tile_texture = SubResource("Resource_ggavl")
+front_tile_texture = ExtResource("5_sof0w")
+back_tile_texture = ExtResource("6_ggavl")
 
 [node name="tile3" parent="maze/grid/row 1" parent_id_path=PackedInt32Array(1820058832, 1485976639) index="2" unique_id=184212914]
 card_id = 1
-front_tile_texture = SubResource("Resource_ubhxj")
-back_tile_texture = SubResource("Resource_65or1")
+front_tile_texture = ExtResource("5_sof0w")
+back_tile_texture = ExtResource("6_ggavl")
 
 [node name="tile4" parent="maze/grid/row 1" parent_id_path=PackedInt32Array(1820058832, 1485976639) index="3" unique_id=1883310592]
+position = Vector2(134, 23)
 card_id = 1
-front_tile_texture = SubResource("Resource_lhbbi")
-back_tile_texture = SubResource("Resource_gjkv5")
+front_tile_texture = ExtResource("5_sof0w")
+back_tile_texture = ExtResource("6_ggavl")
 
 [node name="tile5" parent="maze/grid/row 1" parent_id_path=PackedInt32Array(1820058832, 1485976639) index="4" unique_id=2117416178]
 card_id = 1
-front_tile_texture = SubResource("Resource_00ld1")
-back_tile_texture = SubResource("Resource_3qmij")
+front_tile_texture = ExtResource("5_sof0w")
+back_tile_texture = ExtResource("6_ggavl")
 
 [node name="tile5" parent="maze/grid/row 2" parent_id_path=PackedInt32Array(1820058832, 167130444) index="0" unique_id=760844969]
 card_id = 1
-front_tile_texture = SubResource("Resource_kb5eu")
-back_tile_texture = SubResource("Resource_lfy8a")
+front_tile_texture = ExtResource("5_sof0w")
+back_tile_texture = ExtResource("6_ggavl")
 
 [node name="tile3" parent="maze/grid/row 3" parent_id_path=PackedInt32Array(1820058832, 491769077) index="0" unique_id=337315226]
 card_id = 1
-front_tile_texture = SubResource("Resource_ethxx")
-back_tile_texture = SubResource("Resource_3o2xh")
+front_tile_texture = ExtResource("5_sof0w")
+back_tile_texture = ExtResource("6_ggavl")
 
 [node name="tile4" parent="maze/grid/row 3" parent_id_path=PackedInt32Array(1820058832, 491769077) index="1" unique_id=407230383]
 card_id = 1
-front_tile_texture = SubResource("Resource_duihb")
-back_tile_texture = SubResource("Resource_b6mmh")
+front_tile_texture = ExtResource("5_sof0w")
+back_tile_texture = ExtResource("6_ggavl")
 
 [node name="tile5" parent="maze/grid/row 3" parent_id_path=PackedInt32Array(1820058832, 491769077) index="2" unique_id=1330009101]
 card_id = 1
-front_tile_texture = SubResource("Resource_ttn6t")
-back_tile_texture = SubResource("Resource_ia5ws")
+front_tile_texture = ExtResource("5_sof0w")
+back_tile_texture = ExtResource("6_ggavl")
 
 [node name="tile3" parent="maze/grid/row 4" parent_id_path=PackedInt32Array(1820058832, 624277702) index="0" unique_id=582365156]
 card_id = 1
-front_tile_texture = SubResource("Resource_be5co")
-back_tile_texture = SubResource("Resource_hycyb")
+front_tile_texture = ExtResource("5_sof0w")
+back_tile_texture = ExtResource("6_ggavl")
 
 [node name="tile2" parent="maze/grid/row 5" parent_id_path=PackedInt32Array(1820058832, 76945341) index="0" unique_id=1564730119]
 card_id = 1
-front_tile_texture = SubResource("Resource_swvua")
-back_tile_texture = SubResource("Resource_ka01f")
+front_tile_texture = ExtResource("5_sof0w")
+back_tile_texture = ExtResource("6_ggavl")
 
 [node name="tile3" parent="maze/grid/row 5" parent_id_path=PackedInt32Array(1820058832, 76945341) index="1" unique_id=2134698050]
 card_id = 1
-front_tile_texture = SubResource("Resource_notaq")
-back_tile_texture = SubResource("Resource_ett8d")
+front_tile_texture = ExtResource("5_sof0w")
+back_tile_texture = ExtResource("6_ggavl")
 
 [node name="tile" parent="maze/grid/row 6" parent_id_path=PackedInt32Array(1820058832, 227444857) index="0" unique_id=1672572235]
 card_id = 1
-front_tile_texture = SubResource("Resource_4p6gt")
-back_tile_texture = SubResource("Resource_td8cy")
+front_tile_texture = ExtResource("5_sof0w")
+back_tile_texture = ExtResource("6_ggavl")
 
 [node name="tile2" parent="maze/grid/row 6" parent_id_path=PackedInt32Array(1820058832, 227444857) index="1" unique_id=211187139]
 card_id = 1
-front_tile_texture = SubResource("Resource_84ct4")
-back_tile_texture = SubResource("Resource_i5xja")
+front_tile_texture = ExtResource("5_sof0w")
+back_tile_texture = SubResource("CompressedTexture2D_sof0w")
 
 [node name="cards" parent="." unique_id=481930065 instance=ExtResource("10_gyffv")]
 
@@ -244,13 +175,6 @@ position = Vector2(480, 33)
 [node name="card6" parent="cards" index="5" unique_id=436998077]
 position = Vector2(787, 55)
 
-[node name="Player" parent="." unique_id=1861891870 node_paths=PackedStringArray("player_health_bar", "player_heart") instance=ExtResource("2_hbghi")]
-player_health_bar = NodePath("../RoomTransCamera/playerHealthBar")
-player_heart = NodePath("../RoomTransCamera/playerHealthBar/PlayerHeart")
-speed = null
-atkNumber = null
-is_attacking = null
-
 [node name="CheckpointManager" type="Node2D" parent="." unique_id=1192262142]
 script = ExtResource("4_bjebc")
 
@@ -258,56 +182,57 @@ script = ExtResource("4_bjebc")
 position = Vector2(-6, 2)
 
 [node name="EvilSleem" parent="." unique_id=629169447 instance=ExtResource("6_gyffv")]
-<<<<<<< HEAD
-<<<<<<< HEAD
-position = Vector2(470, 303)
-=======
-visible = false
 position = Vector2(138, -125)
->>>>>>> EmmasThirdBranch
-=======
-position = Vector2(75, -20)
->>>>>>> 91a98744c4d4a3310150a2d14de043351e9bc21b
 collision_mask = 12
 
 [node name="RoomTransCamera" parent="." unique_id=1987845898 node_paths=PackedStringArray("TargetNode") instance=ExtResource("9_5rr72")]
 TargetNode = NodePath("../Player")
 
 [node name="HUD" parent="." unique_id=107477700 instance=ExtResource("7_1pe0h")]
+visible = false
 
-<<<<<<< HEAD
-[node name="Gameover_screen" parent="." unique_id=186693592 instance=ExtResource("13_ggavl")]
+[node name="UI (for the keyRing indicators)" type="CanvasLayer" parent="." unique_id=1651521260]
+visible = false
 
-[node name="Control" parent="Gameover_screen/CanvasLayer" parent_id_path=PackedInt32Array(186693592, 89566598) index="0" unique_id=128978032 node_paths=PackedStringArray("TargetNode")]
-TargetNode = NodePath("../../../Player")
+[node name="Root" type="Control" parent="UI (for the keyRing indicators)" unique_id=2006651031]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
-[node name="EvilZombie" parent="." unique_id=1385137568 instance=ExtResource("16_lhbbi")]
-position = Vector2(1819, 974)
+[node name="KeyIndicators" type="HBoxContainer" parent="UI (for the keyRing indicators)/Root" unique_id=613601807]
+visible = false
+layout_mode = 0
+offset_right = 97.0
+offset_bottom = 69.0
 
-[node name="EvilZombie2" parent="." unique_id=897852672 instance=ExtResource("16_lhbbi")]
-position = Vector2(681, 659)
+[node name="ColorRect" type="ColorRect" parent="UI (for the keyRing indicators)/Root/KeyIndicators" unique_id=533158905]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+color = Color(1, 0.83137256, 0, 1)
 
-[node name="EvilZombie3" parent="." unique_id=2116414755 instance=ExtResource("16_lhbbi")]
-position = Vector2(559, 645)
+[node name="ColorRect2" type="ColorRect" parent="UI (for the keyRing indicators)/Root/KeyIndicators" unique_id=2063516784]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+color = Color(1, 0, 0, 1)
 
-[node name="EvilZombie4" parent="." unique_id=534823147 instance=ExtResource("16_lhbbi")]
-position = Vector2(523, 702)
+[node name="ColorRect3" type="ColorRect" parent="UI (for the keyRing indicators)/Root/KeyIndicators" unique_id=1641341132]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+color = Color(0.09019608, 0.83137256, 0.03137255, 1)
 
-[node name="EvilZombie5" parent="." unique_id=1901962208 instance=ExtResource("16_lhbbi")]
-position = Vector2(781, 330)
+[node name="ColorRect4" type="ColorRect" parent="UI (for the keyRing indicators)/Root/KeyIndicators" unique_id=1190357240]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+color = Color(0, 0.38431373, 0.9882353, 1)
 
-[node name="EvilZombie6" parent="." unique_id=61595267 instance=ExtResource("16_lhbbi")]
-position = Vector2(2048, 659)
-
-[node name="EvilZombie7" parent="." unique_id=404620613 instance=ExtResource("16_lhbbi")]
-position = Vector2(1182, 996)
-
-[node name="EvilZombie8" parent="." unique_id=280238111 instance=ExtResource("16_lhbbi")]
-position = Vector2(2027, 946)
-
-[node name="EvilBigBoss" parent="." unique_id=725883306 instance=ExtResource("17_gjkv5")]
-position = Vector2(291.99997, 1132.9999)
-scale = Vector2(0.4, 0.4)
+[node name="ColorRect5" type="ColorRect" parent="UI (for the keyRing indicators)/Root/KeyIndicators" unique_id=911484842]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+color = Color(1, 0.0627451, 0.64705884, 1)
 
 [node name="EvilSleem2" parent="." unique_id=1110078965 instance=ExtResource("6_gyffv")]
 position = Vector2(-225, 417)
@@ -330,10 +255,7 @@ position = Vector2(1116, 939)
 [node name="EvilSleem8" parent="." unique_id=685797505 instance=ExtResource("6_gyffv")]
 position = Vector2(2121, 1058)
 
-=======
->>>>>>> 91a98744c4d4a3310150a2d14de043351e9bc21b
 [editable path="maze"]
 [editable path="cards"]
 [editable path="RoomTransCamera"]
 [editable path="RoomTransCamera/playerHealthBar"]
-[editable path="HUD"]
