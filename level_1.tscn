@@ -165,7 +165,6 @@ position = Vector2(-188, 711)
 position = Vector2(152, 717)
 
 [node name="Player" parent="." unique_id=1861891870 node_paths=PackedStringArray("player_health_bar", "player_heart") instance=ExtResource("2_hbghi")]
-position = Vector2(201, 81)
 player_health_bar = NodePath("../RoomTransCamera/playerHealthBar")
 player_heart = NodePath("../RoomTransCamera/playerHealthBar/PlayerHeart")
 
@@ -196,6 +195,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="KeyIndicators" type="HBoxContainer" parent="UI (for the keyRing indicators)/Root" unique_id=613601807]
+visible = false
 layout_mode = 0
 offset_right = 97.0
 offset_bottom = 69.0

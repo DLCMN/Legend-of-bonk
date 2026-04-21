@@ -23,7 +23,7 @@ collision_layer = 16
 collision_mask = 2
 
 [node name="CollisionShapeUP" type="CollisionShape2D" parent="AreaUP" unique_id=345689216]
-position = Vector2(0, -184)
+position = Vector2(0, -192)
 shape = SubResource("RectangleShape2D_d76bn")
 
 [node name="AreaDOWN" type="Area2D" parent="." unique_id=301541429]
@@ -31,7 +31,7 @@ collision_layer = 16
 collision_mask = 2
 
 [node name="CollisionShapeDOWN" type="CollisionShape2D" parent="AreaDOWN" unique_id=1383866753]
-position = Vector2(0, 184)
+position = Vector2(0, 192)
 shape = SubResource("RectangleShape2D_0p7pf")
 
 [node name="AreaLEFT" type="Area2D" parent="." unique_id=1870542174]
@@ -39,7 +39,7 @@ collision_layer = 16
 collision_mask = 2
 
 [node name="CollisionShapeLEFT" type="CollisionShape2D" parent="AreaLEFT" unique_id=861176442]
-position = Vector2(-344, 0)
+position = Vector2(-352, 0)
 shape = SubResource("RectangleShape2D_l5yki")
 
 [node name="AreaRIGHT" type="Area2D" parent="." unique_id=1997859476]
@@ -47,7 +47,7 @@ collision_layer = 16
 collision_mask = 2
 
 [node name="CollisionShapeRIGHT" type="CollisionShape2D" parent="AreaRIGHT" unique_id=1088932905]
-position = Vector2(344, 0)
+position = Vector2(352, 0)
 shape = SubResource("RectangleShape2D_c647a")
 
 [node name="playerHealthBar" parent="." unique_id=641231933 instance=ExtResource("2_d76bn")]
