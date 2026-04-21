@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://dffv5r21ui2r7"]
+
+[ext_resource type="Script" uid="uid://dlkjlwdovckoc" path="res://scripts/shooter.gd" id="1_shooter"]
+[ext_resource type="Texture2D" uid="uid://d1w3n0o66oxt2" path="res://scenes/char_blue.png" id="2_1e8ai"]
+
+[node name="Shooter" type="Node2D" unique_id=1490857062]
+script = ExtResource("1_shooter")
+
+[node name="BubbleContainer" type="Node2D" parent="." unique_id=689173110]
+
+[node name="CurrentBubblePos" type="Marker2D" parent="." unique_id=2014399208]
+position = Vector2(-337, 244)
+
+[node name="NextBubblePos" type="Marker2D" parent="." unique_id=1942181032]
+position = Vector2(6000, 600)
+
+[node name="AimLine" type="Line2D" parent="." unique_id=315877294]
+width = 3.0
+default_color = Color(1, 1, 1, 0.5)
+
+[node name="LauncherBg" type="Sprite2D" parent="." unique_id=117392452]
+modulate = Color(0.7, 0.5, 0.8, 0.6)
+position = Vector2(-377, 298)
+scale = Vector2(4.6500006, 3.4874997)
+texture = ExtResource("2_1e8ai")
+region_enabled = true
+region_rect = Rect2(293.60004, 134.4, 30.399963, 40)

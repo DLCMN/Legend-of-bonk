@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://hud001"]
+
+[ext_resource type="Texture2D" uid="uid://b7k5c6f2qkylr" path="res://images/door game.jpg" id="2_hqnrr"]
+
+[node name="HUD" type="CanvasLayer" unique_id=955696042]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1335267045]
+position = Vector2(354.00003, 35)
+scale = Vector2(0.08632814, 0.071759254)
+texture = ExtResource("2_hqnrr")
