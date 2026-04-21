@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Bubble Shooter"
-run/main_scene="uid://duxpqy2yk26k1"
+run/main_scene="uid://dm74mugs1ojh4"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 

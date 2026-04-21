@@ -1,5 +1,49 @@
 [gd_scene format=3 uid="uid://uhg7vkdhcmec"]
 
-[node name="gameover_screen" type="Node2D" unique_id=186693592]
+[ext_resource type="AudioStream" uid="uid://dyhy54lrsfuag" path="res://assets/Music/music_Directed-by-Robert-B-Weide-Sound-Effect.wav" id="1_no4x2"]
+
+[node name="Gameover_screen" type="Node2D" unique_id=186693592]
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=2115829375]
+stream = ExtResource("1_no4x2")
+volume_db = -10.0
+autoplay = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=89566598]
+
+[node name="Control" type="Control" parent="CanvasLayer" unique_id=128978032]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="CanvasLayer/Control" unique_id=438008150]
+custom_minimum_size = Vector2(256, 128)
+layout_mode = 0
+offset_left = 51.0
+offset_top = 93.0
+offset_right = 650.0
+offset_bottom = 221.0
+text = "Game Over ;)"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="StartAgainButton" type="Button" parent="CanvasLayer/Control" unique_id=1028140249]
+layout_mode = 0
+offset_left = 305.0
+offset_top = 211.0
+offset_right = 397.0
+offset_bottom = 242.0
+text = "Start again
+"
+
+[node name="MenuButton" type="Button" parent="CanvasLayer/Control" unique_id=1559805398]
+layout_mode = 0
+offset_left = 326.0
+offset_top = 271.0
+offset_right = 379.0
+offset_bottom = 302.0
+text = "Menu
+"
