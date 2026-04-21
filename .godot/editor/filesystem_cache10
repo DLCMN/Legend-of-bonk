@@ -1,5 +1,5 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1776764175
+::res://::1776764767
 Checkpoint.gd::GDScript::1933859761129508519::1776763157::0::1::::<>Area2D<><>0<>0<><>::
 Checkpoint.tscn::PackedScene::625375444729655433::1776763157::0::1::::<><><>0<>0<><>::uid://2s1nghfl7aep::::res://Checkpoint.gd<>uid://cyquh5ps5dx32::::res://RespawnPH.png
 checkpoint_manager.gd::GDScript::9069212903147553111::1776763159::0::1::::<>Node2D<><>0<>0<><>::
@@ -12,7 +12,7 @@ health_bar.tscn::PackedScene::5193518120599219562::1776763159::0::1::::<><><>0<>
 hud.gd::GDScript::9132841004335700971::1776763159::0::1::::<>CanvasLayer<><>0<>0<><>::
 hud.tscn::PackedScene::4109693264767957472::1776763159::0::1::::<><><>0<>0<><>::uid://d3eas658nf8y6::::res://hud.gd
 KeyItem.tscn::PackedScene::3451713583537518266::1776763157::0::1::::<><><>0<>0<><>::uid://bghbtqocbx4qk::::res://Script/key_item.gd<>uid://dfb7mpq8y6176::::res://assets/Sword Sprite.png
-level_1.tscn::PackedScene::406492265906022753::1776763159::0::1::::<><><>0<>0<><>::uid://g6j758sb38j::::res://assets/Music/music-pirate-adventure-361663.wav<>uid://cbdolxwpgq5l7::::res://assets/Pixel Art Furniture Pack - FREE/tilesV1.tres<>uid://bq8vi3nwkcsbh::::res://Move/movement.tscn<>uid://d2hgu144de5mx::::res://checkpoint_manager.gd<>uid://i563vucp4hn2::::res://Checkpoint.tscn<>uid://jsn56cdncyeg::::res://mazeFixed/greenSquare.png<>uid://01ok706fjof6::::res://mazeFixed/megamind.png<>uid://65b2y3wyhjma::::res://newEnemies/EvilSleem/evil_sleem.tscn<>uid://bys1bvclcs8ns::::res://hud.tscn<>uid://bc2mh7ylwndcv::::res://sleem_friend.tscn<>uid://cp8nuuvji53rb::::res://Camera/room_trans_camera.tscn<>uid://cur3p5nk6k7yp::::res://JanusPuzzle/game_manager.tscn<>uid://b6b41yl6tb0o1::::res://mazeFixed/global.tscn
+level_1.tscn::PackedScene::406492265906022753::1776764723::0::1::::<><><>0<>0<><>::uid://g6j758sb38j::::res://assets/Music/music-pirate-adventure-361663.wav<>uid://cbdolxwpgq5l7::::res://assets/Pixel Art Furniture Pack - FREE/tilesV1.tres<>uid://bq8vi3nwkcsbh::::res://Move/movement.tscn<>uid://d2hgu144de5mx::::res://checkpoint_manager.gd<>uid://i563vucp4hn2::::res://Checkpoint.tscn<>uid://beqjwreu5yl8v::::res://mazeFixed/Lily pad.png<>uid://eppu1ojp7hyj::::res://mazeFixed/clear.png<>uid://65b2y3wyhjma::::res://newEnemies/EvilSleem/evil_sleem.tscn<>uid://bys1bvclcs8ns::::res://hud.tscn<>uid://bc2mh7ylwndcv::::res://sleem_friend.tscn<>uid://cp8nuuvji53rb::::res://Camera/room_trans_camera.tscn<>uid://cur3p5nk6k7yp::::res://JanusPuzzle/game_manager.tscn<>uid://b6b41yl6tb0o1::::res://mazeFixed/global.tscn
 menu.gd::GDScript::3849924976859413871::1776763159::0::1::::<>Node2D<><>0<>0<><>::
 menu.tscn::PackedScene::8069371545771663487::1776763159::0::1::::<><><>0<>0<><>::uid://bu36x4m86u00j::::res://menu.gd<>uid://gi670poaw171::::res://assets/Music/music-greensleeves-acoustic-379008.wav
 music_for_different_rooms_level_1.tscn::PackedScene::1972865534965852723::1776763159::0::1::::<><><>0<>0<><>::uid://dpenrxiasguhy::::res://assets/Music/music-Winter_ I - Allegro Non Molto.wav<>uid://dyhy54lrsfuag::::res://assets/Music/music_Directed-by-Robert-B-Weide-Sound-Effect.wav
@@ -22,7 +22,7 @@ player_stats.gd::GDScript::3291852207855878795::1776763160::0::1::::<>Node<><>0<
 RedKeyDropper.gd::GDScript::848363600560249058::1776763157::0::1::::<>Node2D<><>0<>0<><>::
 RedKeyDropper.tscn::PackedScene::1832324113677506547::1776763157::0::1::::<><><>0<>0<><>::uid://mc7oo1wp3dju::::res://RedKey/RedKeyDropper.gd
 RedKeyItem.gd::GDScript::8139527326643340176::1776763157::0::1::::<>CharacterBody2D<><>0<>1<><>::
-RedKeyItem.tscn::PackedScene::5146666863363586509::1776763157::0::1::::<><><>0<>0<><>::uid://dn733cx82gpau::::res://RedKey/RedKeyItem.gd
+RedKeyItem.tscn::PackedScene::5146666863363586509::1776764723::0::1::::<><><>0<>0<><>::uid://dn733cx82gpau::::res://RedKeyItem.gd<>uid://ck18p0b83cqo4::::res://assets/key.png
 RespawnPH.png::CompressedTexture2D::6491632098907243047::1776763157::1776763157::1::::<><><>0<>0<>c9e16c7d82a1f9d9592f823ff0175e7d<>res://.godot/imported/RespawnPH.png-fc7dfccf01ee754a97c800a2b8dbc9b5.ctex::
 room_trans_camera.gd::GDScript::1857401992733621359::1776763160::0::1::::roomTransitionCamera<>Camera2D<><>0<>0<><>::
 SleemBuddy.gd::GDScript::5714395490061578123::1776763157::0::1::::<>CharacterBody2D<><>0<>0<><>::
@@ -35,9 +35,10 @@ git_plugin.gdextension::GDExtension::4272845067232409448::1776763157::0::1::::<>
 THIRDPARTY.md::TextFile::-1::1776763157::0::1::::<><><>0<>0<><>::
 ::res://addons/godot-git-plugin/linux/::1776763157
 ::res://addons/godot-git-plugin/macos/::1776763157
-::res://addons/godot-git-plugin/windows/::1776764169
-::res://assets/::1776763159
+::res://addons/godot-git-plugin/windows/::1776764760
+::res://assets/::1776764723
 Axe Sprite.png::CompressedTexture2D::6353231015973738032::1776763157::1776763157::1::::<><><>0<>0<>ee15fde32082bd7f5306a9d2961b6097<>res://.godot/imported/Axe Sprite.png-0e26bd4c6dde7182e5644793847dfac6.ctex::
+key.png::CompressedTexture2D::5530435389207388905::1776764723::1776764723::1::::<><><>0<>0<>7e21e35cd412b6aae74e4c9a700135d4<>res://.godot/imported/key.png-a97df9ba773df86f934812b8b28ef996.ctex::
 Sword Sprite.png::CompressedTexture2D::7514235834418723935::1776763159::1776763159::1::::<><><>0<>0<>a1aca501752bc9431f7cc6715fbe1833<>res://.godot/imported/Sword Sprite.png-4c25f2cfb74d4a68361fe65e86a180c2.ctex::
 ::res://assets/Music/::1776763159
 music-greensleeves-acoustic-379008.wav::AudioStreamWAV::439588792934201202::1776763158::1776763158::1::::<><><>0<>0<>bc0d5fde7a9b71656bb94068cdd6fa0f<>res://.godot/imported/music-greensleeves-acoustic-379008.wav-36b5785b610f5881ddddbdab95ab25e6.sample::
@@ -84,16 +85,17 @@ README.txt::TextFile::-1::1776763159::0::1::::<><><>0<>0<><>::
 ::res://Camera/::1776763157
 room_trans_camera.tscn::PackedScene::5894624607953439619::1776763157::0::1::::<><><>0<>0<><>::uid://dwe7s0qvheag0::::res://Camera/room_trans_camera.tscn.gd<>uid://r0m4lbvc7ew8::::res://player_health_bar.tscn
 room_trans_camera.tscn.gd::GDScript::8713650548955349653::1776763157::0::1::::RoomTransitionCamera<>Camera2D<><>0<>0<><>::
-::res://fml/::1776763159
-::res://JanusPuzzle/::1776763157
+::res://fml/::1776764685
+::res://JanusPuzzle/::1776764723
 card.gd::GDScript::9100312351875533753::1776763157::0::1::::<>Area2D<><>0<>0<><>::
 card.tscn::PackedScene::2382682222741168534::1776763157::0::1::::<><><>0<>0<><>::uid://d2wi2x8m6f1dt::::res://JanusPuzzle/card.gd
 cardA.png::CompressedTexture2D::7103121033888554214::1776763157::1776763157::1::::<><><>0<>0<>d68d5e5fdce5c307b30d714eaba0dc82<>res://.godot/imported/cardA.png-fc1f1c94a996b4cf1ee05fda814eabbc.ctex::
 cardB.png::CompressedTexture2D::1997931769585633572::1776763157::1776763157::1::::<><><>0<>0<>16148abf72cbea63e768567e0052c342<>res://.godot/imported/cardB.png-a174fd2b7079472a1eed24cd2a221561.ctex::
 cardC.png::CompressedTexture2D::4755696769357403655::1776763157::1776763157::1::::<><><>0<>0<>76e856394cbe85f72394dc69cfd60ad1<>res://.godot/imported/cardC.png-36abe0a86b50be27d11c0fb7db6e0bf7.ctex::
+card_game.tscn::PackedScene::7263701879172704233::1776764723::0::1::::<><><>0<>0<><>::uid://c3k0cukgk6j2e::::res://JanusPuzzle/game_manager.gd<>uid://87gos4233mxy::::res://JanusPuzzle/card.tscn<>uid://c8g2moxqfielq::::res://JanusPuzzle/cardA.png<>uid://jqlqns3k8wfy::::res://JanusPuzzle/icon.svg<>uid://3p2v54jsilm7::::res://JanusPuzzle/cardB.png<>uid://b80xvpn4blcfn::::res://JanusPuzzle/cardC.png
 game.tscn::PackedScene::6791947575080779365::1776763157::0::1::::<><><>0<>0<><>::res://game_manager.gd<>uid://dara34pg55f2o::::res://player.tscn<>uid://87gos4233mxy::::res://card.tscn<>res://cardA.png<>res://icon.svg<>res://cardB.png<>res://cardC.png
 game_manager.gd::GDScript::6760295329400930710::1776763157::0::1::::<>Node<><>0<>0<><>::
-game_manager.tscn::PackedScene::6213441120951073663::1776763157::0::1::::<><><>0<>0<><>::uid://c3k0cukgk6j2e::::res://JanusPuzzle/game_manager.gd<>uid://87gos4233mxy::::res://JanusPuzzle/card.tscn<>uid://c8g2moxqfielq::::res://JanusPuzzle/cardA.png<>uid://jqlqns3k8wfy::::res://JanusPuzzle/icon.svg<>uid://3p2v54jsilm7::::res://JanusPuzzle/cardB.png<>uid://b80xvpn4blcfn::::res://JanusPuzzle/cardC.png
+game_manager.tscn::PackedScene::6213441120951073663::1776764723::0::1::::<><><>0<>0<><>::uid://c3k0cukgk6j2e::::res://JanusPuzzle/game_manager.gd<>uid://87gos4233mxy::::res://JanusPuzzle/card.tscn<>uid://c8g2moxqfielq::::res://JanusPuzzle/cardA.png<>uid://jqlqns3k8wfy::::res://JanusPuzzle/icon.svg<>uid://3p2v54jsilm7::::res://JanusPuzzle/cardB.png<>uid://b80xvpn4blcfn::::res://JanusPuzzle/cardC.png
 icon.svg::CompressedTexture2D::665426808327066562::1776763157::1776763157::1::::<><><>0<>0<>a2511bb0f5a8424aa77ec6bfcf923a78<>res://.godot/imported/icon.svg-6ebf500ae4a98e045a84ed4fc3b3bc94.ctex::
 ::res://main_boss/::1776763159
 evil_big_boss.gd::GDScript::7293424512267358589::1776763159::0::1::::<>CharacterBody2D<><>0<>0<><>::
@@ -111,12 +113,13 @@ OG1SLEEM.png::CompressedTexture2D::4867935095674585010::1776763159::1776763159::
 OG2SLEEM.png::CompressedTexture2D::4242389232106635253::1776763159::1776763159::1::::<><><>0<>0<>bd4e20d7439fbf51c555eaf546a6f954<>res://.godot/imported/OG2SLEEM.png-bd475a7062a4e4a50650b0486abcf974.ctex::
 SlimeDead.mp3::AudioStreamMP3::5669852655801088476::1776763159::1776763159::1::::<><><>0<>0<>9dd67769b41c895b26a5b3b6ddf115fa<>res://.godot/imported/SlimeDead.mp3-2191d3490a3afa596b72f2c6b3fbc27b.mp3str::
 slimejump.mp3::AudioStreamMP3::2897066069412385568::1776763159::1776763159::1::::<><><>0<>0<>197a50cc02ff78ad25d4e08734e744d7<>res://.godot/imported/slimejump.mp3-5acdee38350034573bce26979bf2dd42.mp3str::
-::res://mazeFixed/::1776763159
+::res://mazeFixed/::1776764723
+clear.png::CompressedTexture2D::312668899297217125::1776764723::1776764723::1::::<><><>0<>0<>7d52e4f49ba7f46deb5e996d2698458b<>res://.godot/imported/clear.png-67f21dab47f352865089b8c29519e76c.ctex::
 global.gd::GDScript::3849274784188805800::1776763159::0::1::::<>Node<><>0<>0<><>::
-global.tscn::PackedScene::4566147716645128754::1776763159::0::1::::<><><>0<>0<><>::uid://bs001hlef7dpr::::res://mazeFixed/tile.tscn<>uid://bu3u81jbisnlo::::res://mazeFixed/global.gd
-greenSquare.png::CompressedTexture2D::669702918505726766::1776763159::1776763159::1::::<><><>0<>0<>02772677345fd44dbfeb1e304a3c2d82<>res://.godot/imported/greenSquare.png-4913310b21413941161ffe5c2ba2bd3c.ctex::
-megamind.png::CompressedTexture2D::1809264529177008185::1776763159::1776763159::1::::<><><>0<>0<>16d8027812fa1f9516bfe329298d1e22<>res://.godot/imported/megamind.png-bfa79a153e8ee667e8e1522564bf4315.ctex::
-tile.gd::GDScript::5028994588198867180::1776763159::0::1::::<>Area2D<><>0<>0<><>::
+global.tscn::PackedScene::4566147716645128754::1776764723::0::1::::<><><>0<>0<><>::uid://bs001hlef7dpr::::res://mazeFixed/tile.tscn<>uid://bu3u81jbisnlo::::res://mazeFixed/global.gd
+Lily pad.png::CompressedTexture2D::2700792742736918723::1776764723::1776764723::1::::<><><>0<>0<>e1e4ac1f0323e02743f17e683791a15b<>res://.godot/imported/Lily pad.png-10cde4e8d280cce8b46e65dc5f181b8a.ctex::
+maze_game.tscn::PackedScene::9096628759519410153::1776764723::0::1::::<><><>0<>0<><>::uid://bu3u81jbisnlo::::res://mazeFixed/global.gd<>uid://bs001hlef7dpr::::res://mazeFixed/tile.tscn
+tile.gd::GDScript::5028994588198867180::1776764723::0::1::::<>Area2D<><>0<>0<><>::
 tile.tscn::PackedScene::3702994053335851947::1776763159::0::1::::<><><>0<>0<><>::uid://cdwc2n43j5ipo::::res://mazeFixed/tile.gd
 ::res://Move/::1776763157
 AttackPH.png::CompressedTexture2D::26080778193297647::1776763157::1776763157::1::::<><><>0<>0<>738adb5c6bfa6aeb5053426c105298bc<>res://.godot/imported/AttackPH.png-02119603bb978cd2ce799d01e2ed1602.ctex::
