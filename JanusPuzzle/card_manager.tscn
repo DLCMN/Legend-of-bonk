@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://cur3p5nk6k7yp"]
+
+[ext_resource type="Script" uid="uid://c3k0cukgk6j2e" path="res://JanusPuzzle/card_manager.gd" id="1_70yv6"]
+[ext_resource type="PackedScene" uid="uid://87gos4233mxy" path="res://JanusPuzzle/card.tscn" id="2_yq6rq"]
+[ext_resource type="Texture2D" uid="uid://c8g2moxqfielq" path="res://JanusPuzzle/cardA.png" id="3_11j04"]
+[ext_resource type="Texture2D" uid="uid://jqlqns3k8wfy" path="res://JanusPuzzle/icon.svg" id="4_00syw"]
+[ext_resource type="Texture2D" uid="uid://3p2v54jsilm7" path="res://JanusPuzzle/cardB.png" id="5_u60b2"]
+[ext_resource type="Texture2D" uid="uid://b80xvpn4blcfn" path="res://JanusPuzzle/cardC.png" id="6_2ybjy"]
+
+[node name="cardGame" type="Node" unique_id=481930065]
+script = ExtResource("1_70yv6")
+
+[node name="card" parent="." unique_id=1539333485 instance=ExtResource("2_yq6rq")]
+card_id = 1
+face_up_texture = ExtResource("3_11j04")
+face_down_texture = ExtResource("4_00syw")
+
+[node name="card2" parent="." unique_id=501392757 instance=ExtResource("2_yq6rq")]
+card_id = 1
+face_up_texture = ExtResource("3_11j04")
+face_down_texture = ExtResource("4_00syw")
+
+[node name="card3" parent="." unique_id=1810234599 instance=ExtResource("2_yq6rq")]
+card_id = 2
+face_up_texture = ExtResource("5_u60b2")
+face_down_texture = ExtResource("4_00syw")
+
+[node name="card4" parent="." unique_id=1688188529 instance=ExtResource("2_yq6rq")]
+card_id = 2
+face_up_texture = ExtResource("5_u60b2")
+face_down_texture = ExtResource("4_00syw")
+
+[node name="card5" parent="." unique_id=1664601371 instance=ExtResource("2_yq6rq")]
+card_id = 3
+face_up_texture = ExtResource("6_2ybjy")
+face_down_texture = ExtResource("4_00syw")
+
+[node name="card6" parent="." unique_id=436998077 instance=ExtResource("2_yq6rq")]
+card_id = 3
+face_up_texture = ExtResource("6_2ybjy")
+face_down_texture = ExtResource("4_00syw")

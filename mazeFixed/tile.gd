@@ -4,8 +4,9 @@ extends Area2D
 @export var front_tile_texture : Texture2D
 @export var back_tile_texture : Texture2D
 
-@onready var sprite : Sprite2D = $Sprite2D
 
+@onready var sprite : Sprite2D = $Sprite2D
+var maze_game = "res://mazeFixed/maze_game.tscn"
 var is_flipped := false
 
 
@@ -20,8 +21,7 @@ func flip_tile():
 
 	is_flipped = true
 	sprite.texture = front_tile_texture
-
-	GameManager.card_flipped(self)
+	maze_game.card_flipped(self)
 
 
 func reset_tile():
@@ -30,5 +30,5 @@ func reset_tile():
 
 
 func _on_body_entered(body: Node2D) -> void:
-	if body == GameManager.player:
+	if body == maze_game.player:
 		flip_tile()

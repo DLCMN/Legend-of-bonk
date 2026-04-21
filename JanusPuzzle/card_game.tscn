@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dbqudxwy5b8dx"]
 
-[ext_resource type="Script" uid="uid://c3k0cukgk6j2e" path="res://JanusPuzzle/game_manager.gd" id="1_2fcfs"]
+[ext_resource type="Script" uid="uid://c3k0cukgk6j2e" path="res://JanusPuzzle/card_manager.gd" id="1_2fcfs"]
 [ext_resource type="PackedScene" uid="uid://87gos4233mxy" path="res://JanusPuzzle/card.tscn" id="2_an3dn"]
 [ext_resource type="Texture2D" uid="uid://c8g2moxqfielq" path="res://JanusPuzzle/cardA.png" id="3_vsoh7"]
 [ext_resource type="Texture2D" uid="uid://jqlqns3k8wfy" path="res://JanusPuzzle/icon.svg" id="4_d2207"]

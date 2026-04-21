@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://d2uqe8rl5berp"]
 
-[ext_resource type="Script" uid="uid://bu3u81jbisnlo" path="res://mazeFixed/global.gd" id="1_bpmbs"]
+[ext_resource type="Script" uid="uid://bu3u81jbisnlo" path="res://mazeFixed/mazeGlobal.gd" id="1_bpmbs"]
 [ext_resource type="PackedScene" uid="uid://bs001hlef7dpr" path="res://mazeFixed/tile.tscn" id="2_wvlje"]
 
 [node name="mazeGame" type="Node" unique_id=1820058832]
