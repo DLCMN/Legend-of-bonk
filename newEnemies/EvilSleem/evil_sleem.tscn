@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://65b2y3wyhjma"]
 
-[ext_resource type="Texture2D" uid="uid://bpjo54clffuw4" path="res://newEnemies/EvilSleem/OG2SLEEM.png" id="1_4hv5h"]
+[ext_resource type="Texture2D" uid="uid://bpjo54clffuw4" path="res://newEnemies/EvilZombie/OG2SLEEM.png" id="1_4hv5h"]
 [ext_resource type="Script" uid="uid://cm7eqx31re6ya" path="res://newEnemies/EvilSleem/Evilsleem.gd" id="1_uqpha"]
 [ext_resource type="AudioStream" uid="uid://v85ica6gcvqt" path="res://newEnemies/EvilSleem/SlimeDead.mp3" id="3_s2cuy"]
 [ext_resource type="AudioStream" uid="uid://bf0dfqf7cg5jg" path="res://newEnemies/EvilSleem/BonkSlime.mp3" id="4_4pejn"]

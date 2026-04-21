@@ -164,8 +164,9 @@ func DeathAnimFinished() -> void:
 	heart_break_sound.play()
 	await get_tree().create_timer(0.8).timeout
 	await hud.fade(1.0)
-	friendDead = false #notifys sleem to stop crying
+	 #notifys sleem to stop crying
 	position = checkpointManager.lastLocation
+	friendDead = false
 	health = PlayerStats.Maxhealth
 	player_health_bar.updateHealth(health)
 	playback.travel("Idle")
