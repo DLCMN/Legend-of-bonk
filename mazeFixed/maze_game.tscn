@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bu3u81jbisnlo" path="res://mazeFixed/global.gd" id="1_bpmbs"]
 [ext_resource type="PackedScene" uid="uid://bs001hlef7dpr" path="res://mazeFixed/tile.tscn" id="2_wvlje"]
+[ext_resource type="Texture2D" uid="uid://do6cxda45hrtb" path="res://assets/Big lily pad.png" id="3_wvlje"]
 
 [node name="mazeGame" type="Node" unique_id=1820058832]
 script = ExtResource("1_bpmbs")
@@ -14,57 +15,71 @@ position = Vector2(32, 0)
 
 [node name="tile" parent="grid/row 1" unique_id=691846773 instance=ExtResource("2_wvlje")]
 position = Vector2(-8, 24)
+front_tile_texture = ExtResource("3_wvlje")
 
 [node name="tile2" parent="grid/row 1" unique_id=1045228084 instance=ExtResource("2_wvlje")]
 position = Vector2(40, 24)
+front_tile_texture = ExtResource("3_wvlje")
 
 [node name="tile3" parent="grid/row 1" unique_id=184212914 instance=ExtResource("2_wvlje")]
 position = Vector2(88, 24)
+front_tile_texture = ExtResource("3_wvlje")
 
 [node name="tile4" parent="grid/row 1" unique_id=1883310592 instance=ExtResource("2_wvlje")]
 position = Vector2(136, 24)
+front_tile_texture = ExtResource("3_wvlje")
 
 [node name="tile5" parent="grid/row 1" unique_id=2117416178 instance=ExtResource("2_wvlje")]
 position = Vector2(184, 24)
+front_tile_texture = ExtResource("3_wvlje")
 
 [node name="row 2" type="Node2D" parent="grid" unique_id=167130444]
 position = Vector2(0, 64)
 
 [node name="tile5" parent="grid/row 2" unique_id=760844969 instance=ExtResource("2_wvlje")]
 position = Vector2(216, 8)
+front_tile_texture = ExtResource("3_wvlje")
 
 [node name="row 3" type="Node2D" parent="grid" unique_id=491769077]
 position = Vector2(-8, 88)
 
 [node name="tile3" parent="grid/row 3" unique_id=337315226 instance=ExtResource("2_wvlje")]
 position = Vector2(128, 32)
+front_tile_texture = ExtResource("3_wvlje")
 
 [node name="tile4" parent="grid/row 3" unique_id=407230383 instance=ExtResource("2_wvlje")]
 position = Vector2(176, 32)
+front_tile_texture = ExtResource("3_wvlje")
 
 [node name="tile5" parent="grid/row 3" unique_id=1330009101 instance=ExtResource("2_wvlje")]
 position = Vector2(224, 32)
+front_tile_texture = ExtResource("3_wvlje")
 
 [node name="row 4" type="Node2D" parent="grid" unique_id=624277702]
 position = Vector2(-8, 136)
 
 [node name="tile3" parent="grid/row 4" unique_id=582365156 instance=ExtResource("2_wvlje")]
 position = Vector2(128, 32)
+front_tile_texture = ExtResource("3_wvlje")
 
 [node name="row 5" type="Node2D" parent="grid" unique_id=76945341]
 position = Vector2(-8, 184)
 
 [node name="tile2" parent="grid/row 5" unique_id=1564730119 instance=ExtResource("2_wvlje")]
 position = Vector2(80, 32)
+front_tile_texture = ExtResource("3_wvlje")
 
 [node name="tile3" parent="grid/row 5" unique_id=2134698050 instance=ExtResource("2_wvlje")]
 position = Vector2(128, 32)
+front_tile_texture = ExtResource("3_wvlje")
 
 [node name="row 6" type="Node2D" parent="grid" unique_id=227444857]
 position = Vector2(-8, 232)
 
 [node name="tile" parent="grid/row 6" unique_id=1672572235 instance=ExtResource("2_wvlje")]
 position = Vector2(32, 32)
+front_tile_texture = ExtResource("3_wvlje")
 
 [node name="tile2" parent="grid/row 6" unique_id=211187139 instance=ExtResource("2_wvlje")]
 position = Vector2(80, 32)
+front_tile_texture = ExtResource("3_wvlje")

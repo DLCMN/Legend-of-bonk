@@ -1,5 +1,5 @@
 extends Node2D
-var lastLocation
+@export var lastLocation : Vector2
 var playerCharacter
 #manages checkpoints as a whole
 func _ready() -> void:

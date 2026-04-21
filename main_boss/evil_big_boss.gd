@@ -1,13 +1,13 @@
 extends CharacterBody2D
 
-const SPEED: int = 100
+const SPEED: int = 60
 
-var knockbackForce: int = 150
+var knockbackForce: int = 200
 var alive: bool = true
 var target = null
 var targetInRange:bool = false
-var strength: int  = 10
-var health: int = 75
+var strength: int  = 25
+var health: int = 120
 var enemyTarget = null
 
 
