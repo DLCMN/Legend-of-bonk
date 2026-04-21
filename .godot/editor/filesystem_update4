@@ -1,0 +1,6 @@
+res://level_1.tscn
+res://assets/Pixel Art Furniture Pack - FREE/tilesV1.tres
+res://Move/player.gd
+res://gameover_screen.tscn
+res://Script/level_1.gd
+res://Script/game_over_screen.gd

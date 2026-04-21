@@ -49,3 +49,6 @@ offset_right = 379.0
 offset_bottom = 302.0
 text = "Menu
 "
+
+[connection signal="pressed" from="CanvasLayer/Control/StartAgainButton" to="CanvasLayer/Control" method="_on_StartAgainButton_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/MenuButton" to="CanvasLayer/Control" method="_on_MenuButton_pressed"]

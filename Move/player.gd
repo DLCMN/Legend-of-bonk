@@ -1,6 +1,8 @@
 class_name player
 extends CharacterBody2D
 
+signal player_died
+
 # To be assigned to Player Health Assets
 @export var player_health_bar : TextureProgressBar =  null
 @export var player_heart : AnimatedSprite2D = null
@@ -86,7 +88,7 @@ func _physics_process(_delta: float) -> void:
 	# dash
 	if Input.is_action_just_pressed("Dash") and not is_attacking and not dead:
 		$DashTimer.start()
-		speed *= 10
+		speed *= 5
 		velocity = input * speed
 
 
@@ -157,25 +159,36 @@ func die() -> void:
 	playback.travel("death")
 	$CollisionShape2D.set_deferred("disabled", true)
 	respawn_shield.start()
+	
+	emit_signal("player_died")
 
 #actually resetting + respawning and running the screen fade
+
 func DeathAnimFinished() -> void:
 	await get_tree().create_timer(0.7).timeout
 	heart_break_sound.play()
+
 	await get_tree().create_timer(0.8).timeout
 	await hud.fade(1.0)
-	friendDead = false #notifys sleem to stop crying
+
+	respawn()
+
+	await hud.fade(0.3)
+	hud.fade(0.0)
+
+	
+func respawn() -> void:
+	friendDead = false
 	position = checkpointManager.lastLocation
 	health = PlayerStats.Maxhealth
 	player_health_bar.updateHealth(health)
 	playback.travel("Idle")
-	await hud.fade(0.3)
-	dead = false #resetting various variables
+
+	dead = false
 	is_attacking = false
 	cooldownCombo = false
-	hud.fade(0.0)
-	
-	 #making it so the combo actually appears as a combo and not just a spam of three animations
+	$CollisionShape2D.set_deferred("disabled", false)
+ #making it so the combo actually appears as a combo and not just a spam of three animations
 func comboCooldown():
 	cooldownCombo = true
 	await get_tree().create_timer(0.2).timeout
