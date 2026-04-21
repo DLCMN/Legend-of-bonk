@@ -172,53 +172,13 @@ script = ExtResource("4_bjebc")
 position = Vector2(-6, 2)
 
 [node name="EvilSleem" parent="." unique_id=629169447 instance=ExtResource("6_gyffv")]
-position = Vector2(105, -36)
+position = Vector2(131, 20)
 collision_mask = 12
 
 [node name="RoomTransCamera" parent="." unique_id=1987845898 node_paths=PackedStringArray("TargetNode") instance=ExtResource("9_5rr72")]
 TargetNode = NodePath("../Player")
 
 [node name="HUD" parent="." unique_id=107477700 instance=ExtResource("7_1pe0h")]
-
-[node name="UI (for the keyRing indicators)" type="CanvasLayer" parent="." unique_id=1651521260]
-
-[node name="Root" type="Control" parent="UI (for the keyRing indicators)" unique_id=2006651031]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="KeyIndicators" type="HBoxContainer" parent="UI (for the keyRing indicators)/Root" unique_id=613601807]
-layout_mode = 0
-offset_right = 97.0
-offset_bottom = 69.0
-
-[node name="ColorRect" type="ColorRect" parent="UI (for the keyRing indicators)/Root/KeyIndicators" unique_id=533158905]
-custom_minimum_size = Vector2(32, 32)
-layout_mode = 2
-color = Color(1, 0.83137256, 0, 1)
-
-[node name="ColorRect2" type="ColorRect" parent="UI (for the keyRing indicators)/Root/KeyIndicators" unique_id=2063516784]
-custom_minimum_size = Vector2(32, 32)
-layout_mode = 2
-color = Color(1, 0, 0, 1)
-
-[node name="ColorRect3" type="ColorRect" parent="UI (for the keyRing indicators)/Root/KeyIndicators" unique_id=1641341132]
-custom_minimum_size = Vector2(32, 32)
-layout_mode = 2
-color = Color(0.09019608, 0.83137256, 0.03137255, 1)
-
-[node name="ColorRect4" type="ColorRect" parent="UI (for the keyRing indicators)/Root/KeyIndicators" unique_id=1190357240]
-custom_minimum_size = Vector2(32, 32)
-layout_mode = 2
-color = Color(0, 0.38431373, 0.9882353, 1)
-
-[node name="ColorRect5" type="ColorRect" parent="UI (for the keyRing indicators)/Root/KeyIndicators" unique_id=911484842]
-custom_minimum_size = Vector2(32, 32)
-layout_mode = 2
-color = Color(1, 0.0627451, 0.64705884, 1)
 
 [editable path="maze"]
 [editable path="cards"]
