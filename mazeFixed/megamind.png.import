@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ck18p0b83cqo4"
-path="res://.godot/imported/key.png-a97df9ba773df86f934812b8b28ef996.ctex"
+uid="uid://01ok706fjof6"
+path="res://.godot/imported/megamind.png-bfa79a153e8ee667e8e1522564bf4315.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/key.png"
-dest_files=["res://.godot/imported/key.png-a97df9ba773df86f934812b8b28ef996.ctex"]
+source_file="res://mazeFixed/megamind.png"
+dest_files=["res://.godot/imported/megamind.png-bfa79a153e8ee667e8e1522564bf4315.ctex"]
 
 [params]
 

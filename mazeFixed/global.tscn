@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://bs001hlef7dpr" path="res://mazeFixed/tile.tscn" id="1_f2qap"]
 [ext_resource type="Script" uid="uid://bu3u81jbisnlo" path="res://mazeFixed/global.gd" id="1_lhyfq"]
 
-[node name="mazeGame" type="Node" unique_id=1820058832]
+[node name="global" type="Node" unique_id=1820058832]
 script = ExtResource("1_lhyfq")
 
 [node name="grid" type="Node2D" parent="." unique_id=82943105]

@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://3p2v54jsilm7" path="res://JanusPuzzle/cardB.png" id="5_u60b2"]
 [ext_resource type="Texture2D" uid="uid://b80xvpn4blcfn" path="res://JanusPuzzle/cardC.png" id="6_2ybjy"]
 
-[node name="cardGame" type="Node" unique_id=481930065]
+[node name="game" type="Node" unique_id=481930065]
 script = ExtResource("1_70yv6")
 
 [node name="card" parent="." unique_id=1539333485 instance=ExtResource("2_yq6rq")]

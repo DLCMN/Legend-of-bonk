@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://cflc37dtysvf6"]
 
-[ext_resource type="Script" uid="uid://dn733cx82gpau" path="res://RedKeyItem.gd" id="1_625ob"]
-[ext_resource type="Texture2D" uid="uid://ck18p0b83cqo4" path="res://assets/key.png" id="2_iqwfl"]
+[ext_resource type="Script" uid="uid://dn733cx82gpau" path="res://RedKey/RedKeyItem.gd" id="1_625ob"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gv60a"]
 
@@ -19,6 +18,5 @@ shape = SubResource("RectangleShape2D_gv60a")
 shape = SubResource("RectangleShape2D_625ob")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1397326408]
-texture = ExtResource("2_iqwfl")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1044859913]

@@ -12,7 +12,7 @@ var is_flipped := false
 func _ready():
 	sprite.texture = back_tile_texture
 	add_to_group("tiles")
-	body_entered.connect(_on_body_entered)
+
 
 func flip_tile():
 	if is_flipped:
