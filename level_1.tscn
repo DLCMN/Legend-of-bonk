@@ -201,9 +201,116 @@ limit_right = 1056500
 limit_bottom = 1056500
 limit_smoothed = true
 
+<<<<<<< Updated upstream
 [node name="EvilSleem" parent="." unique_id=629169447 instance=ExtResource("6_5hph3")]
 position = Vector2(740, 185)
 scale = Vector2(1.5, 1.5)
+=======
+[node name="grid" parent="maze" index="0" unique_id=82943105]
+position = Vector2(2480, 488)
+
+[node name="tile" parent="maze/grid/row 1" parent_id_path=PackedInt32Array(1820058832, 1485976639) index="0" unique_id=691846773]
+card_id = 1
+front_tile_texture = ExtResource("5_sof0w")
+back_tile_texture = ExtResource("6_ggavl")
+
+[node name="tile2" parent="maze/grid/row 1" parent_id_path=PackedInt32Array(1820058832, 1485976639) index="1" unique_id=1045228084]
+card_id = 1
+front_tile_texture = ExtResource("5_sof0w")
+back_tile_texture = ExtResource("6_ggavl")
+
+[node name="tile3" parent="maze/grid/row 1" parent_id_path=PackedInt32Array(1820058832, 1485976639) index="2" unique_id=184212914]
+card_id = 1
+front_tile_texture = ExtResource("5_sof0w")
+back_tile_texture = ExtResource("6_ggavl")
+
+[node name="tile4" parent="maze/grid/row 1" parent_id_path=PackedInt32Array(1820058832, 1485976639) index="3" unique_id=1883310592]
+position = Vector2(134, 23)
+card_id = 1
+front_tile_texture = ExtResource("5_sof0w")
+back_tile_texture = ExtResource("6_ggavl")
+
+[node name="tile5" parent="maze/grid/row 1" parent_id_path=PackedInt32Array(1820058832, 1485976639) index="4" unique_id=2117416178]
+card_id = 1
+front_tile_texture = ExtResource("5_sof0w")
+back_tile_texture = ExtResource("6_ggavl")
+
+[node name="tile5" parent="maze/grid/row 2" parent_id_path=PackedInt32Array(1820058832, 167130444) index="0" unique_id=760844969]
+card_id = 1
+front_tile_texture = ExtResource("5_sof0w")
+back_tile_texture = ExtResource("6_ggavl")
+
+[node name="tile3" parent="maze/grid/row 3" parent_id_path=PackedInt32Array(1820058832, 491769077) index="0" unique_id=337315226]
+card_id = 1
+front_tile_texture = ExtResource("5_sof0w")
+back_tile_texture = ExtResource("6_ggavl")
+
+[node name="tile4" parent="maze/grid/row 3" parent_id_path=PackedInt32Array(1820058832, 491769077) index="1" unique_id=407230383]
+card_id = 1
+front_tile_texture = ExtResource("5_sof0w")
+back_tile_texture = ExtResource("6_ggavl")
+
+[node name="tile5" parent="maze/grid/row 3" parent_id_path=PackedInt32Array(1820058832, 491769077) index="2" unique_id=1330009101]
+card_id = 1
+front_tile_texture = ExtResource("5_sof0w")
+back_tile_texture = ExtResource("6_ggavl")
+
+[node name="tile3" parent="maze/grid/row 4" parent_id_path=PackedInt32Array(1820058832, 624277702) index="0" unique_id=582365156]
+card_id = 1
+front_tile_texture = ExtResource("5_sof0w")
+back_tile_texture = ExtResource("6_ggavl")
+
+[node name="tile2" parent="maze/grid/row 5" parent_id_path=PackedInt32Array(1820058832, 76945341) index="0" unique_id=1564730119]
+card_id = 1
+front_tile_texture = ExtResource("5_sof0w")
+back_tile_texture = ExtResource("6_ggavl")
+
+[node name="tile3" parent="maze/grid/row 5" parent_id_path=PackedInt32Array(1820058832, 76945341) index="1" unique_id=2134698050]
+card_id = 1
+front_tile_texture = ExtResource("5_sof0w")
+back_tile_texture = ExtResource("6_ggavl")
+
+[node name="tile" parent="maze/grid/row 6" parent_id_path=PackedInt32Array(1820058832, 227444857) index="0" unique_id=1672572235]
+card_id = 1
+front_tile_texture = ExtResource("5_sof0w")
+back_tile_texture = ExtResource("6_ggavl")
+
+[node name="tile2" parent="maze/grid/row 6" parent_id_path=PackedInt32Array(1820058832, 227444857) index="1" unique_id=211187139]
+card_id = 1
+front_tile_texture = ExtResource("5_sof0w")
+back_tile_texture = SubResource("CompressedTexture2D_sof0w")
+
+[node name="cards" parent="." unique_id=481930065 instance=ExtResource("10_gyffv")]
+
+[node name="card" parent="cards" index="0" unique_id=1539333485]
+position = Vector2(148, 573)
+
+[node name="card2" parent="cards" index="1" unique_id=501392757]
+position = Vector2(-194, 577)
+
+[node name="card3" parent="cards" index="2" unique_id=1810234599]
+position = Vector2(-8, 714)
+
+[node name="card4" parent="cards" index="3" unique_id=1688188529]
+position = Vector2(-3, 570)
+
+[node name="card5" parent="cards" index="4" unique_id=1664601371]
+position = Vector2(-188, 711)
+
+[node name="card6" parent="cards" index="5" unique_id=436998077]
+position = Vector2(152, 717)
+
+[node name="Player" parent="." unique_id=1861891870 node_paths=PackedStringArray("player_health_bar", "player_heart") instance=ExtResource("2_hbghi")]
+player_health_bar = NodePath("../RoomTransCamera/playerHealthBar")
+player_heart = NodePath("../RoomTransCamera/playerHealthBar/PlayerHeart")
+
+[node name="CheckpointManager" type="Node2D" parent="." unique_id=1192262142]
+visible = false
+script = ExtResource("4_bjebc")
+
+[node name="Checkpoint1" parent="CheckpointManager" unique_id=1216059412 instance=ExtResource("5_5rr72")]
+position = Vector2(-6, 2)
+>>>>>>> Stashed changes
 
 <<<<<<< Updated upstream
 [node name="CheckpointManager" type="Node2D" parent="." unique_id=229678362]
@@ -219,5 +326,53 @@ position = Vector2(392, 229)
 
 [node name="HUD" parent="." unique_id=107477700 instance=ExtResource("9_5rr72")]
 
+<<<<<<< Updated upstream
 [node name="SleemFriend" parent="." unique_id=1720382389 instance=ExtResource("6_gyffv")]
 position = Vector2(679, 590)
+=======
+[node name="UI (for the keyRing indicators)" type="CanvasLayer" parent="." unique_id=1651521260]
+
+[node name="Root" type="Control" parent="UI (for the keyRing indicators)" unique_id=2006651031]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="KeyIndicators" type="HBoxContainer" parent="UI (for the keyRing indicators)/Root" unique_id=613601807]
+visible = false
+layout_mode = 0
+offset_right = 97.0
+offset_bottom = 69.0
+
+[node name="ColorRect" type="ColorRect" parent="UI (for the keyRing indicators)/Root/KeyIndicators" unique_id=533158905]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+color = Color(1, 0.83137256, 0, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="UI (for the keyRing indicators)/Root/KeyIndicators" unique_id=2063516784]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+color = Color(1, 0, 0, 1)
+
+[node name="ColorRect3" type="ColorRect" parent="UI (for the keyRing indicators)/Root/KeyIndicators" unique_id=1641341132]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+color = Color(0.09019608, 0.83137256, 0.03137255, 1)
+
+[node name="ColorRect4" type="ColorRect" parent="UI (for the keyRing indicators)/Root/KeyIndicators" unique_id=1190357240]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+color = Color(0, 0.38431373, 0.9882353, 1)
+
+[node name="ColorRect5" type="ColorRect" parent="UI (for the keyRing indicators)/Root/KeyIndicators" unique_id=911484842]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+color = Color(1, 0.0627451, 0.64705884, 1)
+
+[editable path="maze"]
+[editable path="cards"]
+[editable path="RoomTransCamera"]
+[editable path="RoomTransCamera/playerHealthBar"]
+>>>>>>> Stashed changes
