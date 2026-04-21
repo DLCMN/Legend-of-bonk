@@ -1,15 +1,24 @@
 [gd_scene format=3 uid="uid://cvhyodwqnk65d"]
 
 [ext_resource type="Script" uid="uid://b4b3le5btr3uc" path="res://Script/door.gd" id="1_1vvux"]
+[ext_resource type="Texture2D" uid="uid://3p2v54jsilm7" path="res://JanusPuzzle/cardB.png" id="2_iu8q0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cuixy"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jbk66"]
+size = Vector2(20, 40)
 
 [node name="Door" type="Node2D" unique_id=833142503]
 script = ExtResource("1_1vvux")
 
 [node name="Sprite2D2" type="Sprite2D" parent="." unique_id=1924431924]
+scale = Vector2(0.39999998, 0.41999996)
+texture = ExtResource("2_iu8q0")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=900510179]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1515647956]
+shape = SubResource("RectangleShape2D_cuixy")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1410336593]
 
@@ -18,3 +27,5 @@ script = ExtResource("1_1vvux")
 [node name="InteractArea2D" type="Area2D" parent="." unique_id=906559032]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractArea2D" unique_id=191793307]
+position = Vector2(0, -1)
+shape = SubResource("RectangleShape2D_jbk66")
