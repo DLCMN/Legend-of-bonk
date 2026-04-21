@@ -8,7 +8,6 @@
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=2115829375]
 stream = ExtResource("1_no4x2")
 volume_db = -10.0
-autoplay = true
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=89566598]
 

@@ -11,6 +11,7 @@ signal player_died
 @export var animation_tree : AnimationTree
 @export var atkNumber: int = 3
 
+@onready var game_over_audio : AudioStreamPlayer2D = $Game_over_music
 @onready var soundDamage: AudioStreamPlayer2D = $PlayerDamage
 @onready var damage_cooldown: Timer = $DamageCooldown
 @onready var respawn_shield: Timer = $RespawnShield
@@ -159,8 +160,10 @@ func die() -> void:
 	playback.travel("death")
 	$CollisionShape2D.set_deferred("disabled", true)
 	respawn_shield.start()
+
+	game_over_audio.play()
 	
-	emit_signal("player_died")
+	#emit_signal("player_died")
 
 #actually resetting + respawning and running the screen fade
 
@@ -170,24 +173,22 @@ func DeathAnimFinished() -> void:
 
 	await get_tree().create_timer(0.8).timeout
 	await hud.fade(1.0)
-
-	respawn()
-
-	await hud.fade(0.3)
-	hud.fade(0.0)
-
-	
-func respawn() -> void:
 	friendDead = false
 	position = checkpointManager.lastLocation
 	health = PlayerStats.Maxhealth
 	player_health_bar.updateHealth(health)
 	playback.travel("Idle")
-
+	await await get_tree().create_timer(3).timeout
+	await hud.fade(0.3)
+	
 	dead = false
 	is_attacking = false
 	cooldownCombo = false
 	$CollisionShape2D.set_deferred("disabled", false)
+	hud.fade(0.0)
+
+	
+
  #making it so the combo actually appears as a combo and not just a spam of three animations
 func comboCooldown():
 	cooldownCombo = true

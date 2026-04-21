@@ -12,7 +12,6 @@
 [ext_resource type="PackedScene" uid="uid://cp8nuuvji53rb" path="res://Camera/room_trans_camera.tscn" id="9_5rr72"]
 [ext_resource type="PackedScene" uid="uid://cur3p5nk6k7yp" path="res://JanusPuzzle/game_manager.tscn" id="10_gyffv"]
 [ext_resource type="PackedScene" uid="uid://b6b41yl6tb0o1" path="res://mazeFixed/global.tscn" id="11_1pe0h"]
-[ext_resource type="PackedScene" uid="uid://uhg7vkdhcmec" path="res://gameover_screen.tscn" id="13_ggavl"]
 
 [sub_resource type="Resource" id="Resource_1pe0h"]
 metadata/__load_path__ = "res://mazeFixed/greenSquare.png"
@@ -246,9 +245,11 @@ position = Vector2(-188, 711)
 position = Vector2(152, 717)
 
 [node name="Player" parent="." unique_id=1861891870 node_paths=PackedStringArray("player_health_bar", "player_heart") instance=ExtResource("2_hbghi")]
-position = Vector2(2448, 648)
 player_health_bar = NodePath("../RoomTransCamera/playerHealthBar")
 player_heart = NodePath("../RoomTransCamera/playerHealthBar/PlayerHeart")
+speed = null
+atkNumber = null
+is_attacking = null
 
 [node name="CheckpointManager" type="Node2D" parent="." unique_id=1192262142]
 script = ExtResource("4_bjebc")
@@ -257,7 +258,7 @@ script = ExtResource("4_bjebc")
 position = Vector2(-6, 2)
 
 [node name="EvilSleem" parent="." unique_id=629169447 instance=ExtResource("6_gyffv")]
-position = Vector2(96, -240)
+position = Vector2(75, -20)
 collision_mask = 12
 
 [node name="RoomTransCamera" parent="." unique_id=1987845898 node_paths=PackedStringArray("TargetNode") instance=ExtResource("9_5rr72")]
@@ -265,13 +266,8 @@ TargetNode = NodePath("../Player")
 
 [node name="HUD" parent="." unique_id=107477700 instance=ExtResource("7_1pe0h")]
 
-[node name="Gameover_screen" parent="." unique_id=186693592 instance=ExtResource("13_ggavl")]
-
-[node name="Control" parent="Gameover_screen/CanvasLayer" parent_id_path=PackedInt32Array(186693592, 89566598) index="0" unique_id=128978032 node_paths=PackedStringArray("TargetNode")]
-TargetNode = NodePath("../../../Player")
-
 [editable path="maze"]
 [editable path="cards"]
 [editable path="RoomTransCamera"]
 [editable path="RoomTransCamera/playerHealthBar"]
-[editable path="Gameover_screen"]
+[editable path="HUD"]
