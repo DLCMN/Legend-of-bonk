@@ -1,3 +1,5 @@
-res://level_1.tscn
+res://Enemy(fireball)/Enemy(fireball)/evil_enemy(fireball).gd
+res://Enemy(fireball)/Enemy(fireball)/evil_enemy(fireball).tscn
 res://assets/Pixel Art Furniture Pack - FREE/tilesV1.tres
-res://Enemy(fireball)/Enemy(fireball)/fireball_2d.tscn
+res://Move/movement.tscn
+res://level_1.tscn
