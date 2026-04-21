@@ -6,6 +6,20 @@
 [ext_resource type="Script" uid="uid://dhdsn20fsdm15" path="res://Script/key_ring.gd" id="5_0ka7j"]
 [ext_resource type="AudioStream" uid="uid://brwthaofkauij" path="res://Move/HeartSnap.wav" id="5_p5v78"]
 [ext_resource type="AudioStream" uid="uid://cncpkndt8qfpm" path="res://assets/Music/music_short8s_Directed-by-Robert-B-Weide-Sound-Effect.wav" id="6_0ka7j"]
+[ext_resource type="AudioStream" uid="uid://da25r51se6s5v" path="res://assets/sfx/wpn/blade/wpn_blade_01.ogg" id="7_5e5nn"]
+[ext_resource type="AudioStream" uid="uid://bw87akxwk75b" path="res://assets/sfx/dash/wind.ogg" id="7_eicaj"]
+[ext_resource type="AudioStream" uid="uid://ky1p7bwbwtjl" path="res://assets/sfx/stps/walk1.ogg" id="8_8qlaw"]
+[ext_resource type="AudioStream" uid="uid://bxs4k7t6lx06m" path="res://assets/sfx/wpn/blade/wpn_blade_02.ogg" id="8_kxcuq"]
+[ext_resource type="AudioStream" uid="uid://cq7s41q0l0psv" path="res://assets/sfx/wpn/blade/wpn_blade_03.ogg" id="9_8stoh"]
+[ext_resource type="AudioStream" uid="uid://btmqygsiah55n" path="res://assets/sfx/stps/walk2.ogg" id="9_xabqq"]
+[ext_resource type="AudioStream" uid="uid://bmtbh04bd8pal" path="res://assets/sfx/stps/walk3.ogg" id="10_m73wb"]
+[ext_resource type="AudioStream" uid="uid://cpxr6c1f75lwm" path="res://assets/sfx/wpn/blade/wpn_blade_04.ogg" id="10_xhdvj"]
+[ext_resource type="AudioStream" uid="uid://bjm22igkxkv60" path="res://assets/sfx/stps/walk4.ogg" id="11_vjfan"]
+[ext_resource type="AudioStream" uid="uid://cl4gvmute2bb1" path="res://assets/sfx/stps/walk5.ogg" id="12_bovxj"]
+[ext_resource type="AudioStream" uid="uid://v142mt5a4etm" path="res://assets/sfx/stps/walk6.ogg" id="13_so1tb"]
+[ext_resource type="AudioStream" uid="uid://bjv8i8k43lufr" path="res://assets/sfx/stps/walk7.ogg" id="14_167mw"]
+[ext_resource type="AudioStream" uid="uid://mngjdb1y4vo4" path="res://assets/sfx/stps/walk8.ogg" id="15_vk2oi"]
+[ext_resource type="AudioStream" uid="uid://kp8mt6v3asyy" path="res://assets/sfx/stps/walk9.ogg" id="16_yfsum"]
 
 [sub_resource type="Animation" id="Animation_fu8xx"]
 resource_name = "Attack1 - Down"
@@ -1115,6 +1129,26 @@ size = Vector2(32.5, 32.5)
 radius = 19.0
 height = 62.0
 
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_wmevh"]
+streams_count = 10
+stream_0/stream = ExtResource("8_8qlaw")
+stream_1/stream = ExtResource("9_xabqq")
+stream_2/stream = ExtResource("10_m73wb")
+stream_3/stream = ExtResource("11_vjfan")
+stream_4/stream = ExtResource("12_bovxj")
+stream_5/stream = ExtResource("13_so1tb")
+stream_6/stream = ExtResource("14_167mw")
+stream_7/stream = ExtResource("15_vk2oi")
+stream_8/stream = ExtResource("16_yfsum")
+stream_9/stream = ExtResource("16_yfsum")
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_ltlno"]
+streams_count = 4
+stream_0/stream = ExtResource("7_5e5nn")
+stream_1/stream = ExtResource("8_kxcuq")
+stream_2/stream = ExtResource("9_8stoh")
+stream_3/stream = ExtResource("10_xhdvj")
+
 [node name="Player" type="CharacterBody2D" unique_id=1861891870 node_paths=PackedStringArray("animation_tree")]
 z_index = 1
 collision_layer = 3
@@ -1184,6 +1218,20 @@ script = ExtResource("5_0ka7j")
 
 [node name="Game_over_music" type="AudioStreamPlayer2D" parent="." unique_id=95609768]
 stream = ExtResource("6_0ka7j")
+
+[node name="dashSound" type="AudioStreamPlayer2D" parent="." unique_id=518793623]
+stream = ExtResource("7_eicaj")
+volume_db = 4.0
+
+[node name="footstepSounds" type="AudioStreamPlayer2D" parent="." unique_id=1534909469]
+stream = SubResource("AudioStreamRandomizer_wmevh")
+
+[node name="attackSounds" type="AudioStreamPlayer2D" parent="." unique_id=339042668]
+stream = SubResource("AudioStreamRandomizer_ltlno")
+
+[node name="footstepTimer" type="Timer" parent="." unique_id=2053289875]
+wait_time = 0.4
+one_shot = true
 
 [connection signal="timeout" from="DashTimer" to="." method="_on_dash_timer_timeout"]
 [connection signal="body_entered" from="Marker2D/SwordHitBox" to="." method="_on_sword_hit_box_body_entered"]

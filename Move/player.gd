@@ -20,6 +20,12 @@ signal player_died
 # @onready var player_heart: AnimatedSprite2D = $CanvasLayer/playerHealthBar/PlayerHeart
 @onready var heart_break_sound: AudioStreamPlayer2D = $heartBreakSound
 
+@onready var attack_sound: AudioStreamPlayer2D = $attackSounds
+
+@onready var footstep_sounds: AudioStreamPlayer2D = $footstepSounds
+@onready var footstep_timer = $footstepTimer
+
+@onready var dash_sound: AudioStreamPlayer2D = $dashSound
 
 
 var input : Vector2
@@ -59,12 +65,15 @@ func _physics_process(_delta: float) -> void:
 		velocity = Vector2.ZERO
 		if Input.is_action_just_pressed("Attack") and atkNumber == 3:
 			playback.travel("Attack1") #go to attack
+			attack_sound.play()
 			removeAtkNumber()
 		elif Input.is_action_just_pressed("Attack") and atkNumber == 2:
 			playback.travel("Attack2") #go to attack
+			attack_sound.play()
 			removeAtkNumber()
 		elif Input.is_action_just_pressed("Attack") and atkNumber == 1:
 			playback.travel("Attack3") #go to attack
+			attack_sound.play()
 			removeAtkNumber()
 			comboCooldown()
 			
@@ -79,8 +88,15 @@ func _physics_process(_delta: float) -> void:
 		#only move when not attacking
 		if not is_attacking and not dead:
 			velocity = input * speed
+			if input != Vector2.ZERO and velocity != Vector2.ZERO:
+				if footstep_timer.is_stopped():
+					footstep_sounds.play()
+					footstep_timer.start(0.4)
+			else:
+				footstep_timer.stop()
 		else:
 			velocity = Vector2.ZERO
+			footstep_timer.stop()
 
 		move_and_slide()
 		select_animation()
@@ -91,6 +107,8 @@ func _physics_process(_delta: float) -> void:
 		$DashTimer.start()
 		speed *= 5
 		velocity = input * speed
+		if velocity != Vector2.ZERO:
+			dash_sound.play()
 
 
 #ending attack
