@@ -17,6 +17,7 @@
 [ext_resource type="Script" uid="uid://bbjly3iygdq8" path="res://Script/ui_key_indicator.gd" id="14_ggavl"]
 [ext_resource type="Script" uid="uid://cr3lryy7tx6ky" path="res://Script/ui_key_indicators.gd" id="14_ubhxj"]
 [ext_resource type="PackedScene" uid="uid://bpgbhoq0o3d7o" path="res://KeyItem.tscn" id="17_lhbbi"]
+[ext_resource type="PackedScene" uid="uid://cvhyodwqnk65d" path="res://Door.tscn" id="18_gjkv5"]
 
 [node name="Level1" type="Node2D" unique_id=1321335471]
 script = ExtResource("1_65or1")
@@ -68,7 +69,7 @@ volume_db = -35.0
 autoplay = true
 
 [node name="SleemFriend" parent="." unique_id=1720382389 instance=ExtResource("8_27bay")]
-position = Vector2(2288, 624)
+position = Vector2(2779, 702)
 
 [node name="maze" parent="." unique_id=1820058832 instance=ExtResource("11_1pe0h")]
 
@@ -239,6 +240,11 @@ color = Color(1, 0.0627451, 0.64705884, 1)
 [node name="KeyItem" parent="." unique_id=2086649070 instance=ExtResource("17_lhbbi")]
 position = Vector2(2502, 652)
 key_id = "first_key"
+
+[node name="Door_1" parent="." unique_id=833142503 instance=ExtResource("18_gjkv5")]
+position = Vector2(2272, 645)
+rotation = 4.712389
+required_key_id = "first_key"
 
 [editable path="maze"]
 [editable path="cards"]

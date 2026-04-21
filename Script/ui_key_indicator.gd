@@ -6,5 +6,5 @@ class_name UiIndicator
 func _ready() -> void:
 	visible = false
 	
-func set_active(active: bool) -> void:
-	visible = active
+#func set_active(active: bool) -> void:
+	#visible = active
