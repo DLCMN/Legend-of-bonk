@@ -5,14 +5,17 @@
 [ext_resource type="PackedScene" uid="uid://bq8vi3nwkcsbh" path="res://Move/movement.tscn" id="2_hbghi"]
 [ext_resource type="Script" uid="uid://d2hgu144de5mx" path="res://checkpoint_manager.gd" id="4_bjebc"]
 [ext_resource type="PackedScene" uid="uid://i563vucp4hn2" path="res://Checkpoint.tscn" id="5_5rr72"]
-[ext_resource type="Texture2D" uid="uid://jsn56cdncyeg" path="res://mazeFixed/greenSquare.png" id="5_sof0w"]
-[ext_resource type="Texture2D" uid="uid://01ok706fjof6" path="res://mazeFixed/megamind.png" id="6_ggavl"]
+[ext_resource type="Texture2D" uid="uid://beqjwreu5yl8v" path="res://mazeFixed/Lily pad.png" id="5_sof0w"]
+[ext_resource type="Texture2D" uid="uid://eppu1ojp7hyj" path="res://mazeFixed/clear.png" id="6_ggavl"]
 [ext_resource type="PackedScene" uid="uid://65b2y3wyhjma" path="res://newEnemies/EvilSleem/evil_sleem.tscn" id="6_gyffv"]
 [ext_resource type="PackedScene" uid="uid://bys1bvclcs8ns" path="res://hud.tscn" id="7_1pe0h"]
 [ext_resource type="PackedScene" uid="uid://bc2mh7ylwndcv" path="res://sleem_friend.tscn" id="8_27bay"]
 [ext_resource type="PackedScene" uid="uid://cp8nuuvji53rb" path="res://Camera/room_trans_camera.tscn" id="9_5rr72"]
 [ext_resource type="PackedScene" uid="uid://cur3p5nk6k7yp" path="res://JanusPuzzle/game_manager.tscn" id="10_gyffv"]
 [ext_resource type="PackedScene" uid="uid://b6b41yl6tb0o1" path="res://mazeFixed/global.tscn" id="11_1pe0h"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_sof0w"]
+load_path = "res://.godot/imported/megamind.png-bfa79a153e8ee667e8e1522564bf4315.ctex"
 
 [node name="Level1" type="Node2D" unique_id=1321335471]
 
@@ -63,7 +66,7 @@ volume_db = -35.0
 autoplay = true
 
 [node name="SleemFriend" parent="." unique_id=1720382389 instance=ExtResource("8_27bay")]
-position = Vector2(2288, 624)
+position = Vector2(-130, 13)
 
 [node name="maze" parent="." unique_id=1820058832 instance=ExtResource("11_1pe0h")]
 
@@ -86,6 +89,7 @@ front_tile_texture = ExtResource("5_sof0w")
 back_tile_texture = ExtResource("6_ggavl")
 
 [node name="tile4" parent="maze/grid/row 1" parent_id_path=PackedInt32Array(1820058832, 1485976639) index="3" unique_id=1883310592]
+position = Vector2(134, 23)
 card_id = 1
 front_tile_texture = ExtResource("5_sof0w")
 back_tile_texture = ExtResource("6_ggavl")
@@ -138,7 +142,7 @@ back_tile_texture = ExtResource("6_ggavl")
 [node name="tile2" parent="maze/grid/row 6" parent_id_path=PackedInt32Array(1820058832, 227444857) index="1" unique_id=211187139]
 card_id = 1
 front_tile_texture = ExtResource("5_sof0w")
-back_tile_texture = ExtResource("6_ggavl")
+back_tile_texture = SubResource("CompressedTexture2D_sof0w")
 
 [node name="cards" parent="." unique_id=481930065 instance=ExtResource("10_gyffv")]
 
@@ -161,11 +165,12 @@ position = Vector2(-188, 711)
 position = Vector2(152, 717)
 
 [node name="Player" parent="." unique_id=1861891870 node_paths=PackedStringArray("player_health_bar", "player_heart") instance=ExtResource("2_hbghi")]
-position = Vector2(2448, 648)
+position = Vector2(201, 81)
 player_health_bar = NodePath("../RoomTransCamera/playerHealthBar")
 player_heart = NodePath("../RoomTransCamera/playerHealthBar/PlayerHeart")
 
 [node name="CheckpointManager" type="Node2D" parent="." unique_id=1192262142]
+visible = false
 script = ExtResource("4_bjebc")
 
 [node name="Checkpoint1" parent="CheckpointManager" unique_id=1216059412 instance=ExtResource("5_5rr72")]
