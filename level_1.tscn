@@ -3,6 +3,8 @@
 [ext_resource type="AudioStream" uid="uid://g6j758sb38j" path="res://assets/Music/music-pirate-adventure-361663.wav" id="1_3hls8"]
 [ext_resource type="TileSet" uid="uid://cbdolxwpgq5l7" path="res://assets/Pixel Art Furniture Pack - FREE/tilesV1.tres" id="1_hn12h"]
 [ext_resource type="PackedScene" uid="uid://bq8vi3nwkcsbh" path="res://Move/movement.tscn" id="2_hbghi"]
+[ext_resource type="PackedScene" uid="uid://b82lnpdlgmlhl" path="res://newEnemies/SleemMiniBoss/evil_sleem_boss.tscn" id="3_ubhxj"]
+[ext_resource type="PackedScene" uid="uid://dr2ysu1goxcvt" path="res://newEnemies/SleemMiniBoss/SleemShadow.tscn" id="4_65or1"]
 [ext_resource type="Script" uid="uid://d2hgu144de5mx" path="res://checkpoint_manager.gd" id="4_bjebc"]
 [ext_resource type="PackedScene" uid="uid://i563vucp4hn2" path="res://Checkpoint.tscn" id="5_5rr72"]
 [ext_resource type="Texture2D" uid="uid://beqjwreu5yl8v" path="res://mazeFixed/Lily pad.png" id="5_sof0w"]
@@ -65,8 +67,17 @@ stream = ExtResource("1_3hls8")
 volume_db = -35.0
 autoplay = true
 
+[node name="EvilSleemBoss" parent="." unique_id=713703177 instance=ExtResource("3_ubhxj")]
+position = Vector2(1566, 137)
+
+[node name="Shadow" parent="." unique_id=650283062 instance=ExtResource("4_65or1")]
+
 [node name="SleemFriend" parent="." unique_id=1720382389 instance=ExtResource("8_27bay")]
 position = Vector2(-130, 13)
+
+[node name="Player" parent="." unique_id=1861891870 node_paths=PackedStringArray("player_health_bar", "player_heart") instance=ExtResource("2_hbghi")]
+player_health_bar = NodePath("../RoomTransCamera/playerHealthBar")
+player_heart = NodePath("../RoomTransCamera/playerHealthBar/PlayerHeart")
 
 [node name="maze" parent="." unique_id=1820058832 instance=ExtResource("11_1pe0h")]
 
@@ -164,10 +175,6 @@ position = Vector2(-188, 711)
 [node name="card6" parent="cards" index="5" unique_id=436998077]
 position = Vector2(152, 717)
 
-[node name="Player" parent="." unique_id=1861891870 node_paths=PackedStringArray("player_health_bar", "player_heart") instance=ExtResource("2_hbghi")]
-player_health_bar = NodePath("../RoomTransCamera/playerHealthBar")
-player_heart = NodePath("../RoomTransCamera/playerHealthBar/PlayerHeart")
-
 [node name="CheckpointManager" type="Node2D" parent="." unique_id=1192262142]
 visible = false
 script = ExtResource("4_bjebc")
@@ -176,7 +183,7 @@ script = ExtResource("4_bjebc")
 position = Vector2(-6, 2)
 
 [node name="EvilSleem" parent="." unique_id=629169447 instance=ExtResource("6_gyffv")]
-position = Vector2(105, -36)
+position = Vector2(138, -125)
 collision_mask = 12
 
 [node name="RoomTransCamera" parent="." unique_id=1987845898 node_paths=PackedStringArray("TargetNode") instance=ExtResource("9_5rr72")]

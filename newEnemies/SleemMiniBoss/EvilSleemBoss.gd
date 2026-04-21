@@ -97,6 +97,7 @@ func JumpTime():
 		$CollisionShape2D.set_deferred("disabled", true)
 		$Sight/CollisionShape2D.set_deferred("disabled", true)
 		$Hitbox/CollisionShape2D.set_deferred("disabled", true)
+		Shadow.position = thePlayer.position
 		jumping = true
 		Shadow.shadow = true
 		Shadow.show()
