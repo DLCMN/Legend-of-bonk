@@ -2,19 +2,104 @@
 
 [ext_resource type="AudioStream" uid="uid://g6j758sb38j" path="res://assets/Music/music-pirate-adventure-361663.wav" id="1_3hls8"]
 [ext_resource type="TileSet" uid="uid://cbdolxwpgq5l7" path="res://assets/Pixel Art Furniture Pack - FREE/tilesV1.tres" id="1_hn12h"]
+[ext_resource type="Script" uid="uid://dspaf6ubxv1hf" path="res://Script/level_1.gd" id="1_sof0w"]
 [ext_resource type="PackedScene" uid="uid://bq8vi3nwkcsbh" path="res://Move/movement.tscn" id="2_hbghi"]
 [ext_resource type="Script" uid="uid://d2hgu144de5mx" path="res://checkpoint_manager.gd" id="4_bjebc"]
 [ext_resource type="PackedScene" uid="uid://i563vucp4hn2" path="res://Checkpoint.tscn" id="5_5rr72"]
-[ext_resource type="Texture2D" uid="uid://jsn56cdncyeg" path="res://mazeFixed/greenSquare.png" id="5_sof0w"]
-[ext_resource type="Texture2D" uid="uid://01ok706fjof6" path="res://mazeFixed/megamind.png" id="6_ggavl"]
 [ext_resource type="PackedScene" uid="uid://65b2y3wyhjma" path="res://newEnemies/EvilSleem/evil_sleem.tscn" id="6_gyffv"]
 [ext_resource type="PackedScene" uid="uid://bys1bvclcs8ns" path="res://hud.tscn" id="7_1pe0h"]
 [ext_resource type="PackedScene" uid="uid://bc2mh7ylwndcv" path="res://sleem_friend.tscn" id="8_27bay"]
 [ext_resource type="PackedScene" uid="uid://cp8nuuvji53rb" path="res://Camera/room_trans_camera.tscn" id="9_5rr72"]
 [ext_resource type="PackedScene" uid="uid://cur3p5nk6k7yp" path="res://JanusPuzzle/game_manager.tscn" id="10_gyffv"]
 [ext_resource type="PackedScene" uid="uid://b6b41yl6tb0o1" path="res://mazeFixed/global.tscn" id="11_1pe0h"]
+[ext_resource type="PackedScene" uid="uid://uhg7vkdhcmec" path="res://gameover_screen.tscn" id="13_ggavl"]
+
+[sub_resource type="Resource" id="Resource_1pe0h"]
+metadata/__load_path__ = "res://mazeFixed/greenSquare.png"
+
+[sub_resource type="Resource" id="Resource_27bay"]
+metadata/__load_path__ = "res://mazeFixed/megamind.png"
+
+[sub_resource type="Resource" id="Resource_sof0w"]
+metadata/__load_path__ = "res://mazeFixed/greenSquare.png"
+
+[sub_resource type="Resource" id="Resource_ggavl"]
+metadata/__load_path__ = "res://mazeFixed/megamind.png"
+
+[sub_resource type="Resource" id="Resource_ubhxj"]
+metadata/__load_path__ = "res://mazeFixed/greenSquare.png"
+
+[sub_resource type="Resource" id="Resource_65or1"]
+metadata/__load_path__ = "res://mazeFixed/megamind.png"
+
+[sub_resource type="Resource" id="Resource_lhbbi"]
+metadata/__load_path__ = "res://mazeFixed/greenSquare.png"
+
+[sub_resource type="Resource" id="Resource_gjkv5"]
+metadata/__load_path__ = "res://mazeFixed/megamind.png"
+
+[sub_resource type="Resource" id="Resource_00ld1"]
+metadata/__load_path__ = "res://mazeFixed/greenSquare.png"
+
+[sub_resource type="Resource" id="Resource_3qmij"]
+metadata/__load_path__ = "res://mazeFixed/megamind.png"
+
+[sub_resource type="Resource" id="Resource_kb5eu"]
+metadata/__load_path__ = "res://mazeFixed/greenSquare.png"
+
+[sub_resource type="Resource" id="Resource_lfy8a"]
+metadata/__load_path__ = "res://mazeFixed/megamind.png"
+
+[sub_resource type="Resource" id="Resource_ethxx"]
+metadata/__load_path__ = "res://mazeFixed/greenSquare.png"
+
+[sub_resource type="Resource" id="Resource_3o2xh"]
+metadata/__load_path__ = "res://mazeFixed/megamind.png"
+
+[sub_resource type="Resource" id="Resource_duihb"]
+metadata/__load_path__ = "res://mazeFixed/greenSquare.png"
+
+[sub_resource type="Resource" id="Resource_b6mmh"]
+metadata/__load_path__ = "res://mazeFixed/megamind.png"
+
+[sub_resource type="Resource" id="Resource_ttn6t"]
+metadata/__load_path__ = "res://mazeFixed/greenSquare.png"
+
+[sub_resource type="Resource" id="Resource_ia5ws"]
+metadata/__load_path__ = "res://mazeFixed/megamind.png"
+
+[sub_resource type="Resource" id="Resource_be5co"]
+metadata/__load_path__ = "res://mazeFixed/greenSquare.png"
+
+[sub_resource type="Resource" id="Resource_hycyb"]
+metadata/__load_path__ = "res://mazeFixed/megamind.png"
+
+[sub_resource type="Resource" id="Resource_swvua"]
+metadata/__load_path__ = "res://mazeFixed/greenSquare.png"
+
+[sub_resource type="Resource" id="Resource_ka01f"]
+metadata/__load_path__ = "res://mazeFixed/megamind.png"
+
+[sub_resource type="Resource" id="Resource_notaq"]
+metadata/__load_path__ = "res://mazeFixed/greenSquare.png"
+
+[sub_resource type="Resource" id="Resource_ett8d"]
+metadata/__load_path__ = "res://mazeFixed/megamind.png"
+
+[sub_resource type="Resource" id="Resource_4p6gt"]
+metadata/__load_path__ = "res://mazeFixed/greenSquare.png"
+
+[sub_resource type="Resource" id="Resource_td8cy"]
+metadata/__load_path__ = "res://mazeFixed/megamind.png"
+
+[sub_resource type="Resource" id="Resource_84ct4"]
+metadata/__load_path__ = "res://mazeFixed/greenSquare.png"
+
+[sub_resource type="Resource" id="Resource_i5xja"]
+metadata/__load_path__ = "res://mazeFixed/megamind.png"
 
 [node name="Level1" type="Node2D" unique_id=1321335471]
+script = ExtResource("1_sof0w")
 
 [node name="TileMap" type="Node2D" parent="." unique_id=1458838144]
 position = Vector2(-336, -176)
@@ -72,73 +157,73 @@ position = Vector2(2480, 488)
 
 [node name="tile" parent="maze/grid/row 1" parent_id_path=PackedInt32Array(1820058832, 1485976639) index="0" unique_id=691846773]
 card_id = 1
-front_tile_texture = ExtResource("5_sof0w")
-back_tile_texture = ExtResource("6_ggavl")
+front_tile_texture = SubResource("Resource_1pe0h")
+back_tile_texture = SubResource("Resource_27bay")
 
 [node name="tile2" parent="maze/grid/row 1" parent_id_path=PackedInt32Array(1820058832, 1485976639) index="1" unique_id=1045228084]
 card_id = 1
-front_tile_texture = ExtResource("5_sof0w")
-back_tile_texture = ExtResource("6_ggavl")
+front_tile_texture = SubResource("Resource_sof0w")
+back_tile_texture = SubResource("Resource_ggavl")
 
 [node name="tile3" parent="maze/grid/row 1" parent_id_path=PackedInt32Array(1820058832, 1485976639) index="2" unique_id=184212914]
 card_id = 1
-front_tile_texture = ExtResource("5_sof0w")
-back_tile_texture = ExtResource("6_ggavl")
+front_tile_texture = SubResource("Resource_ubhxj")
+back_tile_texture = SubResource("Resource_65or1")
 
 [node name="tile4" parent="maze/grid/row 1" parent_id_path=PackedInt32Array(1820058832, 1485976639) index="3" unique_id=1883310592]
 card_id = 1
-front_tile_texture = ExtResource("5_sof0w")
-back_tile_texture = ExtResource("6_ggavl")
+front_tile_texture = SubResource("Resource_lhbbi")
+back_tile_texture = SubResource("Resource_gjkv5")
 
 [node name="tile5" parent="maze/grid/row 1" parent_id_path=PackedInt32Array(1820058832, 1485976639) index="4" unique_id=2117416178]
 card_id = 1
-front_tile_texture = ExtResource("5_sof0w")
-back_tile_texture = ExtResource("6_ggavl")
+front_tile_texture = SubResource("Resource_00ld1")
+back_tile_texture = SubResource("Resource_3qmij")
 
 [node name="tile5" parent="maze/grid/row 2" parent_id_path=PackedInt32Array(1820058832, 167130444) index="0" unique_id=760844969]
 card_id = 1
-front_tile_texture = ExtResource("5_sof0w")
-back_tile_texture = ExtResource("6_ggavl")
+front_tile_texture = SubResource("Resource_kb5eu")
+back_tile_texture = SubResource("Resource_lfy8a")
 
 [node name="tile3" parent="maze/grid/row 3" parent_id_path=PackedInt32Array(1820058832, 491769077) index="0" unique_id=337315226]
 card_id = 1
-front_tile_texture = ExtResource("5_sof0w")
-back_tile_texture = ExtResource("6_ggavl")
+front_tile_texture = SubResource("Resource_ethxx")
+back_tile_texture = SubResource("Resource_3o2xh")
 
 [node name="tile4" parent="maze/grid/row 3" parent_id_path=PackedInt32Array(1820058832, 491769077) index="1" unique_id=407230383]
 card_id = 1
-front_tile_texture = ExtResource("5_sof0w")
-back_tile_texture = ExtResource("6_ggavl")
+front_tile_texture = SubResource("Resource_duihb")
+back_tile_texture = SubResource("Resource_b6mmh")
 
 [node name="tile5" parent="maze/grid/row 3" parent_id_path=PackedInt32Array(1820058832, 491769077) index="2" unique_id=1330009101]
 card_id = 1
-front_tile_texture = ExtResource("5_sof0w")
-back_tile_texture = ExtResource("6_ggavl")
+front_tile_texture = SubResource("Resource_ttn6t")
+back_tile_texture = SubResource("Resource_ia5ws")
 
 [node name="tile3" parent="maze/grid/row 4" parent_id_path=PackedInt32Array(1820058832, 624277702) index="0" unique_id=582365156]
 card_id = 1
-front_tile_texture = ExtResource("5_sof0w")
-back_tile_texture = ExtResource("6_ggavl")
+front_tile_texture = SubResource("Resource_be5co")
+back_tile_texture = SubResource("Resource_hycyb")
 
 [node name="tile2" parent="maze/grid/row 5" parent_id_path=PackedInt32Array(1820058832, 76945341) index="0" unique_id=1564730119]
 card_id = 1
-front_tile_texture = ExtResource("5_sof0w")
-back_tile_texture = ExtResource("6_ggavl")
+front_tile_texture = SubResource("Resource_swvua")
+back_tile_texture = SubResource("Resource_ka01f")
 
 [node name="tile3" parent="maze/grid/row 5" parent_id_path=PackedInt32Array(1820058832, 76945341) index="1" unique_id=2134698050]
 card_id = 1
-front_tile_texture = ExtResource("5_sof0w")
-back_tile_texture = ExtResource("6_ggavl")
+front_tile_texture = SubResource("Resource_notaq")
+back_tile_texture = SubResource("Resource_ett8d")
 
 [node name="tile" parent="maze/grid/row 6" parent_id_path=PackedInt32Array(1820058832, 227444857) index="0" unique_id=1672572235]
 card_id = 1
-front_tile_texture = ExtResource("5_sof0w")
-back_tile_texture = ExtResource("6_ggavl")
+front_tile_texture = SubResource("Resource_4p6gt")
+back_tile_texture = SubResource("Resource_td8cy")
 
 [node name="tile2" parent="maze/grid/row 6" parent_id_path=PackedInt32Array(1820058832, 227444857) index="1" unique_id=211187139]
 card_id = 1
-front_tile_texture = ExtResource("5_sof0w")
-back_tile_texture = ExtResource("6_ggavl")
+front_tile_texture = SubResource("Resource_84ct4")
+back_tile_texture = SubResource("Resource_i5xja")
 
 [node name="cards" parent="." unique_id=481930065 instance=ExtResource("10_gyffv")]
 
@@ -180,7 +265,13 @@ TargetNode = NodePath("../Player")
 
 [node name="HUD" parent="." unique_id=107477700 instance=ExtResource("7_1pe0h")]
 
+[node name="Gameover_screen" parent="." unique_id=186693592 instance=ExtResource("13_ggavl")]
+
+[node name="Control" parent="Gameover_screen/CanvasLayer" parent_id_path=PackedInt32Array(186693592, 89566598) index="0" unique_id=128978032 node_paths=PackedStringArray("TargetNode")]
+TargetNode = NodePath("../../../Player")
+
 [editable path="maze"]
 [editable path="cards"]
 [editable path="RoomTransCamera"]
 [editable path="RoomTransCamera/playerHealthBar"]
+[editable path="Gameover_screen"]
