@@ -2,6 +2,7 @@
 
 [ext_resource type="AudioStream" uid="uid://g6j758sb38j" path="res://assets/Music/music-pirate-adventure-361663.wav" id="1_3hls8"]
 [ext_resource type="TileSet" uid="uid://cbdolxwpgq5l7" path="res://assets/Pixel Art Furniture Pack - FREE/tilesV1.tres" id="1_hn12h"]
+[ext_resource type="Script" uid="uid://dspaf6ubxv1hf" path="res://Script/level_1.gd" id="1_sof0w"]
 [ext_resource type="PackedScene" uid="uid://bq8vi3nwkcsbh" path="res://Move/movement.tscn" id="2_hbghi"]
 [ext_resource type="Texture2D" uid="uid://pyd2asmie78m" path="res://assets/Pixel Art Furniture Pack - FREE/Forest TopDown PixelArt Tileset.png" id="2_sof0w"]
 [ext_resource type="Texture2D" uid="uid://bghfhttxnwdjy" path="res://assets/Treees.png" id="3_ggavl"]
@@ -13,6 +14,91 @@
 [ext_resource type="PackedScene" uid="uid://cp8nuuvji53rb" path="res://Camera/room_trans_camera.tscn" id="9_5rr72"]
 [ext_resource type="PackedScene" uid="uid://cur3p5nk6k7yp" path="res://JanusPuzzle/game_manager.tscn" id="10_gyffv"]
 [ext_resource type="PackedScene" uid="uid://b6b41yl6tb0o1" path="res://mazeFixed/global.tscn" id="11_1pe0h"]
+[ext_resource type="PackedScene" uid="uid://uhg7vkdhcmec" path="res://gameover_screen.tscn" id="13_ggavl"]
+
+[sub_resource type="Resource" id="Resource_1pe0h"]
+metadata/__load_path__ = "res://mazeFixed/greenSquare.png"
+
+[sub_resource type="Resource" id="Resource_27bay"]
+metadata/__load_path__ = "res://mazeFixed/megamind.png"
+
+[sub_resource type="Resource" id="Resource_sof0w"]
+metadata/__load_path__ = "res://mazeFixed/greenSquare.png"
+
+[sub_resource type="Resource" id="Resource_ggavl"]
+metadata/__load_path__ = "res://mazeFixed/megamind.png"
+
+[sub_resource type="Resource" id="Resource_ubhxj"]
+metadata/__load_path__ = "res://mazeFixed/greenSquare.png"
+
+[sub_resource type="Resource" id="Resource_65or1"]
+metadata/__load_path__ = "res://mazeFixed/megamind.png"
+
+[sub_resource type="Resource" id="Resource_lhbbi"]
+metadata/__load_path__ = "res://mazeFixed/greenSquare.png"
+
+[sub_resource type="Resource" id="Resource_gjkv5"]
+metadata/__load_path__ = "res://mazeFixed/megamind.png"
+
+[sub_resource type="Resource" id="Resource_00ld1"]
+metadata/__load_path__ = "res://mazeFixed/greenSquare.png"
+
+[sub_resource type="Resource" id="Resource_3qmij"]
+metadata/__load_path__ = "res://mazeFixed/megamind.png"
+
+[sub_resource type="Resource" id="Resource_kb5eu"]
+metadata/__load_path__ = "res://mazeFixed/greenSquare.png"
+
+[sub_resource type="Resource" id="Resource_lfy8a"]
+metadata/__load_path__ = "res://mazeFixed/megamind.png"
+
+[sub_resource type="Resource" id="Resource_ethxx"]
+metadata/__load_path__ = "res://mazeFixed/greenSquare.png"
+
+[sub_resource type="Resource" id="Resource_3o2xh"]
+metadata/__load_path__ = "res://mazeFixed/megamind.png"
+
+[sub_resource type="Resource" id="Resource_duihb"]
+metadata/__load_path__ = "res://mazeFixed/greenSquare.png"
+
+[sub_resource type="Resource" id="Resource_b6mmh"]
+metadata/__load_path__ = "res://mazeFixed/megamind.png"
+
+[sub_resource type="Resource" id="Resource_ttn6t"]
+metadata/__load_path__ = "res://mazeFixed/greenSquare.png"
+
+[sub_resource type="Resource" id="Resource_ia5ws"]
+metadata/__load_path__ = "res://mazeFixed/megamind.png"
+
+[sub_resource type="Resource" id="Resource_be5co"]
+metadata/__load_path__ = "res://mazeFixed/greenSquare.png"
+
+[sub_resource type="Resource" id="Resource_hycyb"]
+metadata/__load_path__ = "res://mazeFixed/megamind.png"
+
+[sub_resource type="Resource" id="Resource_swvua"]
+metadata/__load_path__ = "res://mazeFixed/greenSquare.png"
+
+[sub_resource type="Resource" id="Resource_ka01f"]
+metadata/__load_path__ = "res://mazeFixed/megamind.png"
+
+[sub_resource type="Resource" id="Resource_notaq"]
+metadata/__load_path__ = "res://mazeFixed/greenSquare.png"
+
+[sub_resource type="Resource" id="Resource_ett8d"]
+metadata/__load_path__ = "res://mazeFixed/megamind.png"
+
+[sub_resource type="Resource" id="Resource_4p6gt"]
+metadata/__load_path__ = "res://mazeFixed/greenSquare.png"
+
+[sub_resource type="Resource" id="Resource_td8cy"]
+metadata/__load_path__ = "res://mazeFixed/megamind.png"
+
+[sub_resource type="Resource" id="Resource_84ct4"]
+metadata/__load_path__ = "res://mazeFixed/greenSquare.png"
+
+[sub_resource type="Resource" id="Resource_i5xja"]
+metadata/__load_path__ = "res://mazeFixed/megamind.png"
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ubhxj"]
 texture = ExtResource("2_sof0w")
@@ -277,6 +363,7 @@ metadata/__load_path__ = "res://mazeFixed/greenSquare.png"
 metadata/__load_path__ = "res://mazeFixed/megamind.png"
 
 [node name="Level1" type="Node2D" unique_id=1321335471]
+script = ExtResource("1_sof0w")
 
 [node name="TileMap" type="Node2D" parent="." unique_id=1458838144]
 position = Vector2(-336, -176)
@@ -442,7 +529,13 @@ TargetNode = NodePath("../Player")
 
 [node name="HUD" parent="." unique_id=107477700 instance=ExtResource("7_1pe0h")]
 
+[node name="Gameover_screen" parent="." unique_id=186693592 instance=ExtResource("13_ggavl")]
+
+[node name="Control" parent="Gameover_screen/CanvasLayer" parent_id_path=PackedInt32Array(186693592, 89566598) index="0" unique_id=128978032 node_paths=PackedStringArray("TargetNode")]
+TargetNode = NodePath("../../../Player")
+
 [editable path="maze"]
 [editable path="cards"]
 [editable path="RoomTransCamera"]
 [editable path="RoomTransCamera/playerHealthBar"]
+[editable path="Gameover_screen"]
