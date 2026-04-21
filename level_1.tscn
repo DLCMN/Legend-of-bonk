@@ -15,6 +15,8 @@
 [ext_resource type="PackedScene" uid="uid://cp8nuuvji53rb" path="res://Camera/room_trans_camera.tscn" id="9_5rr72"]
 [ext_resource type="PackedScene" uid="uid://cur3p5nk6k7yp" path="res://JanusPuzzle/game_manager.tscn" id="10_gyffv"]
 [ext_resource type="PackedScene" uid="uid://b6b41yl6tb0o1" path="res://mazeFixed/global.tscn" id="11_1pe0h"]
+[ext_resource type="PackedScene" uid="uid://0uw04kj6o0e7" path="res://Enemy(fireball)/Enemy(fireball)/evil_enemy(fireball).tscn" id="16_65or1"]
+[ext_resource type="PackedScene" uid="uid://c6uk5elqkhntw" path="res://Enemy(fireball)/Enemy(fireball)/fireball_2d.tscn" id="17_lhbbi"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_sof0w"]
 load_path = "res://.godot/imported/megamind.png-bfa79a153e8ee667e8e1522564bf4315.ctex"
@@ -231,6 +233,10 @@ color = Color(0, 0.38431373, 0.9882353, 1)
 custom_minimum_size = Vector2(32, 32)
 layout_mode = 2
 color = Color(1, 0.0627451, 0.64705884, 1)
+
+[node name="EvilEnemy(Fireball)" parent="." unique_id=1661997928 instance=ExtResource("16_65or1")]
+
+[node name="fireball_2d" parent="." unique_id=2036028382 instance=ExtResource("17_lhbbi")]
 
 [editable path="maze"]
 [editable path="cards"]
