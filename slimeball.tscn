@@ -1,12 +1,45 @@
 [gd_scene format=3 uid="uid://bk78kxcfjyfbw"]
 
 [ext_resource type="Script" uid="uid://b7ro44kcln5a8" path="res://slimeball.gd" id="1_7oi3l"]
+<<<<<<< HEAD
 [ext_resource type="Texture2D" uid="uid://bud0r80d4ajjn" path="res://newEnemies/EvilSleem/IDLESLEEM.png" id="2_twbif"]
 [ext_resource type="Texture2D" uid="uid://bpjo54clffuw4" path="res://newEnemies/EvilZombie/OG2SLEEM.png" id="3_twbif"]
+=======
+[ext_resource type="Texture2D" uid="uid://ckvimvppoouxr" path="res://Slimeball.png" id="2_twbif"]
+[ext_resource type="Texture2D" uid="uid://bpjo54clffuw4" path="res://newEnemies/EvilSleem/OG2SLEEM.png" id="3_twbif"]
+>>>>>>> EmmasThirdBranch
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_cs63s"]
 atlas = ExtResource("2_twbif")
-region = Rect2(0, 0, 16, 16)
+region = Rect2(0, 0, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n2t5u"]
+atlas = ExtResource("2_twbif")
+region = Rect2(8, 0, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lwa5t"]
+atlas = ExtResource("2_twbif")
+region = Rect2(16, 0, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1snft"]
+atlas = ExtResource("2_twbif")
+region = Rect2(24, 0, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gqq3m"]
+atlas = ExtResource("2_twbif")
+region = Rect2(32, 0, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8v2bw"]
+atlas = ExtResource("2_twbif")
+region = Rect2(40, 0, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_locuj"]
+atlas = ExtResource("2_twbif")
+region = Rect2(48, 0, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3i75w"]
+atlas = ExtResource("2_twbif")
+region = Rect2(56, 0, 8, 8)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_c0kle"]
 atlas = ExtResource("3_twbif")
@@ -29,10 +62,31 @@ animations = [{
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_cs63s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n2t5u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lwa5t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1snft")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gqq3m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8v2bw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_locuj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3i75w")
 }],
 "loop": true,
 "name": &"default",
-"speed": 5.0
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -61,6 +115,7 @@ script = ExtResource("1_7oi3l")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1258232473]
 sprite_frames = SubResource("SpriteFrames_c0kle")
+frame_progress = 0.07323606
 
 [node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="." unique_id=1267849698]
 
