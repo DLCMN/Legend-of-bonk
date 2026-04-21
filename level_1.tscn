@@ -68,18 +68,14 @@ volume_db = -35.0
 autoplay = true
 
 [node name="EvilSleemBoss" parent="." unique_id=713703177 instance=ExtResource("3_ubhxj")]
-visible = false
 position = Vector2(1566, 137)
 
 [node name="Shadow" parent="." unique_id=650283062 instance=ExtResource("4_65or1")]
-visible = false
 
 [node name="SleemFriend" parent="." unique_id=1720382389 instance=ExtResource("8_27bay")]
-visible = false
 position = Vector2(-130, 13)
 
 [node name="Player" parent="." unique_id=1861891870 node_paths=PackedStringArray("player_health_bar", "player_heart") instance=ExtResource("2_hbghi")]
-visible = false
 player_health_bar = NodePath("../RoomTransCamera/playerHealthBar")
 player_heart = NodePath("../RoomTransCamera/playerHealthBar/PlayerHeart")
 
@@ -236,6 +232,27 @@ color = Color(0, 0.38431373, 0.9882353, 1)
 custom_minimum_size = Vector2(32, 32)
 layout_mode = 2
 color = Color(1, 0.0627451, 0.64705884, 1)
+
+[node name="EvilSleem2" parent="." unique_id=1110078965 instance=ExtResource("6_gyffv")]
+position = Vector2(-225, 417)
+
+[node name="EvilSleem3" parent="." unique_id=678047770 instance=ExtResource("6_gyffv")]
+position = Vector2(153, 262)
+
+[node name="EvilSleem4" parent="." unique_id=1400692658 instance=ExtResource("6_gyffv")]
+position = Vector2(457, 232)
+
+[node name="EvilSleem5" parent="." unique_id=2087621967 instance=ExtResource("6_gyffv")]
+position = Vector2(829, 287)
+
+[node name="EvilSleem6" parent="." unique_id=1031185823 instance=ExtResource("6_gyffv")]
+position = Vector2(1740, 583)
+
+[node name="EvilSleem7" parent="." unique_id=1741452121 instance=ExtResource("6_gyffv")]
+position = Vector2(1116, 939)
+
+[node name="EvilSleem8" parent="." unique_id=685797505 instance=ExtResource("6_gyffv")]
+position = Vector2(2121, 1058)
 
 [editable path="maze"]
 [editable path="cards"]
