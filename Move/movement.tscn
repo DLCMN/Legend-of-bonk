@@ -5,6 +5,7 @@
 [ext_resource type="AudioStream" uid="uid://cukbg18i6cr08" path="res://Move/BonkBonk.wav" id="3_0pdi0"]
 [ext_resource type="Script" uid="uid://dhdsn20fsdm15" path="res://Script/key_ring.gd" id="5_0ka7j"]
 [ext_resource type="AudioStream" uid="uid://brwthaofkauij" path="res://Move/HeartSnap.wav" id="5_p5v78"]
+[ext_resource type="AudioStream" uid="uid://cncpkndt8qfpm" path="res://assets/Music/music_short8s_Directed-by-Robert-B-Weide-Sound-Effect.wav" id="6_0ka7j"]
 
 [sub_resource type="Animation" id="Animation_fu8xx"]
 resource_name = "Attack1 - Down"
@@ -1171,7 +1172,7 @@ wait_time = 0.5
 one_shot = true
 
 [node name="RespawnShield" type="Timer" parent="." unique_id=783443919]
-wait_time = 6.0
+wait_time = 15.0
 
 [node name="heartBreakSound" type="AudioStreamPlayer2D" parent="." unique_id=1858684428]
 stream = ExtResource("5_p5v78")
@@ -1180,6 +1181,9 @@ pitch_scale = 0.94
 
 [node name="KeyRing" type="Node" parent="." unique_id=502691710]
 script = ExtResource("5_0ka7j")
+
+[node name="Game_over_music" type="AudioStreamPlayer2D" parent="." unique_id=95609768]
+stream = ExtResource("6_0ka7j")
 
 [connection signal="timeout" from="DashTimer" to="." method="_on_dash_timer_timeout"]
 [connection signal="body_entered" from="Marker2D/SwordHitBox" to="." method="_on_sword_hit_box_body_entered"]

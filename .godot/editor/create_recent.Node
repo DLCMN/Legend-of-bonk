@@ -1,9 +1,8 @@
-AnimatedSprite2D
+AudioStreamPlayer2D
 CanvasLayer
 Button
 Label
 Control
-AudioStreamPlayer2D
 ColorRect
 HBoxContainer
 MarginContainer
@@ -12,3 +11,4 @@ TextureRect
 Area2D
 Node
 CollisionShape2D
+Sprite2D
