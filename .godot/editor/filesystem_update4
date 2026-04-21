@@ -1,4 +1,6 @@
-res://level_1.tscn
+res://newEnemies/SleemMiniBoss/evil_sleem_boss.tscn
 res://assets/Pixel Art Furniture Pack - FREE/tilesV1.tres
-res://newEnemies/SleemMiniBoss/shadow.gd
-res://newEnemies/SleemMiniBoss/EvilSleemBoss.gd
+res://newEnemies/EvilSleem/evil_sleem.tscn
+res://sleem_friend.tscn
+res://slimeball.tscn
+res://level_1.tscn

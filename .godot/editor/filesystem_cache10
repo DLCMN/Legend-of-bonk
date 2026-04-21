@@ -1,5 +1,5 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1776769647
+::res://::1776789291
 Checkpoint.gd::GDScript::1933859761129508519::1776082394::0::1::::<>Area2D<><>0<>0<><>::
 Checkpoint.tscn::PackedScene::625375444729655433::1776082394::0::1::::<><><>0<>0<><>::uid://2s1nghfl7aep::::res://Checkpoint.gd<>uid://cyquh5ps5dx32::::res://RespawnPH.png
 checkpoint_manager.gd::GDScript::9069212903147553111::1776767462::0::1::::<>Node2D<><>0<>0<><>::
@@ -7,12 +7,13 @@ Door.tscn::PackedScene::6262740129304880923::1776769590::0::1::::<><><>0<>0<><>:
 enemy.gd::GDScript::6001697757386927231::1776767462::0::1::::<>CharacterBody2D<><>0<>0<><>::
 gameover_screen.tscn::PackedScene::1418650082984771994::1776081123::0::1::::<><><>0<>0<><>::
 gitignore.txt::TextFile::-1::1776081123::0::1::::<><><>0<>0<><>::
+grass.png::CompressedTexture2D::1408680307480655320::1776777911::1776777912::1::::<><><>0<>0<>cc40f8e00fdefb5d1cdbb585bf4c2e73<>res://.godot/imported/grass.png-79cf597cc1adecdff9d12adae9606f9b.ctex::
 health_bar.gd::GDScript::3146195371532713783::1776082394::0::1::::<>Node2D<><>0<>0<><>::
 health_bar.tscn::PackedScene::5193518120599219562::1776082394::0::1::::<><><>0<>0<><>::uid://b8t8cayb4vc73::::res://newEnemies/lEnemyHealthBar.png<>uid://bk3bm4dak17h0::::res://health_bar.gd<>uid://de63fa3yg432n::::res://newEnemies/fullEnemyHealthBar.png
 hud.gd::GDScript::9132841004335700971::1776082394::0::1::::<>CanvasLayer<><>0<>0<><>::
 hud.tscn::PackedScene::4109693264767957472::1776082394::0::1::::<><><>0<>0<><>::uid://d3eas658nf8y6::::res://hud.gd
 KeyItem.tscn::PackedScene::3451713583537518266::1776767462::0::1::::<><><>0<>0<><>::uid://bghbtqocbx4qk::::res://Script/key_item.gd<>uid://dfb7mpq8y6176::::res://assets/Sword Sprite.png
-level_1.tscn::PackedScene::406492265906022753::1776769590::0::1::::<><><>0<>0<><>::uid://g6j758sb38j::::res://assets/Music/music-pirate-adventure-361663.wav<>uid://cbdolxwpgq5l7::::res://assets/Pixel Art Furniture Pack - FREE/tilesV1.tres<>uid://bq8vi3nwkcsbh::::res://Move/movement.tscn<>uid://d2hgu144de5mx::::res://checkpoint_manager.gd<>uid://i563vucp4hn2::::res://Checkpoint.tscn<>uid://beqjwreu5yl8v::::res://mazeFixed/Lily pad.png<>uid://eppu1ojp7hyj::::res://mazeFixed/clear.png<>uid://65b2y3wyhjma::::res://newEnemies/EvilSleem/evil_sleem.tscn<>uid://bys1bvclcs8ns::::res://hud.tscn<>uid://bc2mh7ylwndcv::::res://sleem_friend.tscn<>uid://cp8nuuvji53rb::::res://Camera/room_trans_camera.tscn<>uid://cur3p5nk6k7yp::::res://JanusPuzzle/game_manager.tscn<>uid://b6b41yl6tb0o1::::res://mazeFixed/global.tscn
+level_1.tscn::PackedScene::406492265906022753::1776789291::0::1::::<><><>0<>0<><>::uid://g6j758sb38j::::res://assets/Music/music-pirate-adventure-361663.wav<>uid://cbdolxwpgq5l7::::res://assets/Pixel Art Furniture Pack - FREE/tilesV1.tres<>uid://bq8vi3nwkcsbh::::res://Move/movement.tscn<>uid://b82lnpdlgmlhl::::res://newEnemies/SleemMiniBoss/evil_sleem_boss.tscn<>uid://dr2ysu1goxcvt::::res://newEnemies/SleemMiniBoss/SleemShadow.tscn<>uid://d2hgu144de5mx::::res://checkpoint_manager.gd<>uid://i563vucp4hn2::::res://Checkpoint.tscn<>uid://beqjwreu5yl8v::::res://mazeFixed/Lily pad.png<>uid://eppu1ojp7hyj::::res://mazeFixed/clear.png<>uid://65b2y3wyhjma::::res://newEnemies/EvilSleem/evil_sleem.tscn<>uid://bys1bvclcs8ns::::res://hud.tscn<>uid://bc2mh7ylwndcv::::res://sleem_friend.tscn<>uid://cp8nuuvji53rb::::res://Camera/room_trans_camera.tscn<>uid://cur3p5nk6k7yp::::res://JanusPuzzle/game_manager.tscn<>uid://b6b41yl6tb0o1::::res://mazeFixed/global.tscn
 menu.gd::GDScript::3849924976859413871::1776767462::0::1::::<>Node2D<><>0<>0<><>::
 menu.tscn::PackedScene::8069371545771663487::1776767462::0::1::::<><><>0<>0<><>::uid://bu36x4m86u00j::::res://menu.gd<>uid://gi670poaw171::::res://assets/Music/music-greensleeves-acoustic-379008.wav
 music_for_different_rooms_level_1.tscn::PackedScene::1972865534965852723::1776081123::0::1::::<><><>0<>0<><>::uid://dpenrxiasguhy::::res://assets/Music/music-Winter_ I - Allegro Non Molto.wav<>uid://dyhy54lrsfuag::::res://assets/Music/music_Directed-by-Robert-B-Weide-Sound-Effect.wav
@@ -23,19 +24,21 @@ RedKeyDropper.gd::GDScript::848363600560249058::1776767462::0::1::::<>Node2D<><>
 RedKeyDropper.tscn::PackedScene::1832324113677506547::1776767462::0::1::::<><><>0<>0<><>::uid://mc7oo1wp3dju::::res://RedKey/RedKeyDropper.gd
 RedKeyItem.gd::GDScript::8139527326643340176::1776767462::0::1::::<>CharacterBody2D<><>0<>1<><>::
 RedKeyItem.tscn::PackedScene::5146666863363586509::1776769590::0::1::::<><><>0<>0<><>::uid://dn733cx82gpau::::res://RedKeyItem.gd<>uid://ck18p0b83cqo4::::res://assets/key.png
+reformedSleem.png::CompressedTexture2D::3024565180444050583::1776776820::1776776820::1::::<><><>0<>0<>d54d926aa07471dff6936d2fd931ce13<>res://.godot/imported/reformedSleem.png-f713319a2ae75f0d2dc0238c999925ee.ctex::
 RespawnPH.png::CompressedTexture2D::6491632098907243047::1776082394::1776082394::1::::<><><>0<>0<>c9e16c7d82a1f9d9592f823ff0175e7d<>res://.godot/imported/RespawnPH.png-fc7dfccf01ee754a97c800a2b8dbc9b5.ctex::
 room_trans_camera.gd::GDScript::1857401992733621359::1776767462::0::1::::roomTransitionCamera<>Camera2D<><>0<>0<><>::
 SleemBuddy.gd::GDScript::5714395490061578123::1776767462::0::1::::<>CharacterBody2D<><>0<>0<><>::
-sleem_friend.tscn::PackedScene::2583279393151525773::1776767462::0::1::::<><><>0<>0<><>::uid://cnodi2hmd7ctn::::res://SleemBuddy.gd<>uid://bpjo54clffuw4::::res://newEnemies/EvilSleem/OG2SLEEM.png<>uid://bk78kxcfjyfbw::::res://slimeball.tscn<>uid://dxnfg7y58rfvp::::res://newEnemies/EvilSleem/cryingSleem.png
+sleem_friend.tscn::PackedScene::2583279393151525773::1776777745::0::1::::<><><>0<>0<><>::uid://cnodi2hmd7ctn::::res://SleemBuddy.gd<>uid://bk78kxcfjyfbw::::res://slimeball.tscn<>uid://bjdee8rbqs86f::::res://reformedSleem.png
 slimeball.gd::GDScript::4668461466582440561::1776082394::0::1::::<>Area2D<><>0<>0<><>::
-slimeball.tscn::PackedScene::3156391938270495420::1776082394::0::1::::<><><>0<>0<><>::uid://b7ro44kcln5a8::::res://slimeball.gd<>uid://bud0r80d4ajjn::::res://newEnemies/EvilSleem/IDLESLEEM.png<>uid://bpjo54clffuw4::::res://newEnemies/EvilSleem/OG2SLEEM.png
+Slimeball.png::CompressedTexture2D::5518590028934005215::1776777694::1776777695::1::::<><><>0<>0<>b3fdcd5ea7c1db456ae51c1142059930<>res://.godot/imported/Slimeball.png-aabf93ecd384fe147c30d0479d34f760.ctex::
+slimeball.tscn::PackedScene::3156391938270495420::1776777732::0::1::::<><><>0<>0<><>::uid://b7ro44kcln5a8::::res://slimeball.gd<>uid://ckvimvppoouxr::::res://Slimeball.png<>uid://bpjo54clffuw4::::res://newEnemies/EvilSleem/OG2SLEEM.png
 ::res://addons/::1776081121
 ::res://addons/godot-git-plugin/::1776764030
 git_plugin.gdextension::GDExtension::4272845067232409448::1776081121::0::1::::<><><>0<>0<><>::
 THIRDPARTY.md::TextFile::-1::1776081121::0::1::::<><><>0<>0<><>::
 ::res://addons/godot-git-plugin/linux/::1776081121
 ::res://addons/godot-git-plugin/macos/::1776081121
-::res://addons/godot-git-plugin/windows/::1776769639
+::res://addons/godot-git-plugin/windows/::1776774267
 ::res://assets/::1776769590
 Axe Sprite.png::CompressedTexture2D::6353231015973738032::1776081121::1776081293::1::::<><><>0<>0<>ee15fde32082bd7f5306a9d2961b6097<>res://.godot/imported/Axe Sprite.png-0e26bd4c6dde7182e5644793847dfac6.ctex::
 Big lily pad.png::CompressedTexture2D::8206064238561018371::1776769590::1776769590::1::::<><><>0<>0<>d9356d49c6ebfecf8ed106fe8b32644d<>res://.godot/imported/Big lily pad.png-199f15d3d5e3d589a8737b2b0bb5eb89.ctex::
@@ -70,7 +73,7 @@ rock_3.png::CompressedTexture2D::9161549049716433802::1776081123::1776081293::1:
 shop.png::CompressedTexture2D::3219100029768665724::1776081123::1776081293::1::::<><><>0<>0<>479ece438f4c4019b1d9c37c0e72a202<>res://.godot/imported/shop.png-dc063dd70d80ea2cb1e89833bfcf2840.ctex::
 shop_anim.png::CompressedTexture2D::6191830883716935270::1776081123::1776081293::1::::<><><>0<>0<>a8d947e30336e76bfacac1458c0d1e7c<>res://.godot/imported/shop_anim.png-7fbe811f11147a61e1f27cfb89e4e98b.ctex::
 sign.png::CompressedTexture2D::6682589615530870877::1776081123::1776081293::1::::<><><>0<>0<>01faca751b1ac727cfa612e9cb495614<>res://.godot/imported/sign.png-9f72ccf479f2dfe54ccdb5d84c370ea7.ctex::
-::res://assets/Pixel Art Furniture Pack - FREE/::1776767880
+::res://assets/Pixel Art Furniture Pack - FREE/::1776778203
 apple.png::CompressedTexture2D::6903322393502042536::1776081122::1776081293::1::::<><><>0<>0<>a2a1124a5362b5d6993caf07a133cf07<>res://.godot/imported/apple.png-ed2f8bbc7003f0f12a76fb38a6c5c317.ctex::
 Evil_Apple.png::CompressedTexture2D::7935048736409831982::1776081122::1776081293::1::::<><><>0<>0<>b59f879e0ef778cd4db1391a085a2794<>res://.godot/imported/Evil_Apple.png-522974d617008325ec4ff64f59a74627.ctex::
 Forest TopDown PixelArt Tileset.png::CompressedTexture2D::1102608116444242574::1776081122::1776081293::1::::<><><>0<>0<>0e1f9cb6e91a756f774b00ad866be401<>res://.godot/imported/Forest TopDown PixelArt Tileset.png-1f635a3fd8cf634e8bca2dfa209b61b7.ctex::
@@ -80,7 +83,7 @@ sprite3.png::CompressedTexture2D::2877629395030835329::1776081122::1776081293::1
 sprite4.png::CompressedTexture2D::3364589145683476500::1776081122::1776081293::1::::<><><>0<>0<>70502c1d1fc09463afcc8aac524fc150<>res://.godot/imported/sprite4.png-861ac35417eb78d726c9d7986c47d34b.ctex::
 sprite5.png::CompressedTexture2D::4943312319823019395::1776081122::1776081293::1::::<><><>0<>0<>e01117e4a73a4c211d8a0f90df32d982<>res://.godot/imported/sprite5.png-f372979e7dad4c311b107e20fa1ce0d9.ctex::
 sprite6.png::CompressedTexture2D::1077350824191728022::1776081122::1776081293::1::::<><><>0<>0<>4f1856515529500bcf5776d76a311155<>res://.godot/imported/sprite6.png-e4394e03559b0d75b8a6f541807199cc.ctex::
-tilesV1.tres::TileSet::4850094268631061966::1776767880::0::1::::<><><>0<>0<><>::uid://pyd2asmie78m::::res://assets/Pixel Art Furniture Pack - FREE/Forest TopDown PixelArt Tileset.png
+tilesV1.tres::TileSet::4850094268631061966::1776778203::0::1::::<><><>0<>0<><>::uid://pyd2asmie78m::::res://assets/Pixel Art Furniture Pack - FREE/Forest TopDown PixelArt Tileset.png<>uid://ucm02h8fxy13::::res://grass.png
 ::res://assets/Pixel Art Furniture Pack - FREE/Pixel Art Furniture Pack - FREE/::1776081293
 2D Pixel Art Furniture Pack – FREE.png::CompressedTexture2D::409393643606298612::1776081122::1776081293::1::::<><><>0<>0<>88b581eae6b33c4d71a01a06e6c0e488<>res://.godot/imported/2D Pixel Art Furniture Pack – FREE.png-8ef2303b86f875c4dec4328d5c07573b.ctex::
 README.txt::TextFile::-1::1776081122::0::1::::<><><>0<>0<><>::
@@ -104,10 +107,11 @@ evil_big_boss.gd::GDScript::7293424512267358589::1776767462::0::1::::<>Character
 evil_big_boss.tscn::PackedScene::5820474573350955::1776767462::0::1::::<><><>0<>0<><>::uid://db58vvmvjtitp::::res://main_boss/evil_big_boss.gd<>uid://v85ica6gcvqt::::res://newEnemies/EvilSleem/SlimeDead.mp3<>uid://bf0dfqf7cg5jg::::res://newEnemies/EvilSleem/BonkSlime.mp3<>uid://bpjo54clffuw4::::res://newEnemies/EvilSleem/OG2SLEEM.png<>uid://c0lvhyhqquvkx::::res://newEnemies/EvilSleem/slimejump.mp3<>uid://cf81qqjhwe04m::::res://health_bar.tscn
 webs.gd::GDScript::7753697825578348383::1776767462::0::1::::<>Area2D<><>0<>0<><>::
 webs.tscn::PackedScene::3062397000350716474::1776767462::0::1::::<><><>0<>0<><>::uid://dip7jgse6l7xj::::res://main_boss/webs.gd<>uid://bpjo54clffuw4::::res://newEnemies/EvilSleem/OG2SLEEM.png
-::res://main_boss/EvilBigBoss/::1776767462
+::res://main_boss/EvilBigBoss/::1776774336
 BonkSlime.mp3::AudioStreamMP3::6445754744090856334::1776767462::1776767462::1::::<><><>0<>0<>7b7a8c5d533730f766eb0a4446710dd2<>res://.godot/imported/BonkSlime.mp3-1622dfdbf74881fad084833e9977867b.mp3str::
 cryingSleem.png::CompressedTexture2D::4317778023372643014::1776767462::1776767462::1::::<><><>0<>0<>11d717a9ea64cb854f800246c1c4b4ef<>res://.godot/imported/cryingSleem.png-1010976f526ae5468f90c298b55cbd29.ctex::
 Evilsleem.gd::GDScript::8997438146313221122::1776767462::0::1::::<>CharacterBody2D<><>0<>0<><>::
+EvilSleemBoss.png::CompressedTexture2D::166791582241823282::1776774336::1776774305::1::::<><><>0<>0<>93c0cfb734ede6dffd5a0425a3531875<>res://.godot/imported/EvilSleemBoss.png-4054a8c8c9f584e117496530d78e45cb.ctex::
 evil_sleem.tscn::PackedScene::6083150012077180990::1776767462::0::1::::<><><>0<>0<><>::uid://d1goqyo4kvxq5::::res://main_boss/EvilBigBoss/Evilsleem.gd<>uid://b1pbsbv240euf::::res://main_boss/EvilBigBoss/OG2SLEEM.png<>uid://cm1rv6p1t7sgy::::res://main_boss/EvilBigBoss/SlimeDead.mp3<>uid://cx3mvytjh2lyk::::res://main_boss/EvilBigBoss/BonkSlime.mp3<>uid://bhjmiwwpp3fcy::::res://main_boss/EvilBigBoss/slimejump.mp3<>uid://cf81qqjhwe04m::::res://health_bar.tscn
 IDLESLEEM.png::CompressedTexture2D::6264361652196376813::1776767462::1776767462::1::::<><><>0<>0<>3d53e23c2d5e5cb7bfa6ca894d7c3928<>res://.godot/imported/IDLESLEEM.png-37c6c09ed04a4793e0e07d8903d4ca28.ctex::
 JUMPSILLYSLEEM.png::CompressedTexture2D::7625192578767963049::1776767462::1776767462::1::::<><><>0<>0<>d151e17024dcb169dda80b0c645225bd<>res://.godot/imported/JUMPSILLYSLEEM.png-694e0f82ddf5e8ad88123294aaf0f300.ctex::
@@ -137,21 +141,24 @@ sleemplaceholder-Sheet.png::CompressedTexture2D::5742388620400674508::1776081121
 ::res://newEnemies/::1776769612
 fullEnemyHealthBar.png::CompressedTexture2D::7505722185128436187::1776082394::1776082394::1::::<><><>0<>0<>02543380f48e23d5357ce10df104a0c1<>res://.godot/imported/fullEnemyHealthBar.png-7127a4db9fa203fb30d13e06a17c3f9c.ctex::
 lEnemyHealthBar.png::CompressedTexture2D::4743882970584732540::1776082394::1776082394::1::::<><><>0<>0<>03cc01b18dc7f14837b6ecb527b8afe7<>res://.godot/imported/lEnemyHealthBar.png-101881dc0dc4e339e81b4ce7693eed74.ctex::
-::res://newEnemies/EvilSleem/::1776769590
+::res://newEnemies/EvilSleem/::1776790007
 BonkSlime.mp3::AudioStreamMP3::2789166275237082688::1776082394::1776082394::1::::<><><>0<>0<>3dec2e285e69a3f3cb8c7722c72055d3<>res://.godot/imported/BonkSlime.mp3-20a751b555bca48379c4f61e7b0d3527.mp3str::
 cryingSleem.png::CompressedTexture2D::8800758384514433861::1776082394::1776082394::1::::<><><>0<>0<>273f5c7acdd10d04e8d53a2fe47005cc<>res://.godot/imported/cryingSleem.png-1e1ed4aaa12006f3935f8238e0db5889.ctex::
 Evilsleem.gd::GDScript::5681440272341857308::1776456544::0::1::::<>CharacterBody2D<><>0<>0<><>::
-evil_sleem.tscn::PackedScene::2237895723675860276::1776769590::0::1::::<><><>0<>0<><>::uid://bpjo54clffuw4::::res://newEnemies/EvilSleem/OG2SLEEM.png<>uid://cm7eqx31re6ya::::res://newEnemies/EvilSleem/Evilsleem.gd<>uid://v85ica6gcvqt::::res://newEnemies/EvilSleem/SlimeDead.mp3<>uid://bf0dfqf7cg5jg::::res://newEnemies/EvilSleem/BonkSlime.mp3<>uid://c0lvhyhqquvkx::::res://newEnemies/EvilSleem/slimejump.mp3<>uid://cf81qqjhwe04m::::res://health_bar.tscn
+EvilSleem.png::CompressedTexture2D::8467747688907432089::1776775373::1776775374::1::::<><><>0<>0<>3757a7b7dc3cdb77458ea8bf7d771fa7<>res://.godot/imported/EvilSleem.png-e00a5e9380a992642ae09d4f6f04dcf8.ctex::
+evil_sleem.tscn::PackedScene::2237895723675860276::1776776771::0::1::::<><><>0<>0<><>::uid://cm7eqx31re6ya::::res://newEnemies/EvilSleem/Evilsleem.gd<>uid://dsv3tj1qsn8th::::res://newEnemies/EvilSleem/EvilSleem.png<>uid://v85ica6gcvqt::::res://newEnemies/EvilSleem/SlimeDead.mp3<>uid://bf0dfqf7cg5jg::::res://newEnemies/EvilSleem/BonkSlime.mp3<>uid://c0lvhyhqquvkx::::res://newEnemies/EvilSleem/slimejump.mp3<>uid://cf81qqjhwe04m::::res://health_bar.tscn
 IDLESLEEM.png::CompressedTexture2D::3797940745097208787::1776082394::1776082394::1::::<><><>0<>0<>fc90a42f52d5fc2efe5b330006653953<>res://.godot/imported/IDLESLEEM.png-f10e352b26b371b40fbc39af869c9aa9.ctex::
 JUMPSILLYSLEEM.png::CompressedTexture2D::8007304893583281071::1776082394::1776082394::1::::<><><>0<>0<>d21d3c8c4709293aff2b796b7a65eeb4<>res://.godot/imported/JUMPSILLYSLEEM.png-d8c9513457efc66fe568e1e1dbba350f.ctex::
 OG1SLEEM.png::CompressedTexture2D::8370976121241835705::1776082394::1776082394::1::::<><><>0<>0<>f0e1a5f7df600d83ea6df35432edc5ea<>res://.godot/imported/OG1SLEEM.png-7f97cf8e5dc7bb361cdd66f0552e215d.ctex::
 OG2SLEEM.png::CompressedTexture2D::3458737876539456945::1776082394::1776082394::1::::<><><>0<>0<>8daa01bc43bdaf4000e2c4f9e3c18de0<>res://.godot/imported/OG2SLEEM.png-311bf6ad2b84e85d364064c8eeb1febb.ctex::
 SlimeDead.mp3::AudioStreamMP3::1543926084880205655::1776082394::1776082394::1::::<><><>0<>0<>3134aba199a24c4835de4ee2cd9183c8<>res://.godot/imported/SlimeDead.mp3-656dbe924b5cc2365f416ad69e37eb1f.mp3str::
 slimejump.mp3::AudioStreamMP3::6551559443160292511::1776082394::1776082394::1::::<><><>0<>0<>ef3dc45c240d6542e5dcb39b4cf52cac<>res://.godot/imported/slimejump.mp3-184cc4fd10026ecc973a16d216a6c2d0.mp3str::
-::res://newEnemies/SleemMiniBoss/::1776769612
-EvilSleemBoss.gd::GDScript::4575949192486777851::1776769543::0::1::::<>CharacterBody2D<><>0<>0<><>::
-evil_sleem_boss.tscn::PackedScene::4759082618341936133::1776769543::0::1::::<><><>0<>0<><>::uid://bpjo54clffuw4::::res://newEnemies/EvilSleem/OG2SLEEM.png<>uid://b6gvhkeo18xyh::::res://newEnemies/SleemMiniBoss/EvilSleemBoss.gd<>uid://v85ica6gcvqt::::res://newEnemies/EvilSleem/SlimeDead.mp3<>uid://dxnfg7y58rfvp::::res://newEnemies/EvilSleem/cryingSleem.png<>uid://dmc2e228oxayh::::res://newEnemies/EvilSleem/JUMPSILLYSLEEM.png<>uid://bf0dfqf7cg5jg::::res://newEnemies/EvilSleem/BonkSlime.mp3<>uid://c0lvhyhqquvkx::::res://newEnemies/EvilSleem/slimejump.mp3<>uid://cf81qqjhwe04m::::res://health_bar.tscn
-shadow.gd::GDScript::1986273352334683189::1776769543::0::1::::<>Area2D<><>0<>0<><>::
+Water.png::CompressedTexture2D::7722069127298426680::1776790007::1776790007::1::::<><><>0<>0<>2d59fb823e67b1e023e5f47a901fa568<>res://.godot/imported/Water.png-299dd8619bffcea209e8b055df7ce53c.ctex::
+::res://newEnemies/SleemMiniBoss/::1776787243
+EvilSleemBoss.gd::GDScript::4575949192486777851::1776770213::0::1::::<>CharacterBody2D<><>0<>0<><>::
+EvilSleemBoss.png::CompressedTexture2D::2068312831545532176::1776774356::1776774357::1::::<><><>0<>0<>dcb7d2f7710aa4a44d5fa0e3a7c72b01<>res://.godot/imported/EvilSleemBoss.png-2e34a0092552c9947b7424b42620407d.ctex::
+evil_sleem_boss.tscn::PackedScene::4759082618341936133::1776787243::0::1::::<><><>0<>0<><>::uid://b6gvhkeo18xyh::::res://newEnemies/SleemMiniBoss/EvilSleemBoss.gd<>uid://4p52ssgknbf1::::res://newEnemies/SleemMiniBoss/EvilSleemBoss.png<>uid://v85ica6gcvqt::::res://newEnemies/EvilSleem/SlimeDead.mp3<>uid://bf0dfqf7cg5jg::::res://newEnemies/EvilSleem/BonkSlime.mp3<>uid://c0lvhyhqquvkx::::res://newEnemies/EvilSleem/slimejump.mp3<>uid://cf81qqjhwe04m::::res://health_bar.tscn
+shadow.gd::GDScript::1986273352334683189::1776770005::0::1::::<>Area2D<><>0<>0<><>::
 SleemShadow.tscn::PackedScene::8409701035326296893::1776769543::0::1::::<><><>0<>0<><>::uid://3kfvqq1qejqr::::res://newEnemies/SleemMiniBoss/shadow.gd<>uid://dxnfg7y58rfvp::::res://newEnemies/EvilSleem/cryingSleem.png
 ::res://Script/::1776769590
 door.gd::GDScript::4425681502989574898::1776767462::0::1::::<>Node2D<><>0<>0<><>::
