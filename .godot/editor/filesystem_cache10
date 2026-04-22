@@ -1,5 +1,5 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1776878124
+::res://::1776894186
 Checkpoint.gd::GDScript::1933859761129508519::1776875497::0::1::::<>Area2D<><>0<>0<><>::
 Checkpoint.tscn::PackedScene::625375444729655433::1776875497::0::1::::<><><>0<>0<><>::uid://2s1nghfl7aep::::res://Checkpoint.gd<>uid://cyquh5ps5dx32::::res://RespawnPH.png
 checkpoint_manager.gd::GDScript::9069212903147553111::1776875499::0::1::::<>Node2D<><>0<>0<><>::
@@ -38,7 +38,7 @@ git_plugin.gdextension::GDExtension::4272845067232409448::1776875497::0::1::::<>
 THIRDPARTY.md::TextFile::-1::1776875497::0::1::::<><><>0<>0<><>::
 ::res://addons/godot-git-plugin/linux/::1776875497
 ::res://addons/godot-git-plugin/macos/::1776875498
-::res://addons/godot-git-plugin/windows/::1776878118
+::res://addons/godot-git-plugin/windows/::1776894180
 ::res://assets/::1776875499
 Axe Sprite.png::CompressedTexture2D::6353231015973738032::1776875498::1776875498::1::::<><><>0<>0<>ee15fde32082bd7f5306a9d2961b6097<>res://.godot/imported/Axe Sprite.png-0e26bd4c6dde7182e5644793847dfac6.ctex::
 Big lily pad.png::CompressedTexture2D::8206064238561018371::1776875498::1776875498::1::::<><><>0<>0<>d9356d49c6ebfecf8ed106fe8b32644d<>res://.godot/imported/Big lily pad.png-199f15d3d5e3d589a8737b2b0bb5eb89.ctex::
