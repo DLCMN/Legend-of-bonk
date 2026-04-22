@@ -1,9 +1,5 @@
 [gd_scene format=3 uid="uid://b82lnpdlgmlhl"]
 
-<<<<<<< HEAD
-[ext_resource type="Texture2D" uid="uid://bpjo54clffuw4" path="res://newEnemies/EvilZombie/OG2SLEEM.png" id="1_7gm7t"]
-=======
->>>>>>> EmmasThirdBranch
 [ext_resource type="Script" uid="uid://b6gvhkeo18xyh" path="res://newEnemies/SleemMiniBoss/EvilSleemBoss.gd" id="1_nfld4"]
 [ext_resource type="Texture2D" uid="uid://4p52ssgknbf1" path="res://newEnemies/SleemMiniBoss/EvilSleemBoss.png" id="2_83cp2"]
 [ext_resource type="AudioStream" uid="uid://v85ica6gcvqt" path="res://newEnemies/EvilSleem/SlimeDead.mp3" id="2_nfld4"]

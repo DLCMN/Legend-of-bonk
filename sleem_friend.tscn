@@ -1,10 +1,6 @@
 [gd_scene format=3 uid="uid://bc2mh7ylwndcv"]
 
 [ext_resource type="Script" uid="uid://cnodi2hmd7ctn" path="res://SleemBuddy.gd" id="1_766gd"]
-<<<<<<< HEAD
-[ext_resource type="Texture2D" uid="uid://bpjo54clffuw4" path="res://newEnemies/EvilZombie/OG2SLEEM.png" id="2_ppe1o"]
-=======
->>>>>>> EmmasThirdBranch
 [ext_resource type="PackedScene" uid="uid://bk78kxcfjyfbw" path="res://slimeball.tscn" id="2_t3n2v"]
 [ext_resource type="Texture2D" uid="uid://bjdee8rbqs86f" path="res://reformedSleem.png" id="3_7wi15"]
 

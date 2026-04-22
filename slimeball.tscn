@@ -1,13 +1,9 @@
+
 [gd_scene format=3 uid="uid://bk78kxcfjyfbw"]
 
 [ext_resource type="Script" uid="uid://b7ro44kcln5a8" path="res://slimeball.gd" id="1_7oi3l"]
-<<<<<<< HEAD
-[ext_resource type="Texture2D" uid="uid://bud0r80d4ajjn" path="res://newEnemies/EvilSleem/IDLESLEEM.png" id="2_twbif"]
-[ext_resource type="Texture2D" uid="uid://bpjo54clffuw4" path="res://newEnemies/EvilZombie/OG2SLEEM.png" id="3_twbif"]
-=======
 [ext_resource type="Texture2D" uid="uid://ckvimvppoouxr" path="res://Slimeball.png" id="2_twbif"]
 [ext_resource type="Texture2D" uid="uid://bpjo54clffuw4" path="res://newEnemies/EvilSleem/OG2SLEEM.png" id="3_twbif"]
->>>>>>> EmmasThirdBranch
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_cs63s"]
 atlas = ExtResource("2_twbif")
